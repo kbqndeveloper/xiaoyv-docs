@@ -1,0 +1,1992 @@
+[
+  {
+    "name": "概述",
+    "order": 10,
+    "items": [
+      {
+        "name": "简介",
+        "md": "md/00-概述/简介.md"
+      },
+      {
+        "name": "类型约定",
+        "md": "md/00-概述/类型约定.md"
+      },
+      {
+        "name": "命名空间与别名",
+        "md": "md/00-概述/命名空间与别名.md"
+      },
+      {
+        "name": "导出命名空间",
+        "md": "md/00-概述/useApi.md",
+        "cmd": "useApi / switchApi"
+      },
+      {
+        "name": "API 总览",
+        "md": "md/00-概述/API总览.md"
+      },
+      {
+        "name": "扩展 API 与迁移",
+        "md": "md/00-概述/扩展与迁移.md"
+      }
+    ]
+  },
+  {
+    "name": "设备",
+    "order": 40,
+    "items": [
+      {
+        "name": "概述",
+        "md": "md/02-设备/概述.md"
+      },
+      {
+        "name": "应用与脚本",
+        "items": [
+          {
+            "name": "是否前台应用",
+            "md": "md/02-设备/应用与脚本/appIsFront.md",
+            "cmd": "m.appIsFront"
+          },
+          {
+            "name": "进程是否存在",
+            "md": "md/02-设备/应用与脚本/appIsRunning.md",
+            "cmd": "m.appIsRunning"
+          },
+          {
+            "name": "前台包名",
+            "md": "md/02-设备/应用与脚本/frontAppName.md",
+            "cmd": "m.frontAppName"
+          },
+          {
+            "name": "前台 Activity",
+            "md": "md/02-设备/应用与脚本/getCurrentActivity.md",
+            "cmd": "m.getCurrentActivity"
+          },
+          {
+            "name": "启动应用",
+            "md": "md/02-设备/应用与脚本/runApp.md",
+            "cmd": "m.runApp"
+          },
+          {
+            "name": "强制停止应用",
+            "md": "md/02-设备/应用与脚本/stopApp.md",
+            "cmd": "m.stopApp"
+          },
+          {
+            "name": "打开 Intent",
+            "md": "md/02-设备/应用与脚本/runIntent.md",
+            "cmd": "m.runIntent"
+          },
+          {
+            "name": "安装 APK",
+            "md": "md/02-设备/应用与脚本/installApk.md",
+            "cmd": "m.installApk"
+          },
+          {
+            "name": "已装 APK 路径",
+            "md": "md/02-设备/应用与脚本/getInstalledApk.md",
+            "cmd": "m.getInstalledApk"
+          },
+          {
+            "name": "已装包名",
+            "md": "md/02-设备/应用与脚本/getInstalledApps.md",
+            "cmd": "m.getInstalledApps"
+          },
+          {
+            "name": "已装应用详情",
+            "md": "md/02-设备/应用与脚本/getInsallAppInfos.md",
+            "cmd": "m.getInsallAppInfos"
+          },
+          {
+            "name": "本应用 versionCode",
+            "md": "md/02-设备/应用与脚本/getApkVerInt.md",
+            "cmd": "m.getApkVerInt"
+          },
+          {
+            "name": "脚本版本号",
+            "md": "md/02-设备/应用与脚本/getScriptVersion.md",
+            "cmd": "m.getScriptVersion"
+          },
+          {
+            "name": "执行 Root 命令",
+            "md": "md/02-设备/应用与脚本/exec.md",
+            "cmd": "m.exec"
+          },
+          {
+            "name": "停止当前脚本",
+            "md": "md/02-设备/应用与脚本/exitScript.md",
+            "cmd": "m.exitScript"
+          },
+          {
+            "name": "EngineApi 地址",
+            "md": "md/02-设备/应用与脚本/getXiaoyvApi.md",
+            "cmd": "m.getXiaoyvApi"
+          }
+        ]
+      },
+      {
+        "name": "设备信息",
+        "items": [
+          {
+            "name": "电量百分比",
+            "md": "md/02-设备/设备信息/getBatteryLevel.md",
+            "cmd": "m.getBatteryLevel"
+          },
+          {
+            "name": "主板代号",
+            "md": "md/02-设备/设备信息/getBoard.md",
+            "cmd": "m.getBoard"
+          },
+          {
+            "name": "BootLoader",
+            "md": "md/02-设备/设备信息/getBootLoader.md",
+            "cmd": "m.getBootLoader"
+          },
+          {
+            "name": "品牌",
+            "md": "md/02-设备/设备信息/getBrand.md",
+            "cmd": "m.getBrand"
+          },
+          {
+            "name": "首选 CPU ABI",
+            "md": "md/02-设备/设备信息/getCpuAbi.md",
+            "cmd": "m.getCpuAbi"
+          },
+          {
+            "name": "第二 CPU ABI",
+            "md": "md/02-设备/设备信息/getCpuAbi2.md",
+            "cmd": "m.getCpuAbi2"
+          },
+          {
+            "name": "CPU 架构",
+            "md": "md/02-设备/设备信息/getCpuArch.md",
+            "cmd": "m.getCpuArch"
+          },
+          {
+            "name": "设备代号",
+            "md": "md/02-设备/设备信息/getDevice.md",
+            "cmd": "m.getDevice"
+          },
+          {
+            "name": "Android ID",
+            "md": "md/02-设备/设备信息/getDeviceId.md",
+            "cmd": "m.getDeviceId"
+          },
+          {
+            "name": "屏幕 DPI",
+            "md": "md/02-设备/设备信息/getDisplayDpi.md",
+            "cmd": "m.getDisplayDpi"
+          },
+          {
+            "name": "屏幕详情",
+            "md": "md/02-设备/设备信息/getDisplayInfo.md",
+            "cmd": "m.getDisplayInfo"
+          },
+          {
+            "name": "屏幕旋转",
+            "md": "md/02-设备/设备信息/getDisplayRotate.md",
+            "cmd": "m.getDisplayRotate"
+          },
+          {
+            "name": "屏幕宽高",
+            "md": "md/02-设备/设备信息/getDisplaySize.md",
+            "cmd": "m.getDisplaySize"
+          },
+          {
+            "name": "系统指纹",
+            "md": "md/02-设备/设备信息/getFingerprint.md",
+            "cmd": "m.getFingerprint"
+          },
+          {
+            "name": "硬件代号",
+            "md": "md/02-设备/设备信息/getHardware.md",
+            "cmd": "m.getHardware"
+          },
+          {
+            "name": "Build.ID",
+            "md": "md/02-设备/设备信息/getId.md",
+            "cmd": "m.getId"
+          },
+          {
+            "name": "制造商",
+            "md": "md/02-设备/设备信息/getManufacturer.md",
+            "cmd": "m.getManufacturer"
+          },
+          {
+            "name": "型号",
+            "md": "md/02-设备/设备信息/getModel.md",
+            "cmd": "m.getModel"
+          },
+          {
+            "name": "系统时间字符串",
+            "md": "md/02-设备/设备信息/getNetWorkTime.md",
+            "cmd": "m.getNetWorkTime"
+          },
+          {
+            "name": "OAID",
+            "md": "md/02-设备/设备信息/getOaid.md",
+            "cmd": "m.getOaid"
+          },
+          {
+            "name": "系统版本名",
+            "md": "md/02-设备/设备信息/getOsVersionName.md",
+            "cmd": "m.getOsVersionName"
+          },
+          {
+            "name": "本应用包名",
+            "md": "md/02-设备/设备信息/getPackageName.md",
+            "cmd": "m.getPackageName"
+          },
+          {
+            "name": "产品代号",
+            "md": "md/02-设备/设备信息/getProduct.md",
+            "cmd": "m.getProduct"
+          },
+          {
+            "name": "运行环境类型",
+            "md": "md/02-设备/设备信息/getRunEnvType.md",
+            "cmd": "m.getRunEnvType"
+          },
+          {
+            "name": "共享存储路径",
+            "md": "md/02-设备/设备信息/getSdPath.md",
+            "cmd": "m.getSdPath"
+          },
+          {
+            "name": "API Level",
+            "md": "md/02-设备/设备信息/getSdkVersion.md",
+            "cmd": "m.getSdkVersion"
+          },
+          {
+            "name": "传感器列表",
+            "md": "md/02-设备/设备信息/getSensorsInfo.md",
+            "cmd": "m.getSensorsInfo"
+          },
+          {
+            "name": "SIM 序列号",
+            "md": "md/02-设备/设备信息/getSimSerialNumber.md",
+            "cmd": "m.getSimSerialNumber"
+          },
+          {
+            "name": "IMSI",
+            "md": "md/02-设备/设备信息/getSubscriberId.md",
+            "cmd": "m.getSubscriberId"
+          },
+          {
+            "name": "Wi-Fi MAC",
+            "md": "md/02-设备/设备信息/getWifiMac.md",
+            "cmd": "m.getWifiMac"
+          },
+          {
+            "name": "脚本所在目录",
+            "md": "md/02-设备/设备信息/getWorkPath.md",
+            "cmd": "m.getWorkPath"
+          }
+        ]
+      },
+      {
+        "name": "系统控制",
+        "items": [
+          {
+            "name": "保持屏幕常亮",
+            "md": "md/02-设备/系统控制/lockScreen.md",
+            "cmd": "m.lockScreen"
+          },
+          {
+            "name": "释放常亮锁",
+            "md": "md/02-设备/系统控制/unLockScreen.md",
+            "cmd": "m.unLockScreen"
+          },
+          {
+            "name": "开关屏幕",
+            "md": "md/02-设备/系统控制/setDisplayPowerOff.md",
+            "cmd": "m.setDisplayPowerOff"
+          },
+          {
+            "name": "飞行模式",
+            "md": "md/02-设备/系统控制/setAirplaneMode.md",
+            "cmd": "m.setAirplaneMode"
+          },
+          {
+            "name": "蓝牙开关",
+            "md": "md/02-设备/系统控制/setBTEnable.md",
+            "cmd": "m.setBTEnable"
+          },
+          {
+            "name": "Wi-Fi 开关",
+            "md": "md/02-设备/系统控制/setWifiEnable.md",
+            "cmd": "m.setWifiEnable"
+          },
+          {
+            "name": "拨打电话",
+            "md": "md/02-设备/系统控制/phoneCall.md",
+            "cmd": "m.phoneCall"
+          },
+          {
+            "name": "发送短信",
+            "md": "md/02-设备/系统控制/sendSms.md",
+            "cmd": "m.sendSms"
+          },
+          {
+            "name": "读取剪贴板",
+            "md": "md/02-设备/系统控制/readPasteboard.md",
+            "cmd": "m.readPasteboard"
+          },
+          {
+            "name": "写入剪贴板",
+            "md": "md/02-设备/系统控制/writePasteboard.md",
+            "cmd": "m.writePasteboard"
+          },
+          {
+            "name": "震动",
+            "md": "md/02-设备/系统控制/vibrate.md",
+            "cmd": "m.vibrate"
+          }
+        ]
+      },
+      {
+        "name": "脚本运行",
+        "items": [
+          {
+            "name": "脚本延时",
+            "md": "md/02-设备/脚本运行/sleep.md",
+            "cmd": "sleep"
+          },
+          {
+            "name": "系统时间戳",
+            "md": "md/02-设备/脚本运行/systemTime.md",
+            "cmd": "systemTime"
+          },
+          {
+            "name": "脚本运行时长",
+            "md": "md/02-设备/脚本运行/tickCount.md",
+            "cmd": "tickCount"
+          },
+          {
+            "name": "延时执行回调",
+            "md": "md/02-设备/系统与文件扩展/setTimer.md",
+            "cmd": "setTimer"
+          },
+          {
+            "name": "重启当前脚本",
+            "md": "md/02-设备/系统与文件扩展/restartScript.md",
+            "cmd": "restartScript"
+          },
+          {
+            "name": "设置 Root 环境",
+            "md": "md/02-设备/系统与文件扩展/setRootEnvMode.md",
+            "cmd": "setRootEnvMode"
+          },
+          {
+            "name": "启用无障碍环境",
+            "md": "md/02-设备/系统与文件扩展/setAccessibilityEnvMode.md",
+            "cmd": "setAccessibilityEnvMode"
+          }
+        ]
+      },
+      {
+        "name": "文件与资源",
+            "items": [
+              {
+                "name": "创建 ZIP",
+                "md": "md/02-设备/系统与文件扩展/zip.md",
+                "cmd": "zip"
+              },
+              {
+                "name": "解压 ZIP",
+                "md": "md/02-设备/系统与文件扩展/unZip.md",
+                "cmd": "unZip"
+              },
+              {
+                "name": "提取 APK assets",
+                "md": "md/02-设备/系统与文件扩展/extractApkAssets.md",
+                "cmd": "extractApkAssets"
+              },
+              {
+                "name": "提取 assets 压缩资源",
+                "md": "md/02-设备/系统与文件扩展/extractAssets.md",
+                "cmd": "extractAssets"
+              }
+            ]
+          },
+          {
+            "name": "媒体",
+            "items": [
+              {
+                "name": "播放音频",
+                "md": "md/02-设备/系统与文件扩展/playAudio.md",
+                "cmd": "playAudio"
+              },
+              {
+                "name": "停止音频",
+                "md": "md/02-设备/系统与文件扩展/stopAudio.md",
+                "cmd": "stopAudio"
+              },
+              {
+                "name": "扫描图片",
+                "md": "md/02-设备/系统与文件扩展/scanImage.md",
+                "cmd": "scanImage"
+              }
+            ]
+          },
+          {
+            "name": "显示与控制",
+            "items": [
+              {
+                "name": "设置虚拟 DPI",
+                "md": "md/02-设备/系统与文件扩展/setDpiToVir.md",
+                "cmd": "setDpiToVir"
+              },
+              {
+                "name": "恢复实际 DPI",
+                "md": "md/02-设备/系统与文件扩展/setDpiToRealy.md",
+                "cmd": "setDpiToRealy"
+              },
+              {
+                "name": "显示或隐藏控制栏",
+                "md": "md/02-设备/系统与文件扩展/showControlBar.md",
+                "cmd": "showControlBar"
+              },
+              {
+                "name": "设置控制栏位置",
+                "md": "md/02-设备/系统与文件扩展/setControlBarPosNew.md",
+                "cmd": "setControlBarPosNew"
+              }
+            ]
+          },
+          {
+            "name": "调试状态",
+            "md": "md/02-设备/系统与文件扩展/checkIsDebug.md",
+            "cmd": "checkIsDebug"
+          }
+    ]
+  },
+  {
+    "name": "Java",
+    "order": 140,
+    "items": [
+      {
+        "name": "概述与规则",
+        "md": "md/03-Java/概述与规则.md"
+      },
+      {
+        "name": "导入 Java 类/包",
+        "md": "md/03-Java/import.md",
+        "cmd": "import"
+      },
+      {
+        "name": "应用 Context",
+        "md": "md/03-Java/LuaEngine.getContext.md",
+        "cmd": "LuaEngine.getContext"
+      },
+      {
+        "name": "已导入扩展路径",
+        "md": "md/03-Java/LuaEngine.getExtensionPath.md",
+        "cmd": "LuaEngine.getExtensionPath"
+      },
+      {
+        "name": "HTTP GET",
+        "md": "md/03-Java/LuaEngine.httpGet.md",
+        "cmd": "LuaEngine.httpGet"
+      },
+      {
+        "name": "表单 POST",
+        "md": "md/03-Java/LuaEngine.httpPost.md",
+        "cmd": "LuaEngine.httpPost"
+      },
+      {
+        "name": "文本 POST",
+        "md": "md/03-Java/LuaEngine.httpPostData.md",
+        "cmd": "LuaEngine.httpPostData"
+      },
+      {
+        "name": "加载插件",
+        "md": "md/03-Java/LuaEngine.loadApk.md",
+        "cmd": "LuaEngine.loadApk"
+      },
+      {
+        "name": "发送邮件",
+        "md": "md/03-Java/LuaEngine.sendMail.md",
+        "cmd": "LuaEngine.sendMail / sendMailWithFile / sendMailWithMultiFile"
+      },
+      {
+        "name": "PaddleOCR 兼容",
+        "md": "md/03-Java/PaddleOcr.md",
+        "cmd": "PaddleOcr.loadModel / detect"
+      },
+      {
+        "name": "脚本结束回调",
+        "md": "md/03-Java/LuaEngine.registerExitCallback.md",
+        "cmd": "LuaEngine.registerExitCallback"
+      }
+    ]
+  },
+  {
+    "name": "多线程",
+    "order": 100,
+    "items": [
+      {
+        "name": "模型与规则",
+        "md": "md/04-多线程/模型与规则.md"
+      },
+      {
+        "name": "启动子线程",
+        "md": "md/04-多线程/beginThread.md",
+        "cmd": "m.thread.beginThread"
+      },
+      {
+        "name": "启动并返回线程",
+        "md": "md/04-多线程/newThread.md",
+        "cmd": "m.thread.newThread"
+      },
+      {
+        "name": "停止子线程",
+        "md": "md/04-多线程/stopThread.md",
+        "cmd": "thread:stopThread"
+      },
+      {
+        "name": "暂停与恢复主线程",
+        "md": "md/04-多线程/主线程暂停恢复.md",
+        "cmd": "setMainThreadPause / setMainThreadResume"
+      },
+      {
+        "name": "脚本结束回调",
+        "md": "md/04-多线程/脚本结束回调.md",
+        "cmd": "setStopCallBack"
+      }
+    ]
+  },
+  {
+    "name": "界面",
+    "order": 120,
+    "items": [
+      {
+        "name": "概述",
+        "md": "md/05-界面/概述.md"
+      },
+      {
+        "name": "弹窗",
+        "items": [
+          {
+            "name": "概述",
+            "md": "md/05-界面/弹窗/概述.md"
+          },
+          {
+            "name": "提示框",
+            "md": "md/05-界面/弹窗/alert.md",
+            "cmd": "m.dialog.alert"
+          },
+          {
+            "name": "确认框",
+            "md": "md/05-界面/弹窗/confirm.md",
+            "cmd": "m.dialog.confirm"
+          },
+          {
+            "name": "输入框",
+            "md": "md/05-界面/弹窗/input.md",
+            "cmd": "m.dialog.input"
+          },
+          {
+            "name": "单选框",
+            "md": "md/05-界面/弹窗/select.md",
+            "cmd": "m.dialog.select"
+          },
+          {
+            "name": "多字段表单",
+            "md": "md/05-界面/弹窗/form.md",
+            "cmd": "m.ui.form"
+          }
+        ]
+      },
+      {
+        "name": "HUD",
+        "items": [
+          {
+            "name": "概述",
+            "md": "md/05-界面/HUD/概述.md"
+          },
+          {
+            "name": "显示 HUD",
+            "md": "md/05-界面/HUD/show.md",
+            "cmd": "m.hud.show"
+          },
+          {
+            "name": "更新 HUD",
+            "md": "md/05-界面/HUD/update.md",
+            "cmd": "m.hud.update"
+          },
+          {
+            "name": "关闭 HUD",
+            "md": "md/05-界面/HUD/hide.md",
+            "cmd": "m.hud.hide"
+          },
+          {
+            "name": "等待 HUD 事件",
+            "md": "md/05-界面/HUD/waitEvent.md",
+            "cmd": "m.hud.waitEvent"
+          },
+          {
+            "name": "自动关闭提示",
+            "md": "md/05-界面/HUD/toast.md",
+            "cmd": "m.toast"
+          }
+        ]
+      },
+      {
+        "name": "HTML",
+        "items": [
+          {
+            "name": "概述",
+            "md": "md/05-界面/HTML/概述.md"
+          },
+          {
+            "name": "打开 HTML 页",
+            "md": "md/05-界面/HTML/open.md",
+            "cmd": "m.web.open"
+          },
+          {
+            "name": "等待页面事件",
+            "md": "md/05-界面/HTML/waitEvent.md",
+            "cmd": "m.web.waitEvent"
+          },
+          {
+            "name": "向页面发消息",
+            "md": "md/05-界面/HTML/postMessage.md",
+            "cmd": "m.web.postMessage"
+          },
+          {
+            "name": "关闭页面",
+            "md": "md/05-界面/HTML/close.md",
+            "cmd": "m.web.close"
+          },
+          {
+            "name": "JavaScript bridge",
+            "md": "md/05-界面/HTML/JS-bridge.md"
+          }
+        ]
+      },
+      {
+        "name": "底层UI",
+        "items": [
+          {
+            "name": "概述",
+            "md": "md/05-界面/底层UI/概述.md"
+          },
+          {
+            "name": "打开底层会话",
+            "md": "md/05-界面/底层UI/open.md",
+            "cmd": "m.ui.open"
+          },
+          {
+            "name": "更新会话",
+            "md": "md/05-界面/底层UI/update.md",
+            "cmd": "m.ui.update"
+          },
+          {
+            "name": "会话发消息",
+            "md": "md/05-界面/底层UI/postMessage.md",
+            "cmd": "m.ui.postMessage"
+          },
+          {
+            "name": "关闭会话",
+            "md": "md/05-界面/底层UI/close.md",
+            "cmd": "m.ui.close"
+          },
+          {
+            "name": "等待会话事件",
+            "md": "md/05-界面/底层UI/waitEvent.md",
+            "cmd": "m.ui.waitEvent"
+          },
+          {
+            "name": "关闭全部会话",
+            "md": "md/05-界面/底层UI/closeAll.md",
+            "cmd": "m.ui.closeAll"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ImGui",
+    "order": 180,
+    "items": [
+      {
+        "name": "概述与完整示例",
+        "md": "md/13-ImGui/概述.md"
+      },
+      {
+        "name": "常量表",
+        "md": "md/13-ImGui/常量表.md"
+      },
+      {
+        "name": "框架与窗口",
+        "items": [
+          {
+            "name": "概述",
+            "md": "md/13-ImGui/框架与窗口.md"
+          },
+          {
+            "name": "检测支持状态",
+            "md": "md/13-ImGui/框架与窗口/isSupport.md",
+            "cmd": "imgui.isSupport"
+          },
+          {
+            "name": "显示全屏框架",
+            "md": "md/13-ImGui/框架与窗口/show.md",
+            "cmd": "imgui.show"
+          },
+          {
+            "name": "显示独立窗口",
+            "md": "md/13-ImGui/框架与窗口/showWindow.md",
+            "cmd": "imgui.showWindow"
+          },
+          {
+            "name": "关闭框架",
+            "md": "md/13-ImGui/框架与窗口/close.md",
+            "cmd": "imgui.close"
+          },
+          {
+            "name": "设置颜色主题",
+            "md": "md/13-ImGui/框架与窗口/setColorTheme.md",
+            "cmd": "imgui.setColorTheme"
+          },
+          {
+            "name": "创建窗口",
+            "md": "md/13-ImGui/框架与窗口/createWindow.md",
+            "cmd": "imgui.createWindow"
+          },
+          {
+            "name": "销毁窗口",
+            "md": "md/13-ImGui/框架与窗口/destroyWindow.md",
+            "cmd": "imgui.destroyWindow"
+          },
+          {
+            "name": "窗口关闭回调",
+            "md": "md/13-ImGui/框架与窗口/setOnClose.md",
+            "cmd": "imgui.setOnClose"
+          },
+          {
+            "name": "设置窗口位置",
+            "md": "md/13-ImGui/框架与窗口/setWindowPos.md",
+            "cmd": "imgui.setWindowPos"
+          },
+          {
+            "name": "设置窗口大小",
+            "md": "md/13-ImGui/框架与窗口/setWindowSize.md",
+            "cmd": "imgui.setWindowSize"
+          },
+          {
+            "name": "获取窗口位置",
+            "md": "md/13-ImGui/框架与窗口/getWindowPos.md",
+            "cmd": "imgui.getWindowPos"
+          },
+          {
+            "name": "设置窗口标志",
+            "md": "md/13-ImGui/框架与窗口/setWindowFlags.md",
+            "cmd": "imgui.setWindowFlags"
+          }
+        ]
+      },
+      {
+        "name": "布局与基础控件",
+        "items": [
+          {
+            "name": "概述",
+            "md": "md/13-ImGui/布局与基础控件.md"
+          },
+          {
+            "name": "垂直布局",
+            "md": "md/13-ImGui/布局与基础控件/createVerticalLayout.md",
+            "cmd": "imgui.createVerticalLayout"
+          },
+          {
+            "name": "水平布局",
+            "md": "md/13-ImGui/布局与基础控件/createHorticalLayout.md",
+            "cmd": "imgui.createHorticalLayout"
+          },
+          {
+            "name": "树形布局",
+            "md": "md/13-ImGui/布局与基础控件/createTreeBoxLayout.md",
+            "cmd": "imgui.createTreeBoxLayout"
+          },
+          {
+            "name": "创建标签栏",
+            "md": "md/13-ImGui/布局与基础控件/createTabBar.md",
+            "cmd": "imgui.createTabBar"
+          },
+          {
+            "name": "添加标签页",
+            "md": "md/13-ImGui/布局与基础控件/addTabBarItem.md",
+            "cmd": "imgui.addTabBarItem"
+          },
+          {
+            "name": "控件同行",
+            "md": "md/13-ImGui/布局与基础控件/sameLine.md",
+            "cmd": "imgui.sameLine"
+          },
+          {
+            "name": "布局边框",
+            "md": "md/13-ImGui/布局与基础控件/setLayoutBorderVisible.md",
+            "cmd": "imgui.setLayoutBorderVisible"
+          },
+          {
+            "name": "创建按钮",
+            "md": "md/13-ImGui/布局与基础控件/createButton.md",
+            "cmd": "imgui.createButton"
+          },
+          {
+            "name": "按钮点击回调",
+            "md": "md/13-ImGui/布局与基础控件/setOnClick.md",
+            "cmd": "imgui.setOnClick"
+          },
+          {
+            "name": "创建标签",
+            "md": "md/13-ImGui/布局与基础控件/createLabel.md",
+            "cmd": "imgui.createLabel"
+          },
+          {
+            "name": "创建复选框",
+            "md": "md/13-ImGui/布局与基础控件/createCheckBox.md",
+            "cmd": "imgui.createCheckBox"
+          },
+          {
+            "name": "创建开关",
+            "md": "md/13-ImGui/布局与基础控件/createSwitch.md",
+            "cmd": "imgui.createSwitch"
+          },
+          {
+            "name": "设置选中状态",
+            "md": "md/13-ImGui/布局与基础控件/setChecked.md",
+            "cmd": "imgui.setChecked"
+          },
+          {
+            "name": "获取选中状态",
+            "md": "md/13-ImGui/布局与基础控件/isChecked.md",
+            "cmd": "imgui.isChecked"
+          },
+          {
+            "name": "选中状态回调",
+            "md": "md/13-ImGui/布局与基础控件/setOnCheck.md",
+            "cmd": "imgui.setOnCheck"
+          },
+          {
+            "name": "创建输入框",
+            "md": "md/13-ImGui/布局与基础控件/createInputText.md",
+            "cmd": "imgui.createInputText"
+          },
+          {
+            "name": "获取输入文本",
+            "md": "md/13-ImGui/布局与基础控件/getInputText.md",
+            "cmd": "imgui.getInputText"
+          },
+          {
+            "name": "设置输入文本",
+            "md": "md/13-ImGui/布局与基础控件/setInputText.md",
+            "cmd": "imgui.setInputText"
+          },
+          {
+            "name": "设置输入类型",
+            "md": "md/13-ImGui/布局与基础控件/setInputType.md",
+            "cmd": "imgui.setInputType"
+          },
+          {
+            "name": "创建进度条",
+            "md": "md/13-ImGui/布局与基础控件/createProgressBar.md",
+            "cmd": "imgui.createProgressBar"
+          },
+          {
+            "name": "设置进度",
+            "md": "md/13-ImGui/布局与基础控件/setProgressBarPos.md",
+            "cmd": "imgui.setProgressBarPos"
+          },
+          {
+            "name": "获取进度",
+            "md": "md/13-ImGui/布局与基础控件/getProgressBarPos.md",
+            "cmd": "imgui.getProgressBarPos"
+          },
+          {
+            "name": "创建滑动条",
+            "md": "md/13-ImGui/布局与基础控件/createSlider.md",
+            "cmd": "imgui.createSlider"
+          },
+          {
+            "name": "设置滑动条",
+            "md": "md/13-ImGui/布局与基础控件/setSlider.md",
+            "cmd": "imgui.setSlider"
+          },
+          {
+            "name": "获取滑动条位置",
+            "md": "md/13-ImGui/布局与基础控件/getSliderPos.md",
+            "cmd": "imgui.getSliderPos"
+          },
+          {
+            "name": "滑动条回调",
+            "md": "md/13-ImGui/布局与基础控件/setOnSliderEvent.md",
+            "cmd": "imgui.setOnSliderEvent"
+          },
+          {
+            "name": "创建颜色选择器",
+            "md": "md/13-ImGui/布局与基础控件/createColorPicker.md",
+            "cmd": "imgui.createColorPicker"
+          }
+        ]
+      },
+      {
+        "name": "选择控件与表格",
+        "items": [
+          {
+            "name": "概述",
+            "md": "md/13-ImGui/选择控件与表格.md"
+          },
+          {
+            "name": "创建组合框",
+            "md": "md/13-ImGui/选择控件与表格/createComboBox.md",
+            "cmd": "imgui.createComboBox"
+          },
+          {
+            "name": "添加组合框选项",
+            "md": "md/13-ImGui/选择控件与表格/addOptionItem.md",
+            "cmd": "imgui.addOptionItem"
+          },
+          {
+            "name": "获取选项文本",
+            "md": "md/13-ImGui/选择控件与表格/getItemText.md",
+            "cmd": "imgui.getItemText"
+          },
+          {
+            "name": "删除选项",
+            "md": "md/13-ImGui/选择控件与表格/removeItemAt.md",
+            "cmd": "imgui.removeItemAt"
+          },
+          {
+            "name": "清空选项",
+            "md": "md/13-ImGui/选择控件与表格/removeAllItems.md",
+            "cmd": "imgui.removeAllItems"
+          },
+          {
+            "name": "获取选择索引",
+            "md": "md/13-ImGui/选择控件与表格/getSelectedItemIndex.md",
+            "cmd": "imgui.getSelectedItemIndex"
+          },
+          {
+            "name": "设置选择项",
+            "md": "md/13-ImGui/选择控件与表格/setItemSelected.md",
+            "cmd": "imgui.setItemSelected"
+          },
+          {
+            "name": "选择回调",
+            "md": "md/13-ImGui/选择控件与表格/setOnSelectEvent.md",
+            "cmd": "imgui.setOnSelectEvent"
+          },
+          {
+            "name": "创建单选组",
+            "md": "md/13-ImGui/选择控件与表格/createRadioGroup.md",
+            "cmd": "imgui.createRadioGroup"
+          },
+          {
+            "name": "添加单选项",
+            "md": "md/13-ImGui/选择控件与表格/addRadioBox.md",
+            "cmd": "imgui.addRadioBox"
+          },
+          {
+            "name": "获取项目数量",
+            "md": "md/13-ImGui/选择控件与表格/getItemCount.md",
+            "cmd": "imgui.getItemCount"
+          },
+          {
+            "name": "创建表格",
+            "md": "md/13-ImGui/选择控件与表格/createTableView.md",
+            "cmd": "imgui.createTableView"
+          },
+          {
+            "name": "设置表头",
+            "md": "md/13-ImGui/选择控件与表格/setTableHeaderItem.md",
+            "cmd": "imgui.setTableHeaderItem"
+          },
+          {
+            "name": "插入表格行",
+            "md": "md/13-ImGui/选择控件与表格/insertTableRow.md",
+            "cmd": "imgui.insertTableRow"
+          },
+          {
+            "name": "获取单元格文本",
+            "md": "md/13-ImGui/选择控件与表格/getTableItemText.md",
+            "cmd": "imgui.getTableItemText"
+          },
+          {
+            "name": "设置单元格文本",
+            "md": "md/13-ImGui/选择控件与表格/setTableItemText.md",
+            "cmd": "imgui.setTableItemText"
+          },
+          {
+            "name": "删除表格行",
+            "md": "md/13-ImGui/选择控件与表格/deleteTableRow.md",
+            "cmd": "imgui.deleteTableRow"
+          },
+          {
+            "name": "清空表格",
+            "md": "md/13-ImGui/选择控件与表格/clearTable.md",
+            "cmd": "imgui.clearTable"
+          },
+          {
+            "name": "表格选择回调",
+            "md": "md/13-ImGui/选择控件与表格/setOnSelectEventEx.md",
+            "cmd": "imgui.setOnSelectEventEx"
+          }
+        ]
+      },
+      {
+        "name": "图片、样式与图形",
+        "items": [
+          {
+            "name": "概述",
+            "md": "md/13-ImGui/图片样式与图形.md"
+          },
+          {
+            "name": "设置控件尺寸",
+            "md": "md/13-ImGui/图片样式与图形/setWidgetSize.md",
+            "cmd": "imgui.setWidgetSize"
+          },
+          {
+            "name": "设置控件可见性",
+            "md": "md/13-ImGui/图片样式与图形/setWidgetVisible.md",
+            "cmd": "imgui.setWidgetVisible"
+          },
+          {
+            "name": "获取控件可见性",
+            "md": "md/13-ImGui/图片样式与图形/isWidgetVisible.md",
+            "cmd": "imgui.isWidgetVisible"
+          },
+          {
+            "name": "设置控件样式",
+            "md": "md/13-ImGui/图片样式与图形/setWidgetStyle.md",
+            "cmd": "imgui.setWidgetStyle"
+          },
+          {
+            "name": "设置控件颜色",
+            "md": "md/13-ImGui/图片样式与图形/setWidgetColor.md",
+            "cmd": "imgui.setWidgetColor"
+          },
+          {
+            "name": "创建图片控件",
+            "md": "md/13-ImGui/图片样式与图形/createImage.md",
+            "cmd": "imgui.createImage"
+          },
+          {
+            "name": "设置路径图片",
+            "md": "md/13-ImGui/图片样式与图形/setImage.md",
+            "cmd": "imgui.setImage"
+          },
+          {
+            "name": "设置 Bitmap 图片",
+            "md": "md/13-ImGui/图片样式与图形/setImageFromBitmap.md",
+            "cmd": "imgui.setImageFromBitmap"
+          },
+          {
+            "name": "创建矩形",
+            "md": "md/13-ImGui/图片样式与图形/createRectangle.md",
+            "cmd": "imgui.createRectangle"
+          },
+          {
+            "name": "创建圆形",
+            "md": "md/13-ImGui/图片样式与图形/createCircle.md",
+            "cmd": "imgui.createCircle"
+          },
+          {
+            "name": "创建多边形",
+            "md": "md/13-ImGui/图片样式与图形/createPolygon.md",
+            "cmd": "imgui.createPolygon"
+          },
+          {
+            "name": "创建线段",
+            "md": "md/13-ImGui/图片样式与图形/createLine.md",
+            "cmd": "imgui.createLine"
+          },
+          {
+            "name": "创建位图图形",
+            "md": "md/13-ImGui/图片样式与图形/createBitmapShape.md",
+            "cmd": "imgui.createBitmapShape"
+          },
+          {
+            "name": "创建文本图形",
+            "md": "md/13-ImGui/图片样式与图形/createShapeText.md",
+            "cmd": "imgui.createShapeText"
+          },
+          {
+            "name": "设置图形位置",
+            "md": "md/13-ImGui/图片样式与图形/setShapePosition.md",
+            "cmd": "imgui.setShapePosition"
+          },
+          {
+            "name": "设置图形可见性",
+            "md": "md/13-ImGui/图片样式与图形/setShapeVisibility.md",
+            "cmd": "imgui.setShapeVisibility"
+          },
+          {
+            "name": "获取图形可见性",
+            "md": "md/13-ImGui/图片样式与图形/isShapeVisibility.md",
+            "cmd": "imgui.isShapeVisibility"
+          },
+          {
+            "name": "设置图形文本",
+            "md": "md/13-ImGui/图片样式与图形/setShapeTextString.md",
+            "cmd": "imgui.setShapeTextString"
+          },
+          {
+            "name": "设置图形文字颜色",
+            "md": "md/13-ImGui/图片样式与图形/setShapeTextColor.md",
+            "cmd": "imgui.setShapeTextColor"
+          },
+          {
+            "name": "设置图形文字背景",
+            "md": "md/13-ImGui/图片样式与图形/setShapeTextBackground.md",
+            "cmd": "imgui.setShapeTextBackground"
+          },
+          {
+            "name": "设置图形文字缩放",
+            "md": "md/13-ImGui/图片样式与图形/setShapeTextFontScale.md",
+            "cmd": "imgui.setShapeTextFontScale"
+          },
+          {
+            "name": "替换位图图形",
+            "md": "md/13-ImGui/图片样式与图形/setBitmapShape.md",
+            "cmd": "imgui.setBitmapShape"
+          },
+          {
+            "name": "设置图形线宽",
+            "md": "md/13-ImGui/图片样式与图形/setShapeThickness.md",
+            "cmd": "imgui.setShapeThickness"
+          },
+          {
+            "name": "删除图形",
+            "md": "md/13-ImGui/图片样式与图形/removeShape.md",
+            "cmd": "imgui.removeShape"
+          }
+        ]
+      },
+      {
+        "name": "辅助、回调与生命周期",
+        "items": [
+          {
+            "name": "概述",
+            "md": "md/13-ImGui/回调线程与生命周期.md"
+          },
+          {
+            "name": "获取最近错误",
+            "md": "md/13-ImGui/辅助方法/getLastError.md",
+            "cmd": "imgui.getLastError"
+          },
+          {
+            "name": "检查句柄",
+            "md": "md/13-ImGui/辅助方法/isValidHandle.md",
+            "cmd": "imgui.isValidHandle"
+          },
+          {
+            "name": "投递回调",
+            "md": "md/13-ImGui/辅助方法/post.md",
+            "cmd": "imgui.post"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "脚本包",
+    "order": 130,
+    "items": [
+      {
+        "name": "打包规则",
+        "md": "md/06-脚本包/打包规则.md"
+      },
+      {
+        "name": "读包内资源",
+        "md": "md/06-脚本包/read_alpkg_file.md",
+        "cmd": "m.read_alpkg_file"
+      }
+    ]
+  },
+  {
+    "name": "日志",
+    "order": 30,
+    "items": [
+      {
+        "name": "输出日志",
+        "md": "md/07-日志/print.md",
+        "cmd": "print / printEx"
+      },
+      {
+        "name": "关闭普通日志",
+        "md": "md/07-日志/setLogOff.md",
+        "cmd": "setLogOff"
+      }
+    ]
+  },
+  {
+    "name": "输入",
+    "order": 70,
+    "items": [
+      {
+        "name": "概述",
+        "md": "md/08-输入/概述.md"
+      },
+      {
+        "name": "坐标缩放与手势",
+        "md": "md/08-输入/坐标缩放与手势.md",
+        "cmd": "setScreenScale / touchDown / touchMove / touchUp / tap / longTap / touchMoveEx / swipe"
+      },
+      {
+        "name": "按下触摸",
+        "md": "md/08-输入/touchDown.md",
+        "cmd": "touchDown"
+      },
+      {
+        "name": "移动触摸",
+        "md": "md/08-输入/touchMove.md",
+        "cmd": "touchMove"
+      },
+      {
+        "name": "抬起触摸",
+        "md": "md/08-输入/touchUp.md",
+        "cmd": "touchUp"
+      },
+      {
+        "name": "按下按键",
+        "md": "md/08-输入/keyDown.md",
+        "cmd": "keyDown"
+      },
+      {
+        "name": "抬起按键",
+        "md": "md/08-输入/keyUp.md",
+        "cmd": "keyUp"
+      },
+      {
+        "name": "点击按键",
+        "md": "md/08-输入/keyPress.md",
+        "cmd": "keyPress"
+      },
+      {
+        "name": "注入文本",
+        "md": "md/08-输入/inputText.md",
+        "cmd": "inputText"
+      }
+    ]
+  },
+  {
+    "name": "输入法",
+    "order": 90,
+    "items": [
+      {
+        "name": "概述",
+        "md": "md/09-输入法/概述.md"
+      },
+      {
+        "name": "锁定输入法",
+        "md": "md/09-输入法/lock.md",
+        "cmd": "m.ime.lock"
+      },
+      {
+        "name": "提交文本",
+        "md": "md/09-输入法/setText.md",
+        "cmd": "m.ime.setText"
+      },
+      {
+        "name": "解锁输入法",
+        "md": "md/09-输入法/unlock.md",
+        "cmd": "m.ime.unlock"
+      },
+      {
+        "name": "输入控制补充",
+        "md": "md/09-输入法/兼容控制.md",
+        "cmd": "m.ime.deleteChar / m.ime.finishInput / m.ime.keyEvent"
+      }
+    ]
+  },
+  {
+    "name": "图像",
+    "order": 50,
+    "items": [
+      {
+        "name": "概述",
+        "md": "md/10-图像/概述.md"
+      },
+      {
+        "name": "截图来源与缓存",
+        "items": [
+          {
+            "name": "获取屏幕像素",
+            "md": "md/10-图像/截图与缓存/获取屏幕像素.md",
+            "cmd": "m.getScreenPixels"
+          },
+          {
+            "name": "设置图片屏幕",
+            "md": "md/10-图像/截图与缓存/设置图片屏幕.md",
+            "cmd": "m.setScreenPixels"
+          },
+          {
+            "name": "还原物理屏幕",
+            "md": "md/10-图像/截图与缓存/还原物理屏幕.md",
+            "cmd": "m.restoreScreenPixels"
+          },
+          {
+            "name": "锁住截图帧",
+            "md": "md/10-图像/截图与缓存/锁住截图帧.md",
+            "cmd": "m.keepCapture"
+          },
+          {
+            "name": "解锁截图帧",
+            "md": "md/10-图像/截图与缓存/解锁截图帧.md",
+            "cmd": "m.releaseCapture"
+          },
+          {
+            "name": "设置截图缓存时间",
+            "md": "md/10-图像/截图与缓存/设置截图缓存时间.md",
+            "cmd": "m.setCaptureCacheMs / setCaptureCacheMs / setSnapCacheTime"
+          },
+          {
+            "name": "缓存规则",
+            "md": "md/10-图像/截图与缓存/缓存规则.md"
+          }
+        ]
+      },
+      {
+        "name": "保存截图",
+        "items": [
+          {
+            "name": "保存截图",
+            "md": "md/10-图像/截图输出/保存截图.md",
+            "cmd": "m.capture"
+          },
+          {
+            "name": "保存截图别名",
+            "md": "md/10-图像/截图输出/保存截图别名.md",
+            "cmd": "m.snapShot"
+          }
+        ]
+      },
+      {
+        "name": "模板找图",
+        "items": [
+          {
+            "name": "查找模板",
+            "md": "md/10-图像/模板找图/查找模板.md",
+            "cmd": "m.findPic"
+          },
+          {
+            "name": "查找全部模板",
+            "md": "md/10-图像/模板找图/查找全部模板.md",
+            "cmd": "m.findPicAll"
+          },
+          {
+            "name": "清理模板缓存",
+            "md": "md/10-图像/模板找图/清理模板缓存.md",
+            "cmd": "m.clearImageCache"
+          },
+          {
+            "name": "设置模板缓存上限",
+            "md": "md/10-图像/模板找图/设置模板缓存上限.md",
+            "cmd": "m.setImageCacheMaxBytes"
+          }
+        ]
+      },
+      {
+        "name": "兼容找图",
+        "items": [
+          {
+            "name": "概述",
+            "md": "md/10-图像/兼容找图/概述.md"
+          },
+          {
+            "name": "多模板找图",
+            "md": "md/10-图像/兼容找图/多模板找图.md",
+            "cmd": "m.findPicEx / m.findImage"
+          },
+          {
+            "name": "查找全部模板坐标",
+            "md": "md/10-图像/兼容找图/查找全部模板坐标.md",
+            "cmd": "m.findPicAllPoint"
+          },
+          {
+            "name": "快速多模板找图",
+            "md": "md/10-图像/兼容找图/快速多模板找图.md",
+            "cmd": "m.findPicFast"
+          }
+        ]
+      },
+      {
+        "name": "OpenCV",
+        "items": [
+          {
+            "name": "概述",
+            "md": "md/10-图像/OpenCV/概述.md"
+          },
+          {
+            "name": "OpenCV 截图 Mat",
+            "md": "md/10-图像/OpenCV/snapShot.md",
+            "cmd": "cv.snapShot"
+          },
+          {
+            "name": "整型点值指针",
+            "md": "md/10-图像/OpenCV/Point.md",
+            "cmd": "cv.newPoint / cv.getPoint / cv.setPoint"
+          },
+          {
+            "name": "浮点点值指针",
+            "md": "md/10-图像/OpenCV/Point2f.md",
+            "cmd": "cv.newPoint2f / cv.getPoint2f / cv.setPoint2f"
+          },
+          {
+            "name": "Int 值指针",
+            "md": "md/10-图像/OpenCV/Int.md",
+            "cmd": "cv.newInt / cv.getInt / cv.setInt"
+          },
+          {
+            "name": "Double 值指针",
+            "md": "md/10-图像/OpenCV/Double.md",
+            "cmd": "cv.newDouble / cv.getDouble / cv.setDouble"
+          },
+          {
+            "name": "Float 值指针",
+            "md": "md/10-图像/OpenCV/Float.md",
+            "cmd": "cv.newFloat / cv.getFloat / cv.setFloat"
+          },
+          {
+            "name": "Long 值指针",
+            "md": "md/10-图像/OpenCV/Long.md",
+            "cmd": "cv.newLong / cv.getLong / cv.setLong"
+          },
+          {
+            "name": "Byte 值指针",
+            "md": "md/10-图像/OpenCV/Byte.md",
+            "cmd": "cv.newByte / cv.getByte / cv.setByte"
+          },
+          {
+            "name": "使值指针失效",
+            "md": "md/10-图像/OpenCV/deletePtr.md",
+            "cmd": "cv.deletePtr"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "找色",
+    "order": 60,
+    "items": [
+      {
+        "name": "概述",
+        "md": "md/11-找色/概述.md"
+      },
+      {
+        "name": "取色与转换",
+        "items": [
+          {
+            "name": "获取单点颜色",
+            "md": "md/11-找色/取色与转换/获取单点颜色.md",
+            "cmd": "m.getPixelColor"
+          },
+          {
+            "name": "获取区域像素",
+            "md": "md/11-找色/取色与转换/获取区域像素.md",
+            "cmd": "m.getScreenPixel"
+          },
+          {
+            "name": "拆分颜色通道",
+            "md": "md/11-找色/取色与转换/拆分颜色通道.md",
+            "cmd": "m.colorToRGB"
+          },
+          {
+            "name": "颜色差值",
+            "md": "md/11-找色/取色与转换/颜色差值.md",
+            "cmd": "m.colorDiff"
+          }
+        ]
+      },
+      {
+        "name": "比色与统计",
+        "items": [
+          {
+            "name": "单点比色",
+            "md": "md/11-找色/比色与统计/单点比色.md",
+            "cmd": "m.cmpColor"
+          },
+          {
+            "name": "多点比色",
+            "md": "md/11-找色/比色与统计/多点比色.md",
+            "cmd": "m.cmpColorEx / m.cmpColorExT"
+          },
+          {
+            "name": "统计颜色数量",
+            "md": "md/11-找色/比色与统计/统计颜色数量.md",
+            "cmd": "m.getColorNum"
+          }
+        ]
+      },
+      {
+        "name": "查找与分析",
+        "items": [
+          {
+            "name": "原生多点找色",
+            "md": "md/11-找色/查找与分析/原生多点找色.md",
+            "cmd": "m.findColors"
+          },
+          {
+            "name": "查找指定颜色",
+            "md": "md/11-找色/查找与分析/查找指定颜色.md",
+            "cmd": "m.findColor / m.findColorT"
+          },
+          {
+            "name": "查找多点颜色",
+            "md": "md/11-找色/查找与分析/查找多点颜色.md",
+            "cmd": "m.findMultiColor / m.findMultiColorT"
+          },
+          {
+            "name": "查找全部多点颜色",
+            "md": "md/11-找色/查找与分析/查找全部多点颜色.md",
+            "cmd": "m.findMultiColorAll / m.findMultiColorAllT"
+          },
+          {
+            "name": "检测画面静止",
+            "md": "md/11-找色/查找与分析/检测画面静止.md",
+            "cmd": "m.isDisplayDead"
+          },
+          {
+            "name": "查找圆形",
+            "md": "md/11-找色/查找与分析/查找圆形.md",
+            "cmd": "m.findCircle"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "扩展开发",
+    "order": 210,
+    "items": [
+      {
+        "name": "对应关系",
+        "md": "md/12-C-ABI/对应关系.md"
+      },
+      {
+        "name": "ImGui 完整对应关系",
+        "md": "md/12-C-ABI/ImGui对应关系.md"
+      },
+      {
+        "name": "声明摘录",
+        "md": "md/12-C-ABI/声明.md"
+      }
+    ]
+  },
+  {
+    "name": "OCR",
+    "order": 160,
+    "items": [
+      {
+        "name": "概述",
+        "md": "md/14-OCR/概述.md"
+      },
+      {
+        "name": "加载内置模型",
+        "md": "md/14-OCR/加载内置模型.md",
+        "cmd": "m.ocr.loadBuiltin"
+      },
+      {
+        "name": "加载模型",
+        "md": "md/14-OCR/加载模型.md",
+        "cmd": "m.ocr.load"
+      },
+      {
+        "name": "释放模型",
+        "md": "md/14-OCR/释放模型.md",
+        "cmd": "m.ocr.release"
+      },
+      {
+        "name": "模型状态",
+        "md": "md/14-OCR/模型状态.md",
+        "cmd": "m.ocr.isLoaded"
+      },
+      {
+        "name": "识别图片",
+        "md": "md/14-OCR/识别图片.md",
+        "cmd": "m.ocr.read"
+      },
+      {
+        "name": "找文字",
+        "md": "md/14-OCR/找文字.md",
+        "cmd": "m.ocr.findText"
+      }
+    ]
+  },
+  {
+    "name": "YOLO",
+    "order": 170,
+    "items": [
+      {
+        "name": "概述",
+        "md": "md/20-YOLO/概述.md"
+      },
+      {
+        "name": "运行时信息",
+        "md": "md/20-YOLO/运行时信息.md",
+        "cmd": "m.yolo.runtimeInfo"
+      },
+      {
+        "name": "运行时可用",
+        "md": "md/20-YOLO/运行时可用.md",
+        "cmd": "m.yolo.isAvailable"
+      },
+      {
+        "name": "加载模型",
+        "md": "md/20-YOLO/加载模型.md",
+        "cmd": "m.yolo.load"
+      },
+      {
+        "name": "初始化默认模型",
+        "md": "md/20-YOLO/初始化默认模型.md",
+        "cmd": "m.yolo.init"
+      },
+      {
+        "name": "释放模型",
+        "md": "md/20-YOLO/释放模型.md",
+        "cmd": "m.yolo.release"
+      },
+      {
+        "name": "模型状态",
+        "md": "md/20-YOLO/模型状态.md",
+        "cmd": "m.yolo.isLoaded"
+      },
+      {
+        "name": "检测屏幕",
+        "md": "md/20-YOLO/检测屏幕.md",
+        "cmd": "m.yolo.detectScreen"
+      },
+      {
+        "name": "检测图片",
+        "md": "md/20-YOLO/检测图片.md",
+        "cmd": "m.yolo.detectFile"
+      },
+      {
+        "name": "简化检测",
+        "md": "md/20-YOLO/简化检测.md",
+        "cmd": "m.yolo.detect"
+      }
+    ]
+  },
+  {
+    "name": "点阵字库",
+    "order": 150,
+    "items": [
+      {
+        "name": "概述",
+        "md": "md/15-点阵字库/概述.md"
+      },
+      {
+        "name": "设置字库",
+        "md": "md/15-点阵字库/设置字库.md",
+        "cmd": "m.font.setDict"
+      },
+      {
+        "name": "追加字库",
+        "md": "md/15-点阵字库/追加字库.md",
+        "cmd": "m.font.addDict"
+      },
+      {
+        "name": "选择字库",
+        "md": "md/15-点阵字库/使用字库.md",
+        "cmd": "m.font.useDict"
+      },
+      {
+        "name": "获取字形点阵",
+        "md": "md/15-点阵字库/获取字形点阵.md",
+        "cmd": "m.font.getFontPixel"
+      },
+      {
+        "name": "结构化识字",
+        "md": "md/15-点阵字库/结构化识字.md",
+        "cmd": "m.font.read"
+      },
+      {
+        "name": "识字",
+        "md": "md/15-点阵字库/识字.md",
+        "cmd": "m.font.ocr"
+      },
+      {
+        "name": "识字详情",
+        "md": "md/15-点阵字库/识字详情.md",
+        "cmd": "m.font.ocrEx"
+      },
+      {
+        "name": "找字",
+        "md": "md/15-点阵字库/找字.md",
+        "cmd": "m.font.findStr"
+      },
+      {
+        "name": "找字全部",
+        "md": "md/15-点阵字库/找字全部.md",
+        "cmd": "m.font.findStrEx"
+      },
+      {
+        "name": "快速找字",
+        "md": "md/15-点阵字库/快速找字.md",
+        "cmd": "m.font.findStrFast"
+      },
+      {
+        "name": "快速找字全部",
+        "md": "md/15-点阵字库/快速找字全部.md",
+        "cmd": "m.font.findStrFastEx"
+      },
+      {
+        "name": "兼容入口",
+        "items": [
+          {
+            "name": "设置兼容字库",
+            "md": "md/15-点阵字库/兼容入口/设置兼容字库.md",
+            "cmd": "m.setDict"
+          },
+          {
+            "name": "选择兼容字库",
+            "md": "md/15-点阵字库/兼容入口/选择兼容字库.md",
+            "cmd": "m.useDict"
+          },
+          {
+            "name": "兼容识字",
+            "md": "md/15-点阵字库/兼容入口/兼容识字.md",
+            "cmd": "m.ocr"
+          },
+          {
+            "name": "兼容识字详情",
+            "md": "md/15-点阵字库/兼容入口/兼容识字详情.md",
+            "cmd": "m.ocrj"
+          },
+          {
+            "name": "兼容找字",
+            "md": "md/15-点阵字库/兼容入口/兼容找字.md",
+            "cmd": "m.findStr"
+          },
+          {
+            "name": "兼容找字全部",
+            "md": "md/15-点阵字库/兼容入口/兼容找字全部.md",
+            "cmd": "m.findStrEx"
+          },
+          {
+            "name": "按字库兼容识字",
+            "md": "md/15-点阵字库/兼容入口/按字库兼容识字.md",
+            "cmd": "m.ocrNew / m.ocrjNew"
+          },
+          {
+            "name": "按字库兼容找字全部",
+            "md": "md/15-点阵字库/兼容入口/按字库兼容找字全部.md",
+            "cmd": "m.findStrExNew"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "网络与通信",
+    "order": 110,
+    "items": [
+      {
+        "name": "概述",
+        "md": "md/16-网络与通信/概述.md"
+      },
+      {
+        "name": "项目 HTTP",
+        "items": [
+          {
+            "name": "HTTP GET",
+            "md": "md/16-网络与通信/项目HTTP/HTTP GET.md",
+            "cmd": "m.httpGet"
+          },
+          {
+            "name": "HTTP POST",
+            "md": "md/16-网络与通信/项目HTTP/HTTP POST.md",
+            "cmd": "m.httpPost"
+          },
+          {
+            "name": "异步 HTTP GET",
+            "md": "md/16-网络与通信/项目HTTP/异步 HTTP GET.md",
+            "cmd": "m.asynHttpGet"
+          },
+          {
+            "name": "异步 HTTP POST",
+            "md": "md/16-网络与通信/项目HTTP/异步 HTTP POST.md",
+            "cmd": "m.asynHttpPost"
+          },
+          {
+            "name": "下载文件",
+            "md": "md/16-网络与通信/项目HTTP/下载文件.md",
+            "cmd": "m.downloadFile"
+          },
+          {
+            "name": "上传文件",
+            "md": "md/16-网络与通信/项目HTTP/上传文件.md",
+            "cmd": "m.uploadFile"
+          }
+        ]
+      },
+      {
+        "name": "WebSocket",
+        "items": [
+          {
+            "name": "创建 WebSocket",
+            "md": "md/16-网络与通信/WebSocket/创建 WebSocket.md",
+            "cmd": "m.startWebSocket"
+          },
+          {
+            "name": "发送 WebSocket 数据",
+            "md": "md/16-网络与通信/WebSocket/发送 WebSocket 数据.md",
+            "cmd": "m.sendWebSocket"
+          },
+          {
+            "name": "关闭 WebSocket",
+            "md": "md/16-网络与通信/WebSocket/关闭 WebSocket.md",
+            "cmd": "m.closeWebSocket"
+          }
+        ]
+      },
+      {
+        "name": "LuaSocket",
+        "items": [
+          {
+            "name": "概述",
+            "md": "md/16-网络与通信/LuaSocket/概述.md"
+          },
+          {
+            "name": "核心模块",
+            "md": "md/16-网络与通信/LuaSocket/核心模块.md",
+            "cmd": "require(\"socket\")"
+          },
+          {
+            "name": "TCP",
+            "md": "md/16-网络与通信/LuaSocket/TCP.md",
+            "cmd": "socket.tcp"
+          },
+          {
+            "name": "UDP",
+            "md": "md/16-网络与通信/LuaSocket/UDP.md",
+            "cmd": "socket.udp"
+          },
+          {
+            "name": "HTTP 请求",
+            "md": "md/16-网络与通信/LuaSocket/HTTP 请求.md",
+            "cmd": "socket.http.request"
+          },
+          {
+            "name": "HTTPS 请求",
+            "md": "md/16-网络与通信/LuaSocket/HTTPS 请求.md",
+            "cmd": "ssl.https.request"
+          },
+          {
+            "name": "LTN12",
+            "md": "md/16-网络与通信/LuaSocket/LTN12.md",
+            "cmd": "require(\"ltn12\")"
+          },
+          {
+            "name": "MIME",
+            "md": "md/16-网络与通信/LuaSocket/MIME.md",
+            "cmd": "require(\"mime\")"
+          },
+          {
+            "name": "URL",
+            "md": "md/16-网络与通信/LuaSocket/URL.md",
+            "cmd": "require(\"socket.url\")"
+          },
+          {
+            "name": "FTP",
+            "md": "md/16-网络与通信/LuaSocket/FTP.md",
+            "cmd": "require(\"socket.ftp\")"
+          },
+          {
+            "name": "SMTP",
+            "md": "md/16-网络与通信/LuaSocket/SMTP.md",
+            "cmd": "require(\"socket.smtp\")"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "安全与数据",
+    "order": 190,
+    "items": [
+      {
+        "name": "加密",
+        "md": "md/17-安全与数据/加密.md",
+        "cmd": "cryptLib.*"
+      }
+    ]
+  },
+  {
+    "name": "运行时扩展",
+    "order": 200,
+    "items": [
+      {
+        "name": "Lua 标准库",
+        "md": "md/18-运行时扩展/Lua标准库.md"
+      },
+      {
+        "name": "FFI",
+        "items": [
+          {
+            "name": "概述",
+            "md": "md/18-运行时扩展/FFI/概述.md"
+          },
+          {
+            "name": "声明与库加载",
+            "md": "md/18-运行时扩展/FFI/声明与库加载.md",
+            "cmd": "声明与库加载：ffi.cdef / ffi.C / ffi.load"
+          },
+          {
+            "name": "C 数据与类型",
+            "md": "md/18-运行时扩展/FFI/C数据与类型.md",
+            "cmd": "C 数据与类型：ffi.new / ffi.cast / ffi.typeof / ffi.sizeof / ffi.alignof / ffi.offsetof / ffi.istype / ffi.addressof / ffi.nullptr / ffi.string / ffi.copy / ffi.fill / ffi.tonumber / ffi.type / ffi.eval"
+          },
+          {
+            "name": "生命周期与回调",
+            "md": "md/18-运行时扩展/FFI/生命周期与回调.md",
+            "cmd": "生命周期与回调：ffi.gc / ffi.metatype / ffi.errno / ffi.cast(callback) / callback.set / callback.free"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "无障碍",
+    "order": 80,
+    "items": [
+      {
+        "name": "节点自动化",
+        "items": [
+          {
+            "name": "概述",
+            "md": "md/19-无障碍/节点自动化.md"
+          },
+          {
+            "name": "选择器",
+            "md": "md/19-无障碍/选择器.md",
+            "cmd": "选择器：id / text / desc / className / packageName / bounds"
+          },
+          {
+            "name": "查询与选择器动作",
+            "md": "md/19-无障碍/查询与选择器动作.md",
+            "cmd": "查询与动作：selector.findOne / findAll / findOnce / click / longClick"
+          },
+          {
+            "name": "节点信息",
+            "md": "md/19-无障碍/节点信息.md",
+            "cmd": "节点信息：node.id / text / bounds / childs / parent / toJson"
+          },
+          {
+            "name": "节点动作",
+            "md": "md/19-无障碍/节点动作.md",
+            "cmd": "节点动作：node.click / longClick / setText / scrollTo / setSelection / setProgress"
+          },
+          {
+            "name": "节点库",
+            "md": "md/19-无障碍/节点库.md",
+            "cmd": "节点库：nodeLib.getNodeXml / saveNode / lockNode / unlockNode / openAccessibility / closeAccessibility"
+          }
+        ]
+      }
+    ]
+  }
+]

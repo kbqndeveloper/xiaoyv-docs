@@ -1,0 +1,12 @@
+# 由 xiaoyv-docs.bat 生成，请修改源目录规则或 .gitignore.public。
+# 源目录过滤规则
+# Generated site and machine-local files
+node_modules/
+.cache/
+dist/
+Thumbs.db
+.DS_Store
+# 公开副本过滤规则
+# 公开文档副本的额外过滤规则。
+# 此文件由 xiaoyv-docs.bat 保留，不会被源目录覆盖。
+.gitignore.public
