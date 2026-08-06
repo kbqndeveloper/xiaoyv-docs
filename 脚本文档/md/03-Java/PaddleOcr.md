@@ -15,8 +15,8 @@ returns: "boolean 或 string?"
 先导入兼容类：
 
 ```lua
-import("com.nx.assist.lua.LuaEngine")
-import("com.nx.assist.lua.PaddleOcr")
+local LuaEngine = import("com.nx.assist.lua.LuaEngine")
+local PaddleOcr = import("com.nx.assist.lua.PaddleOcr")
 ```
 
 | 方法 | 参数 | 返回值 |

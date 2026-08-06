@@ -31,7 +31,7 @@ returns: "无"
 SMTP 连接、读写默认 30 秒超时；端口和加密方式使用 JavaMail 当前 SMTP 默认配置。
 
 ```lua
-import("com.nx.assist.lua.LuaEngine")
+local LuaEngine = import("com.nx.assist.lua.LuaEngine")
 
 LuaEngine.sendMail(
     "user@example.com",

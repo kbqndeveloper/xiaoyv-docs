@@ -37,8 +37,8 @@ returns: "ctype、cdata、number、boolean、string 或 nil"
 | `ffi.tonumber` / `ffi.type` / `ffi.eval` | 将算术 cdata 转为 Lua 数字、识别 cdata 或解析 C 数值常量。 |
 
 结构体、数组和指针的内存布局由当前 Android ABI 决定。不要用 Lua table 代替 C 指针，也不要将任意
-整数当作有效地址。若要把 `cv.new*` 等项目提供的 native userdata 交给 FFI，必须先确认其实际 C
-类型和所有权；不确定时应通过正式 API 传递数据。
+整数当作有效地址。Java 与 OpenCV userdata 不是 C 指针，不能直接传给 FFI；跨边界数据应使用目标库
+声明的 cdata 或正式 API。
 
 ```lua
 local ffi = require("ffi")

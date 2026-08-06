@@ -33,7 +33,7 @@ Lua 仍是动态语言，下面的类型是 API 契约：`integer` 表示整数�
 | 设备 | `restartScript()` / `setTimer(callback, delay, ...)` | 回调、毫秒和透传参数 | 无 | 重启脚本或延时执行回调 |
 | 设备 | `setRootEnvMode(enabled)` / `setAccessibilityEnvMode()` | `enabled: boolean` | 无 | 请求切换 Root 或无障碍运行环境 |
 | 概述 | `useApi(name)` / `switchApi(name)` | `name: string` | `boolean` 或 `nil, string` | 切换全局 API 命名空间 |
-| Java | `import(className)` | `className: string` | 无 | 导入 Java 类或包 |
+| Java | `import(className[, loader])` | `className: string, loader: userdata?` | Java Class 或包代理 userdata | 解析 Java 类或只读包代理，不写入 `_G` |
 | Java | `LuaEngine.getContext()` | 无 | `userdata` | 返回 Android Application Context |
 | Java | `LuaEngine.httpGet(url, headers[, timeout])` | `url: string, headers: table, timeout: integer?` | `string?` | HTTP GET，超时单位秒 |
 | Java | `LuaEngine.httpPost(url, params, headers[, timeout])` | `url: string, params: table, headers: table, timeout: integer?` | `string?` | 表单 HTTP POST |
@@ -93,8 +93,6 @@ Lua 仍是动态语言，下面的类型是 API 契约：`integer` 表示整数�
 | 图像 | `m.findPicAll(x1, y1, x2, y2, picName, deltaColor, dir, sim)` | 同 `m.findPic` | `table` 或 `nil, string` | 返回全部非重叠模板命中 |
 | 图像 | `m.clearImageCache([picName])` | `picName: string?` | `boolean` | 清理一个或全部模板图片缓存 |
 | 图像 | `m.setImageCacheMaxBytes(maxBytes)` | `maxBytes: integer` | `integer` 或 `nil, string` | 设置当前脚本的模板缓存字节上限 |
-| 图像 | `m.findPicEx` / `m.findImage` | 区域、模板列表、相似度 | `name, x, y` 或 `nil, -1, -1` | 兼容多模板找图 |
-| 图像 | `m.findPicAllPoint` / `m.findPicFast` | 区域、模板或模板列表 | 坐标 table 或索引与坐标 table | 兼容的全部和快速多模板找图 |
 | OCR | `m.ocr.loadBuiltin([name[, threads]])` | `name: string?, threads: integer?` | `boolean` 或 `nil, string` | 加载预设中文/英文 PP-OCRv4 mobile 模型（需先导入运行时和模型文件） |
 | OCR | `m.ocr.load(name, detPath, recPath, clsPath, keysPath[, threads])` | `name, detPath, recPath, keysPath: string, clsPath: string?, threads: integer?` | `boolean` 或 `nil, string` | 显式加载或复用 RapidOCR ONNX 模型 |
 | OCR | `m.ocr.release(name)` | `name: string` | `boolean` 或 `nil, string` | 释放一个模型名称持有的引用 |
@@ -126,12 +124,13 @@ Lua 仍是动态语言，下面的类型是 API 契约：`integer` 表示整数�
 | 网络与通信 | `m.downloadFile` / `m.uploadFile` | URL、本地路径与可选超时 | 状态或响应正文 | 文件下载和 multipart 上传 |
 | 网络与通信 | `m.startWebSocket` / `m.sendWebSocket` / `m.closeWebSocket` | URL、句柄、文本与回调 | 句柄或 boolean | WebSocket 事件连接 |
 | 网络与通信 | `require("socket")`、`require("socket.http")`、`require("ssl.https")` | 见「网络与通信 / LuaSocket」 | module、socket 或响应 | 固定 LuaSocket 3.1.0 模块与 HTTPS 请求兼容入口 |
-| 输入 | `setScreenScale`、`touchDown`、`touchMove`、`touchUp`、`tap`、`longTap`、`swipe` | 见「输入 / 坐标缩放与手势」 | 无 | 虚拟坐标与常用手势 |
+| 输入 | `touchDown`、`touchMove`、`touchUp`、`tap`、`longTap`、`swipe` | 见「输入 / 触控与手势」 | 无 | 真实屏幕坐标与常用手势 |
 | 找色 | `m.getPixelColor` / `m.getScreenPixel` / `m.colorToRGB` / `m.colorDiff` | 坐标或颜色 | 颜色、通道或像素 table | 取色与颜色转换 |
 | 找色 | `m.cmpColor` / `m.cmpColorEx` / `m.getColorNum` | 坐标、颜色、相似度 | `1`、`0` 或数量 | 单点、多点比色与统计 |
 | 找色 | `m.findColors` / `m.findColor` / `m.findMultiColor` / `m.findMultiColorAll` | 区域、颜色规则与方向 | 坐标、颜色或 table | 原生和兼容找色 |
-| 找色 | `m.isDisplayDead` / `m.findCircle` | 区域、等待时间或霍夫圆参数 | boolean 或圆形 table | 画面静止检测与圆形分析 |
-| 图像 / 运行时 | `cv.snapShot`、`cv.new/get/set*`、`cv.deletePtr`、`import("org.opencv.*")`、`ffi.cdef`、`ffi.load` | 见「图像 / OpenCV」和「运行时扩展」 | userdata、table 或标量 | OpenCV `Mat`、兼容值指针、Java API 与 CFFI（声明、结构体、数组、浮点、回调和可变参数） |
+| 找色 | `m.isDisplayDead` | 区域和等待时间 | boolean | 判断区域画面是否保持不变 |
+| OpenCV | `opencv.capture` / `opencv.findCircles` / `opencv.Mat` 等 | 截图区域、算法配置或 Java 类参数 | Mat userdata、圆形 table 或 Java 对象 | 独立只读命名空间；类索引来自构建所用 OpenCV AAR |
+| 运行时 | `ffi.cdef` / `ffi.load` | C 声明和库路径 | cdata、library 或标量 | CFFI 声明、结构体、数组、浮点、回调和可变参数 |
 | 无障碍 | 选择器、查询、节点信息、节点动作、`nodeLib.*` | 见「无障碍 / 节点自动化」 | selector、node、table 或状态 | 查询和操作 Android 无障碍节点 |
 
 `m.sleep`、`m.systemTime`、`m.tickCount`、`m.touchDown` 等同名成员与默认全局函数的参数、

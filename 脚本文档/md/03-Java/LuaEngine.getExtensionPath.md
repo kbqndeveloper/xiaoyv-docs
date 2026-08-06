@@ -24,7 +24,7 @@ returns: "string?"
 也不推断 SO 依赖关系。需要原生扩展时由脚本自行按正确顺序调用 `ffi.load`。
 
 ```lua
-import("com.nx.assist.lua.LuaEngine")
+local LuaEngine = import("com.nx.assist.lua.LuaEngine")
 
 local ffi = require("ffi")
 local runtime = assert(LuaEngine.getExtensionPath("myext/libc++_shared.so"))

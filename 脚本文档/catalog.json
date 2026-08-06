@@ -1229,9 +1229,9 @@
         "md": "md/08-输入/概述.md"
       },
       {
-        "name": "坐标缩放与手势",
-        "md": "md/08-输入/坐标缩放与手势.md",
-        "cmd": "setScreenScale / touchDown / touchMove / touchUp / tap / longTap / touchMoveEx / swipe"
+        "name": "触控与手势",
+        "md": "md/08-输入/触控与手势.md",
+        "cmd": "touchDown / touchMove / touchUp / tap / longTap / touchMoveEx / swipe"
       },
       {
         "name": "按下触摸",
@@ -1388,30 +1388,6 @@
         ]
       },
       {
-        "name": "兼容找图",
-        "items": [
-          {
-            "name": "概述",
-            "md": "md/10-图像/兼容找图/概述.md"
-          },
-          {
-            "name": "多模板找图",
-            "md": "md/10-图像/兼容找图/多模板找图.md",
-            "cmd": "m.findPicEx / m.findImage"
-          },
-          {
-            "name": "查找全部模板坐标",
-            "md": "md/10-图像/兼容找图/查找全部模板坐标.md",
-            "cmd": "m.findPicAllPoint"
-          },
-          {
-            "name": "快速多模板找图",
-            "md": "md/10-图像/兼容找图/快速多模板找图.md",
-            "cmd": "m.findPicFast"
-          }
-        ]
-      },
-      {
         "name": "OpenCV",
         "items": [
           {
@@ -1420,48 +1396,13 @@
           },
           {
             "name": "OpenCV 截图 Mat",
-            "md": "md/10-图像/OpenCV/snapShot.md",
-            "cmd": "cv.snapShot"
+            "md": "md/10-图像/OpenCV/capture.md",
+            "cmd": "opencv.capture"
           },
           {
-            "name": "整型点值指针",
-            "md": "md/10-图像/OpenCV/Point.md",
-            "cmd": "cv.newPoint / cv.getPoint / cv.setPoint"
-          },
-          {
-            "name": "浮点点值指针",
-            "md": "md/10-图像/OpenCV/Point2f.md",
-            "cmd": "cv.newPoint2f / cv.getPoint2f / cv.setPoint2f"
-          },
-          {
-            "name": "Int 值指针",
-            "md": "md/10-图像/OpenCV/Int.md",
-            "cmd": "cv.newInt / cv.getInt / cv.setInt"
-          },
-          {
-            "name": "Double 值指针",
-            "md": "md/10-图像/OpenCV/Double.md",
-            "cmd": "cv.newDouble / cv.getDouble / cv.setDouble"
-          },
-          {
-            "name": "Float 值指针",
-            "md": "md/10-图像/OpenCV/Float.md",
-            "cmd": "cv.newFloat / cv.getFloat / cv.setFloat"
-          },
-          {
-            "name": "Long 值指针",
-            "md": "md/10-图像/OpenCV/Long.md",
-            "cmd": "cv.newLong / cv.getLong / cv.setLong"
-          },
-          {
-            "name": "Byte 值指针",
-            "md": "md/10-图像/OpenCV/Byte.md",
-            "cmd": "cv.newByte / cv.getByte / cv.setByte"
-          },
-          {
-            "name": "使值指针失效",
-            "md": "md/10-图像/OpenCV/deletePtr.md",
-            "cmd": "cv.deletePtr"
+            "name": "查找圆形",
+            "md": "md/10-图像/OpenCV/查找圆形.md",
+            "cmd": "opencv.findCircles"
           }
         ]
       }
@@ -1547,11 +1488,6 @@
             "name": "检测画面静止",
             "md": "md/11-找色/查找与分析/检测画面静止.md",
             "cmd": "m.isDisplayDead"
-          },
-          {
-            "name": "查找圆形",
-            "md": "md/11-找色/查找与分析/查找圆形.md",
-            "cmd": "m.findCircle"
           }
         ]
       }

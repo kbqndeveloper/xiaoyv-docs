@@ -29,7 +29,7 @@ returns: "无"
 **使用示例：**
 
 ```lua
-import("com.nx.assist.lua.LuaEngine")
+local LuaEngine = import("com.nx.assist.lua.LuaEngine")
 
 LuaEngine.registerExitCallback(function(hasError, exitCode)
     print("Java 兼容结束回调", hasError, exitCode)

@@ -21,8 +21,8 @@ returns: "无"
 **详细说明：**
 
 ```lua
-import("android.graphics.Bitmap")
-import("android.graphics.Color")
+local Bitmap = import("android.graphics.Bitmap")
+local Color = import("android.graphics.Color")
 
 local bitmap = Bitmap.createBitmap(64, 64, Bitmap.Config.ARGB_8888)
 bitmap.eraseColor(Color.RED)
