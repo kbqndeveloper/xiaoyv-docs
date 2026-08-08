@@ -383,6 +383,22 @@
       text-underline-offset: 2px;
     }
     #body a:hover { color: var(--text-strong); }
+
+    .private-supplement {
+      margin-top: 2rem;
+      padding: 1rem 1.2rem;
+      border: 1px solid #5c4930;
+      border-left: 4px solid #b78b48;
+      border-radius: 10px;
+      background: #1d1a15;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
+    }
+
+    .private-supplement-label {
+      margin-bottom: 0.7rem;
+      color: #e0b86a;
+      font-weight: 700;
+    }
     #status { color: var(--muted); font-size: 13px; }
     #showSidebarFab {
       position: fixed;
@@ -480,6 +496,7 @@
     const searchEl = document.getElementById("search");
 
     let catalog = [];
+    let privateDocuments = {};
     let activeRow = null;
     let activeMarkdownPath = "";
     let sidebarWidth = DEF_W;
@@ -876,8 +893,7 @@
       ["m.keepCapture", 150], ["m.releaseCapture", 160], ["m.setCaptureCacheMs", 170],
       ["m.capture", 180], ["m.snapShot", 190], ["m.findPic", 200], ["m.findPicAll", 210],
       ["m.getPixelColor", 220], ["m.getScreenPixel", 230], ["m.cmpColor", 240],
-      ["m.cmpColorEx", 250], ["m.findColors", 260], ["m.findColor", 270],
-      ["m.findMultiColor", 280], ["m.findMultiColorAll", 290], ["m.getColorNum", 300],
+      ["m.cmpColorEx", 250], ["m.findColors", 260], ["m.findColorsAll", 265], ["m.findColor", 270], ["m.getColorNum", 300],
       ["tap", 310], ["longTap", 320], ["swipe", 330], ["touchDown", 340],
       ["touchMove", 350], ["touchUp", 360], ["keyPress", 370], ["keyDown", 380],
       ["keyUp", 390], ["inputText", 400], ["selector.findOne", 410],
@@ -1024,7 +1040,24 @@
           metaEl.hidden = true;
           metaEl.innerHTML = "";
         }
-        bodyEl.innerHTML = renderMarkdown(extracted.body);
+        let privateHtml = "";
+        const privatePath = privateDocuments[node.md];
+        if (privatePath) {
+          try {
+            const privateRes = await fetch(BASE + privatePath);
+            if (!privateRes.ok) throw new Error("HTTP " + privateRes.status);
+            const privateText = await privateRes.text();
+            const privateParsed = parseFrontMatter(privateText);
+            privateHtml = `<section class="private-supplement">` +
+              `<div class="private-supplement-label">内部补充 · 不公开同步</div>` +
+              renderMarkdown(privateParsed.body) + `</section>`;
+          } catch (privateError) {
+            privateHtml = `<section class="private-supplement">` +
+              `<div class="private-supplement-label">内部补充读取失败</div>` +
+              `<p class="muted">${escapeHtml(privateError.message)}</p></section>`;
+          }
+        }
+        bodyEl.innerHTML = renderMarkdown(extracted.body) + privateHtml;
         if (filePathEl) {
           filePathEl.hidden = false;
           filePathEl.textContent = node.md;
@@ -1064,6 +1097,15 @@
         const res = await fetch(BASE + "catalog.json");
         if (!res.ok) throw new Error("HTTP " + res.status);
         catalog = await res.json();
+        try {
+          const privateRes = await fetch(BASE + "catalog@private.json");
+          if (privateRes.ok) {
+            const privateIndex = await privateRes.json();
+            if (privateIndex && typeof privateIndex === "object" && !Array.isArray(privateIndex)) {
+              privateDocuments = privateIndex;
+            }
+          }
+        } catch (_) {}
         statusEl.textContent = "请从左侧选择分类或命令。";
         paintTree("");
         searchEl.addEventListener("input", () => paintTree(searchEl.value));

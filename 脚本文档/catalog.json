@@ -429,18 +429,8 @@
             ]
           },
           {
-            "name": "显示与控制",
+            "name": "悬浮控制",
             "items": [
-              {
-                "name": "设置虚拟 DPI",
-                "md": "md/02-设备/系统与文件扩展/setDpiToVir.md",
-                "cmd": "setDpiToVir"
-              },
-              {
-                "name": "恢复实际 DPI",
-                "md": "md/02-设备/系统与文件扩展/setDpiToRealy.md",
-                "cmd": "setDpiToRealy"
-              },
               {
                 "name": "显示或隐藏控制栏",
                 "md": "md/02-设备/系统与文件扩展/showControlBar.md",
@@ -1470,19 +1460,14 @@
             "cmd": "m.findColors"
           },
           {
+            "name": "查找全部多点颜色",
+            "md": "md/11-找色/查找与分析/查找全部多点颜色.md",
+            "cmd": "m.findColorsAll"
+          },
+          {
             "name": "查找指定颜色",
             "md": "md/11-找色/查找与分析/查找指定颜色.md",
             "cmd": "m.findColor / m.findColorT"
-          },
-          {
-            "name": "查找多点颜色",
-            "md": "md/11-找色/查找与分析/查找多点颜色.md",
-            "cmd": "m.findMultiColor / m.findMultiColorT"
-          },
-          {
-            "name": "查找全部多点颜色",
-            "md": "md/11-找色/查找与分析/查找全部多点颜色.md",
-            "cmd": "m.findMultiColorAll / m.findMultiColorAllT"
           },
           {
             "name": "检测画面静止",

@@ -10,3 +10,5 @@ Thumbs.db
 # 公开文档副本的额外过滤规则。
 # 此文件由 xiaoyv-docs.bat 保留，不会被源目录覆盖。
 .gitignore.public
+*@private
+*@private.*

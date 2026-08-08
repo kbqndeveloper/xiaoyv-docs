@@ -28,8 +28,8 @@ Lua 仍是动态语言，下面的类型是 API 契约：`integer` 表示整数�
 | 设备 | `playAudio(path)` / `stopAudio()` / `scanImage(path)` | 文件路径 | 无 | 媒体播放、停止和图片媒体库扫描 |
 | 设备 | `zip(source, zipPath)` / `unZip(zipPath, output[, password[, charset]])` | 文件路径与可选解密参数 | 无 | 创建或解压 ZIP 文件 |
 | 设备 | `extractApkAssets(asset, output)` / `extractAssets(assetArchive, output[, pattern])` | assets 路径与输出路径 | 无 | 提取 APK 内置资源 |
-| 设备 | `setDpiToVir(dpi)` / `setDpiToRealy()` | `dpi: integer` | 无 | 设置或恢复显示密度 |
-| 设备 | `showControlBar(show)` / `setControlBarPosNew(x, y)` | 显示状态与相对坐标 | 无 | 控制小鱼精灵控制栏 |
+| 设备 | `showControlBar(show)` / `setControlBarPosNew(x, y)` | 显示状态与相对坐标 | 无 | 控制小鱼精灵悬浮控制图标 |
+| 设备 | `checkIsDebug()` | 无 | `boolean` | 查询当前 APK 是否为 Debug 构建 |
 | 设备 | `restartScript()` / `setTimer(callback, delay, ...)` | 回调、毫秒和透传参数 | 无 | 重启脚本或延时执行回调 |
 | 设备 | `setRootEnvMode(enabled)` / `setAccessibilityEnvMode()` | `enabled: boolean` | 无 | 请求切换 Root 或无障碍运行环境 |
 | 概述 | `useApi(name)` / `switchApi(name)` | `name: string` | `boolean` 或 `nil, string` | 切换全局 API 命名空间 |
@@ -89,6 +89,7 @@ Lua 仍是动态语言，下面的类型是 API 契约：`integer` 表示整数�
 | 图像 | `m.releaseCapture()` | 无 | `boolean` | 取消锁帧，恢复按时间缓存 |
 | 图像 | `m.setCaptureCacheMs(ms)` | `ms: integer` | `integer \| nil, string?` | 设置并返回截图缓存时间 |
 | 找色 | `m.findColors(x1, y1, x2, y2, dir, sim, colors)` | `x1..y2: integer, dir: integer, sim: integer, colors: string` | `integer, integer` 或 `nil, string` | 在当前截图缓存上多点找色 |
+| 找色 | `m.findColorsAll(x1, y1, x2, y2, dir, sim, colors)` | 同 `m.findColors` | `table` 或 `nil, string` | 返回全部多点颜色匹配坐标 |
 | 图像 | `m.findPic(x1, y1, x2, y2, picName, deltaColor, dir, sim)` | `x1..y2: integer, picName: string, deltaColor: string, dir: integer, sim: number` | `integer, integer` 或 `nil, string` | 在当前截图缓存中查找模板图片 |
 | 图像 | `m.findPicAll(x1, y1, x2, y2, picName, deltaColor, dir, sim)` | 同 `m.findPic` | `table` 或 `nil, string` | 返回全部非重叠模板命中 |
 | 图像 | `m.clearImageCache([picName])` | `picName: string?` | `boolean` | 清理一个或全部模板图片缓存 |
@@ -127,7 +128,7 @@ Lua 仍是动态语言，下面的类型是 API 契约：`integer` 表示整数�
 | 输入 | `touchDown`、`touchMove`、`touchUp`、`tap`、`longTap`、`swipe` | 见「输入 / 触控与手势」 | 无 | 真实屏幕坐标与常用手势 |
 | 找色 | `m.getPixelColor` / `m.getScreenPixel` / `m.colorToRGB` / `m.colorDiff` | 坐标或颜色 | 颜色、通道或像素 table | 取色与颜色转换 |
 | 找色 | `m.cmpColor` / `m.cmpColorEx` / `m.getColorNum` | 坐标、颜色、相似度 | `1`、`0` 或数量 | 单点、多点比色与统计 |
-| 找色 | `m.findColors` / `m.findColor` / `m.findMultiColor` / `m.findMultiColorAll` | 区域、颜色规则与方向 | 坐标、颜色或 table | 原生和兼容找色 |
+| 找色 | `m.findColors` / `m.findColorsAll` / `m.findColor` | 区域、颜色规则与方向 | 坐标、坐标列表或颜色 | 原生多点找色与单色查找 |
 | 找色 | `m.isDisplayDead` | 区域和等待时间 | boolean | 判断区域画面是否保持不变 |
 | OpenCV | `opencv.capture` / `opencv.findCircles` / `opencv.Mat` 等 | 截图区域、算法配置或 Java 类参数 | Mat userdata、圆形 table 或 Java 对象 | 独立只读命名空间；类索引来自构建所用 OpenCV AAR |
 | 运行时 | `ffi.cdef` / `ffi.load` | C 声明和库路径 | cdata、library 或标量 | CFFI 声明、结构体、数组、浮点、回调和可变参数 |
