@@ -5,9 +5,12 @@ returns: "integer"
 
 **方法名称：** 创建按钮控件。
 
-**语法：** `imgui.createButton(parent, text, width, height)`
+**语法：**
 
-**语法：** `imgui.createButton(x, y, width, height, text)`
+```lua
+imgui.createButton(parent, text, width, height)
+imgui.createButton(x, y, width, height, text)
+```
 
 **参数说明：**
 

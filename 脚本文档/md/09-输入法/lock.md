@@ -6,7 +6,7 @@ returns: "boolean"
 
 **方法名称：** 锁定输入法。
 
-**语法：** `m.ime.lock()`（默认全局：`ime.lock()`）
+**语法：** `ime.lock()`
 
 **参数说明：** 无。
 

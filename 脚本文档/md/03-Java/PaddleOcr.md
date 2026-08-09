@@ -5,7 +5,7 @@ returns: "boolean 或 string?"
 
 **方法名称：** `PaddleOcr` PP-OCRv4 Java 兼容接口。
 
-**语法：** `PaddleOcr.loadModel(useOnnx)` 等，完整入口见下表。
+**语法：** 见下方方法表。
 
 **参数说明：**
 

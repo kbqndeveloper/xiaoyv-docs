@@ -6,7 +6,7 @@ returns: "integer"
 
 **方法名称：** 获取运行环境类型。
 
-**语法：** `m.getRunEnvType()` 或 `getRunEnvType()`
+**语法：** `getRunEnvType()`
 
 **参数说明：** 无。
 

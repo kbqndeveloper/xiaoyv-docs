@@ -6,7 +6,7 @@ returns: "boolean"
 
 **方法名称：** 解锁输入法。
 
-**语法：** `m.ime.unlock()`（默认全局：`ime.unlock()`）
+**语法：** `ime.unlock()`
 
 **参数说明：** 无。
 

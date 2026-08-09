@@ -119,7 +119,7 @@ Lua 仍是动态语言，下面的类型是 API 契约：`integer` 表示整数�
 | 点阵字库 | `m.font.findStrEx(x1, y1, x2, y2, text, color, sim)` | `x1..y2: integer, text, color: string, sim: number` | `string` 或 `nil, string` | 返回所有目标文字坐标 |
 | 点阵字库 | `m.font.findStrFast(x1, y1, x2, y2, text, color, sim)` | `x1..y2: integer, text, color: string, sim: number` | `integer, integer` 或 `nil, string` | 只搜索目标字形并返回第一处坐标 |
 | 点阵字库 | `m.font.findStrFastEx(x1, y1, x2, y2, text, color, sim)` | `x1..y2: integer, text, color: string, sim: number` | `string` 或 `nil, string` | 只搜索目标字形并返回全部坐标 |
-| 点阵字库 | `m.setDict` / `m.useDict` / `m.ocr` / `m.ocrj` / `m.findStr*` | 见「点阵字库 / 兼容入口」 | `1`、`0`、文字或 JSON | 迁移旧脚本的点阵字库兼容入口 |
+| 点阵字库 | `m.setDict` / `m.useDict` / `m.ocrj*` / `m.ocrNew` / `m.findStr*` | 见「点阵字库 / 兼容入口」 | `1`、`0`、文字或 JSON | 迁移旧脚本的点阵字库兼容入口 |
 | 安全与数据 | `cryptLib.aes_*`、`cryptLib.rsa_*` | 见「安全与数据 / 加密」 | 二进制字符串或 PEM | AES、RSA 和安全随机密钥 |
 | 网络与通信 | `m.httpGet` / `m.httpPost` / `m.asynHttpGet` / `m.asynHttpPost` | URL、正文、超时、请求头 | 正文、状态或线程对象 | 项目 HTTP 同步和异步请求 |
 | 网络与通信 | `m.downloadFile` / `m.uploadFile` | URL、本地路径与可选超时 | 状态或响应正文 | 文件下载和 multipart 上传 |

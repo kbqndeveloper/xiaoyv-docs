@@ -5,8 +5,13 @@ returns: "无"
 
 **方法名称：** 异步发送邮件和附件。
 
-**语法：** `LuaEngine.sendMail(...)` / `sendMailWithFile(...)` /
-`sendMailWithMultiFile(...)`
+**语法：**
+
+```lua
+LuaEngine.sendMail(...)
+sendMailWithFile(...)
+sendMailWithMultiFile(...)
+```
 
 **参数说明：**
 

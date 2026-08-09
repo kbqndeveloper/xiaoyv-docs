@@ -5,7 +5,14 @@ returns: "ctype、cdata、number、boolean、string 或 nil"
 
 **方法名称：** 创建、转换和检查 C 数据与类型。
 
-**语法：** `ffi.new(ctype[, init...])`、`ffi.cast(ctype, value)`、`ffi.typeof(ctype)`、`ffi.sizeof(ctypeOrCdata[, length])`
+**语法：**
+
+```lua
+ffi.new(ctype[, init...])
+ffi.cast(ctype, value)
+ffi.typeof(ctype)
+ffi.sizeof(ctypeOrCdata[, length])
+```
 
 **参数说明：**
 

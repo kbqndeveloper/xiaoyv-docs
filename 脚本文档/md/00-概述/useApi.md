@@ -6,7 +6,12 @@ returns: "boolean 或 nil, string"
 
 **方法名称：** 切换全局 API 命名空间。
 
-**语法：** `useApi(name)` / `switchApi(name)`
+**语法：**
+
+```lua
+useApi(name)
+switchApi(name)
+```
 
 **参数说明：**
 

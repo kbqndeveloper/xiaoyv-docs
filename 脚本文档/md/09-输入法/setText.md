@@ -6,7 +6,7 @@ returns: "boolean"
 
 **方法名称：** 提交文本。
 
-**语法：** `m.ime.setText(text)`（默认全局：`ime.setText(text)`）
+**语法：** `ime.setText(text)`
 
 **参数说明：**
 
