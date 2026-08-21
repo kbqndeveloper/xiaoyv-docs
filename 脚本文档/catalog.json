@@ -1904,5 +1904,450 @@
         ]
       }
     ]
+  },
+  {
+    "name": "Windows",
+    "order": 1000,
+    "items": [
+      {
+        "name": "概述",
+        "md": "md/21-Windows/概述.md"
+      },
+      {
+        "name": "中控交互",
+        "md": "md/21-Windows/中控交互.md"
+      },
+      {
+        "name": "开发与打包",
+        "md": "md/21-Windows/开发与打包.md"
+      },
+      {
+        "name": "多线程",
+        "items": [
+          {
+            "name": "概述",
+            "md": "md/21-Windows/多线程/概述.md"
+          },
+          {
+            "name": "启动子线程",
+            "md": "md/21-Windows/多线程/beginThread.md",
+            "cmd": "beginThread"
+          },
+          {
+            "name": "启动并返回线程",
+            "md": "md/21-Windows/多线程/newThread.md",
+            "cmd": "thread.newThread"
+          },
+          {
+            "name": "停止子线程",
+            "md": "md/21-Windows/多线程/stopThread.md",
+            "cmd": "threadObject:stopThread"
+          }
+        ]
+      },
+      {
+        "name": "网络与 FFI",
+        "items": [
+          {
+            "name": "概述",
+            "md": "md/21-Windows/网络与FFI/概述.md"
+          },
+          {
+            "name": "HTTP",
+            "items": [
+              {
+                "name": "概述",
+                "md": "md/21-Windows/网络与FFI/HTTP/概述.md"
+              },
+              {
+                "name": "HTTP GET",
+                "md": "md/21-Windows/网络与FFI/HTTP/httpGet.md",
+                "cmd": "httpGet"
+              },
+              {
+                "name": "HTTP POST",
+                "md": "md/21-Windows/网络与FFI/HTTP/httpPost.md",
+                "cmd": "httpPost"
+              },
+              {
+                "name": "异步 HTTP GET",
+                "md": "md/21-Windows/网络与FFI/HTTP/asynHttpGet.md",
+                "cmd": "asynHttpGet"
+              },
+              {
+                "name": "异步 HTTP POST",
+                "md": "md/21-Windows/网络与FFI/HTTP/asynHttpPost.md",
+                "cmd": "asynHttpPost"
+              }
+            ]
+          },
+          {
+            "name": "FFI",
+            "items": [
+              {
+                "name": "概述",
+                "md": "md/21-Windows/网络与FFI/FFI/概述.md"
+              },
+              {
+                "name": "声明与库加载",
+                "md": "md/21-Windows/网络与FFI/FFI/声明与库加载.md",
+                "cmd": "ffi.cdef / ffi.C / ffi.load"
+              },
+              {
+                "name": "C 数据与类型",
+                "md": "md/21-Windows/网络与FFI/FFI/C数据与类型.md",
+                "cmd": "ffi.new / ffi.cast / ffi.typeof / ffi.sizeof"
+              },
+              {
+                "name": "生命周期与回调",
+                "md": "md/21-Windows/网络与FFI/FFI/生命周期与回调.md",
+                "cmd": "ffi.gc / ffi.metatype / ffi.errno / ffi.cast(callback)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "常驻状态",
+        "md": "md/21-Windows/print_user.md",
+        "cmd": "print_user"
+      },
+      {
+        "name": "UTF-8 与 GBK",
+        "md": "md/21-Windows/U2G和G2U.md",
+        "cmd": "U2G / G2U"
+      },
+      {
+        "name": "大漠兼容入口",
+        "md": "md/21-Windows/大漠兼容入口.md",
+        "cmd": "dm.*"
+      },
+      {
+        "name": "屏幕找色",
+        "md": "md/21-Windows/屏幕找色.md",
+        "cmd": "findColors"
+      },
+      {
+        "name": "stb 图像处理",
+        "items": [
+          {
+            "name": "概述",
+            "md": "md/21-Windows/stb图像处理/概述.md"
+          },
+          {
+            "name": "加载图片",
+            "md": "md/21-Windows/stb图像处理/load.md",
+            "cmd": "stb_image.load"
+          },
+          {
+            "name": "读取图片",
+            "md": "md/21-Windows/stb图像处理/read.md",
+            "cmd": "stb_image.read"
+          },
+          {
+            "name": "写入图片",
+            "md": "md/21-Windows/stb图像处理/write.md",
+            "cmd": "stb_image.write"
+          },
+          {
+            "name": "合并图片",
+            "md": "md/21-Windows/stb图像处理/merge.md",
+            "cmd": "stb_image.merge"
+          },
+          {
+            "name": "HSV 二值化",
+            "md": "md/21-Windows/stb图像处理/hsvThreshold.md",
+            "cmd": "stb_image.hsvThreshold"
+          },
+          {
+            "name": "格式转换",
+            "md": "md/21-Windows/stb图像处理/convert.md",
+            "cmd": "stb_image.convert"
+          },
+          {
+            "name": "RGB 转 HSV",
+            "md": "md/21-Windows/stb图像处理/rgbToHsv.md",
+            "cmd": "stb_image.rgbToHsv"
+          },
+          {
+            "name": "图片多点找色",
+            "md": "md/21-Windows/stb图像处理/findColors.md",
+            "cmd": "stb_image.findColors / stb_image.findColor"
+          },
+          {
+            "name": "可编辑图片对象",
+            "items": [
+              {
+                "name": "概述",
+                "md": "md/21-Windows/stb图像处理/可编辑图片/概述.md"
+              },
+              {
+                "name": "获取宽高",
+                "md": "md/21-Windows/stb图像处理/可编辑图片/getSize.md",
+                "cmd": "image:getSize"
+              },
+              {
+                "name": "读取像素",
+                "md": "md/21-Windows/stb图像处理/可编辑图片/getPixel.md",
+                "cmd": "image:getPixel"
+              },
+              {
+                "name": "修改像素",
+                "md": "md/21-Windows/stb图像处理/可编辑图片/setPixel.md",
+                "cmd": "image:setPixel"
+              },
+              {
+                "name": "批量修改像素",
+                "md": "md/21-Windows/stb图像处理/可编辑图片/setPixels.md",
+                "cmd": "image:setPixels"
+              },
+              {
+                "name": "复制点阵",
+                "md": "md/21-Windows/stb图像处理/可编辑图片/getPixels.md",
+                "cmd": "image:getPixels"
+              },
+              {
+                "name": "获取点阵地址",
+                "md": "md/21-Windows/stb图像处理/可编辑图片/getData.md",
+                "cmd": "image:getData"
+              },
+              {
+                "name": "保存图片",
+                "md": "md/21-Windows/stb图像处理/可编辑图片/save.md",
+                "cmd": "image:save"
+              },
+              {
+                "name": "关闭图片",
+                "md": "md/21-Windows/stb图像处理/可编辑图片/close.md",
+                "cmd": "image:close"
+              }
+            ]
+          },
+          {
+            "name": "兼容入口",
+            "md": "md/21-Windows/stb图像处理/兼容入口.md"
+          }
+        ]
+      },
+      {
+        "name": "OpenCV 5",
+        "items": [
+          {
+            "name": "概述",
+            "md": "md/21-Windows/OpenCV/概述.md",
+            "cmd": "require(\"opencv\") / cv.*"
+          },
+          {
+            "name": "Mat 对象",
+            "md": "md/21-Windows/OpenCV/Mat对象.md",
+            "cmd": "cv.Mat / image:empty / image:clone"
+          },
+          {
+            "name": "读取图片",
+            "md": "md/21-Windows/OpenCV/imread.md",
+            "cmd": "cv.imread"
+          },
+          {
+            "name": "写入图片",
+            "md": "md/21-Windows/OpenCV/imwrite.md",
+            "cmd": "cv.imwrite"
+          },
+          {
+            "name": "颜色转换",
+            "md": "md/21-Windows/OpenCV/cvtColor.md",
+            "cmd": "cv.cvtColor"
+          },
+          {
+            "name": "缩放图片",
+            "md": "md/21-Windows/OpenCV/resize.md",
+            "cmd": "cv.resize"
+          },
+          {
+            "name": "阈值二值化",
+            "md": "md/21-Windows/OpenCV/threshold.md",
+            "cmd": "cv.threshold"
+          },
+          {
+            "name": "范围掩码",
+            "md": "md/21-Windows/OpenCV/inRange.md",
+            "cmd": "cv.inRange"
+          },
+          {
+            "name": "高斯滤波",
+            "md": "md/21-Windows/OpenCV/GaussianBlur.md",
+            "cmd": "cv.GaussianBlur"
+          },
+          {
+            "name": "Canny 边缘",
+            "md": "md/21-Windows/OpenCV/Canny.md",
+            "cmd": "cv.Canny"
+          },
+          {
+            "name": "查找轮廓",
+            "md": "md/21-Windows/OpenCV/findContours.md",
+            "cmd": "cv.findContours"
+          },
+          {
+            "name": "绘制轮廓",
+            "md": "md/21-Windows/OpenCV/drawContours.md",
+            "cmd": "cv.drawContours"
+          },
+          {
+            "name": "模板匹配",
+            "md": "md/21-Windows/OpenCV/matchTemplate.md",
+            "cmd": "cv.matchTemplate"
+          },
+          {
+            "name": "最值定位",
+            "md": "md/21-Windows/OpenCV/minMaxLoc.md",
+            "cmd": "cv.minMaxLoc"
+          }
+        ]
+      },
+      {
+        "name": "SQLite 数据库",
+        "items": [
+          {
+            "name": "概述",
+            "md": "md/21-Windows/数据库/概述.md"
+          },
+          {
+            "name": "数据类型与资源",
+            "md": "md/21-Windows/数据库/数据类型.md"
+          },
+          {
+            "name": "模块函数",
+            "items": [
+              {
+                "name": "概述",
+                "md": "md/21-Windows/数据库/模块/概述.md"
+              },
+              {
+                "name": "打开数据库",
+                "md": "md/21-Windows/数据库/模块/open.md",
+                "cmd": "db.open"
+              },
+              {
+                "name": "创建 BLOB 参数",
+                "md": "md/21-Windows/数据库/模块/blob.md",
+                "cmd": "db.blob"
+              },
+              {
+                "name": "获取加密格式",
+                "md": "md/21-Windows/数据库/模块/ciphers.md",
+                "cmd": "db.ciphers"
+              }
+            ]
+          },
+          {
+            "name": "连接",
+            "items": [
+              {
+                "name": "概述",
+                "md": "md/21-Windows/数据库/连接/概述.md"
+              },
+              {
+                "name": "执行 SQL",
+                "md": "md/21-Windows/数据库/连接/exec.md",
+                "cmd": "connection:exec"
+              },
+              {
+                "name": "查询并返回游标",
+                "md": "md/21-Windows/数据库/连接/query.md",
+                "cmd": "connection:query"
+              },
+              {
+                "name": "查询单行",
+                "md": "md/21-Windows/数据库/连接/queryOne.md",
+                "cmd": "connection:queryOne"
+              },
+              {
+                "name": "创建预编译语句",
+                "md": "md/21-Windows/数据库/连接/prepare.md",
+                "cmd": "connection:prepare"
+              },
+              {
+                "name": "事务",
+                "md": "md/21-Windows/数据库/连接/transaction.md",
+                "cmd": "connection:transaction"
+              },
+              {
+                "name": "修改数据库密码",
+                "md": "md/21-Windows/数据库/连接/rekey.md",
+                "cmd": "connection:rekey"
+              },
+              {
+                "name": "检测连接",
+                "md": "md/21-Windows/数据库/连接/ping.md",
+                "cmd": "connection:ping"
+              },
+              {
+                "name": "关闭连接",
+                "md": "md/21-Windows/数据库/连接/close.md",
+                "cmd": "connection:close"
+              }
+            ]
+          },
+          {
+            "name": "预编译语句",
+            "items": [
+              {
+                "name": "概述",
+                "md": "md/21-Windows/数据库/预编译语句/概述.md"
+              },
+              {
+                "name": "执行语句",
+                "md": "md/21-Windows/数据库/预编译语句/exec.md",
+                "cmd": "statement:exec"
+              },
+              {
+                "name": "查询语句",
+                "md": "md/21-Windows/数据库/预编译语句/query.md",
+                "cmd": "statement:query"
+              },
+              {
+                "name": "重置语句",
+                "md": "md/21-Windows/数据库/预编译语句/reset.md",
+                "cmd": "statement:reset"
+              },
+              {
+                "name": "关闭语句",
+                "md": "md/21-Windows/数据库/预编译语句/close.md",
+                "cmd": "statement:close"
+              }
+            ]
+          },
+          {
+            "name": "游标",
+            "items": [
+              {
+                "name": "概述",
+                "md": "md/21-Windows/数据库/游标/概述.md"
+              },
+              {
+                "name": "读取下一行",
+                "md": "md/21-Windows/数据库/游标/fetch.md",
+                "cmd": "cursor:fetch"
+              },
+              {
+                "name": "行迭代器",
+                "md": "md/21-Windows/数据库/游标/rows.md",
+                "cmd": "cursor:rows"
+              },
+              {
+                "name": "获取列名",
+                "md": "md/21-Windows/数据库/游标/columns.md",
+                "cmd": "cursor:columns"
+              },
+              {
+                "name": "关闭游标",
+                "md": "md/21-Windows/数据库/游标/close.md",
+                "cmd": "cursor:close"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   }
 ]
