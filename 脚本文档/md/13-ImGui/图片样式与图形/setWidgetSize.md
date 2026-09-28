@@ -25,5 +25,4 @@ imgui.setWidgetSize(button, 220, 56)
 imgui.setWidgetSize(image, 128, 128)
 ```
 
-控件只使用自身有意义的维度：滑动条和组合框使用宽度，开关使用高度，按钮、图片、表格、
-输入框和布局可使用两者。窗口应优先使用 `setWindowSize`。
+控件只使用自身有意义的维度：滑动条和组合框使用宽度，开关使用高度，按钮、图片、表格、输入框和布局可使用两者。窗口应优先使用 `setWindowSize`。

@@ -46,6 +46,4 @@ local loader = assert(LuaEngine.loadApk("plugin.apk"))
 local Plugin = import("com.example.Plugin", loader)
 ```
 
-支持静态/实例字段、方法、构造函数、公开内部类、重载、数组、集合和接口代理。Java 异常
-转换为 Lua 错误；Java `null` 对应 `nil`，`void` 方法没有返回值。OpenCV 新脚本直接使用
-全局 [`opencv`](../10-图像/OpenCV/概述.md)，无需 import。
+支持静态/实例字段、方法、构造函数、公开内部类、重载、数组、集合和接口代理。Java 异常转换为 Lua 错误；Java `null` 对应 `nil`，`void` 方法没有返回值。OpenCV 新脚本直接使用全局 [`opencv`](../10-图像/OpenCV/概述.md)，无需 import。

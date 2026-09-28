@@ -24,5 +24,4 @@ returns: "无"
 imgui.setItemSelected(combo, 1)
 ```
 
-组合框和单选组会触发 `setOnSelectEvent`；表格会选择该行第 `0` 列，并触发
-`setOnSelectEventEx`。重复设置当前选项不会重复触发回调。
+组合框和单选组会触发 `setOnSelectEvent`；表格会选择该行第 `0` 列，并触发 `setOnSelectEventEx`。重复设置当前选项不会重复触发回调。

@@ -16,9 +16,7 @@ returns: "boolean"
 
 **详细说明：**
 
-`m.ime` 是 小鱼精灵 自己的无界面输入法。它在锁定时保存系统原默认输入法，
-在解锁时恢复原输入法；高频 `setText` 直接调用活动输入法的 `InputConnection`，不
-重复执行 Root 命令，也不回退到按键注入或无障碍。
+`m.ime` 是 小鱼精灵 自己的无界面输入法。它在锁定时保存系统原默认输入法，在解锁时恢复原输入法；高频 `setText` 直接调用活动输入法的 `InputConnection`，不重复执行 Root 命令，也不回退到按键注入或无障碍。
 
 ```lua
 local locked = m.ime.lock()

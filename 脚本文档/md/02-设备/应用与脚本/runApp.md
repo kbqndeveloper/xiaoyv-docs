@@ -28,6 +28,4 @@ runApp("com.tencent.mm")
 
 **详细说明：**
 
-启动应用；有组件名时精确启动，否则打开启动入口。普通模式可用于无障碍环境，但受 Android
-后台启动限制；确实需要越过该限制时传 `isOpenBySuper=true`，此时设备必须已具备可用的
-RootDaemon。
+启动应用；有组件名时精确启动，否则打开启动入口。普通模式可用于无障碍环境，但受 Android 后台启动限制；确实需要越过该限制时传 `isOpenBySuper=true`，此时设备必须已具备可用的 RootDaemon。

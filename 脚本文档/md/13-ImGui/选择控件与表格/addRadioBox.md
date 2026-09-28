@@ -27,5 +27,4 @@ assert(imgui.addRadioBox(radio, "乙", true))  -- 下一项换行
 assert(imgui.addRadioBox(radio, "丙", false))
 ```
 
-懒人精灵网页写成无返回值，1.7.6 LSP 写成布尔值；小鱼精灵返回布尔值，旧脚本忽略它不受
-影响。`wrapline` 是逐项属性，不会覆盖已经添加项目的排列方式。
+懒人精灵网页写成无返回值，1.7.6 LSP 写成布尔值；小鱼精灵返回布尔值，旧脚本忽略它不受影响。`wrapline` 是逐项属性，不会覆盖已经添加项目的排列方式。

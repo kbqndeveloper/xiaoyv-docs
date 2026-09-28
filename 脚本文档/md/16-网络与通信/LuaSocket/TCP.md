@@ -16,9 +16,7 @@ returns: "userdata 或 nil, string"
 
 **详细说明：**
 
-对象方法遵循 LuaSocket 3.1.0：常用的有 `settimeout(seconds)`、`connect(host, port)`、`send(data)`、
-`receive(pattern)`、`close()`、`getsockname()` 与 `getpeername()`。未设置超时时，网络操作可能长时间
-等待；实际脚本应在连接前先调用 `settimeout`。
+对象方法遵循 LuaSocket 3.1.0：常用的有 `settimeout(seconds)`、`connect(host, port)`、`send(data)`、`receive(pattern)`、`close()`、`getsockname()` 与 `getpeername()`。未设置超时时，网络操作可能长时间等待；实际脚本应在连接前先调用 `settimeout`。
 
 ```lua
 local socket = require("socket")

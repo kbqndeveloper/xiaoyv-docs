@@ -17,7 +17,7 @@ returns: "integer | nil, string?"
 
 | 返回值 | 说明 |
 |---|---|
-| `integer | nil, string?` | 具体字段、特殊值和失败情况见下方详细说明。 |
+| `integer \| nil, string?` | 具体字段、特殊值和失败情况见下方详细说明。 |
 
 **使用示例：**
 
@@ -28,7 +28,6 @@ print(result)
 
 **详细说明：**
 
-显示自动关闭的 HUD 提示，不阻塞脚本。成功返回 `handle:integer`，失败返回
-`nil, errorMessage:string`。
+显示自动关闭的 HUD 提示，不阻塞脚本。成功返回 `handle:integer`，失败返回 `nil, errorMessage:string`。
 
 通用字段见左侧「HUD」。

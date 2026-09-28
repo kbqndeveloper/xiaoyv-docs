@@ -9,8 +9,7 @@ returns: "boolean 或 string?"
 
 **参数说明：**
 
-各方法参数随入口而定。模型文件参数均为字符串路径，`bitmap` 为
-`android.graphics.Bitmap`，`padding` 为非负整数，`r/g/b` 为颜色分量。
+各方法参数随入口而定。模型文件参数均为字符串路径，`bitmap` 为 `android.graphics.Bitmap`，`padding` 为非负整数，`r/g/b` 为颜色分量。
 
 先导入兼容类：
 
@@ -43,13 +42,7 @@ local PaddleOcr = import("com.nx.assist.lua.PaddleOcr")
 
 **详细说明：**
 
-内置和自定义 ONNX 模型都进入小鱼精灵现有 RapidOCR/ONNX Runtime 模型缓存。调用
-`PaddleOcr.loadModel(true)` 前，先按 [OCR 概述](../14-OCR/概述.md) 导入目标 ABI 对应的
-`libonnxruntime.so` 与 PP-OCRv4 预设模型文件。
-`detectWithPadding` 只回收内部创建的带边框副本，调用方仍应通过
-`LuaEngine.releaseBmp(bitmap)` 释放原 Bitmap。当前 APK 没有 NCNN 运行时，因此
-`loadModel(false)` 和 `loadNnccModel(...)` 会真实返回 `false`，不会把 ONNX 模型冒充成
-NCNN。
+内置和自定义 ONNX 模型都进入小鱼精灵现有 RapidOCR/ONNX Runtime 模型缓存。调用 `PaddleOcr.loadModel(true)` 前，先按 [OCR 概述](../14-OCR/概述.md) 导入目标 ABI 对应的 `libonnxruntime.so` 与 PP-OCRv4 预设模型文件。`detectWithPadding` 只回收内部创建的带边框副本，调用方仍应通过 `LuaEngine.releaseBmp(bitmap)` 释放原 Bitmap。当前 APK 没有 NCNN 运行时，因此 `loadModel(false)` 和 `loadNnccModel(...)` 会真实返回 `false`，不会把 ONNX 模型冒充成 NCNN。
 
 **使用示例：**
 

@@ -21,8 +21,7 @@ returns: "boolean"
 
 **详细说明：**
 
-该接口发送 WebSocket 文本帧。需要发送二进制帧或更底层协议时，使用服务器支持的文本编码，或改用
-LuaSocket TCP/UDP 接口实现协议。
+该接口发送 WebSocket 文本帧。需要发送二进制帧或更底层协议时，使用服务器支持的文本编码，或改用 LuaSocket TCP/UDP 接口实现协议。
 
 ```lua
 local ok = sendWebSocket(handle, "ping")

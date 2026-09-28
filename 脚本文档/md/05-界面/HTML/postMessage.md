@@ -17,7 +17,7 @@ returns: "boolean | nil, string?"
 
 | 返回值 | 说明 |
 |---|---|
-| `boolean | nil, string?` | 具体字段、特殊值和失败情况见下方详细说明。 |
+| `boolean \| nil, string?` | 具体字段、特殊值和失败情况见下方详细说明。 |
 
 **使用示例：**
 
@@ -28,5 +28,4 @@ print(result)
 
 **详细说明：**
 
-向页面发送 JSON 数据：调用页面的 `xiaoyv.onMessage(data)`，并派发
-`xiaoyv-message` 事件。成功返回 `true`，失败返回 `nil, errorMessage:string`。
+向页面发送 JSON 数据：调用页面的 `xiaoyv.onMessage(data)`，并派发 `xiaoyv-message` 事件。成功返回 `true`，失败返回 `nil, errorMessage:string`。

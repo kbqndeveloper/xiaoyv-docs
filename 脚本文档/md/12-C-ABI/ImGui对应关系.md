@@ -5,8 +5,7 @@ returns: ""
 
 # ImGui 完整 C ABI 对应关系
 
-`EngineImGuiApi* imguiApi = engine_getImGuiApi()` 返回 ImGui 子函数表。下表中的直接导出和
-子函数表成员与对应的直接导出行为一致，不是两套独立接口。
+`EngineImGuiApi* imguiApi = engine_getImGuiApi()` 返回 ImGui 子函数表。下表中的直接导出和子函数表成员与对应的直接导出行为一致，不是两套独立接口。
 
 ## 框架与窗口
 
@@ -24,8 +23,7 @@ returns: ""
 | `imgui.getWindowPos(handle)` | `engine_imguiGetWindowPos(handle, &geometry)` | `imguiApi->getWindowPos(...)` |
 | `imgui.setWindowFlags(...)` | `engine_imguiSetWindowFlags(...)` | `imguiApi->setWindowFlags(...)` |
 
-`show` 和 `showWindow` 的差别由 `EngineImGuiSurfaceConfig.windowed` 表达，所以共用一个 C ABI，
-不重复增加 `engine_imguiShowWindow`。
+`show` 和 `showWindow` 的差别由 `EngineImGuiSurfaceConfig.windowed` 表达，所以共用一个 C ABI，不重复增加 `engine_imguiShowWindow`。
 
 ## 布局与基础控件
 
@@ -125,6 +123,4 @@ Java `Bitmap` 只在 Lua-Java 边界转换；固定 C ABI 始终接收路径或�
 | `imgui.isValidHandle(handle)` | `engine_imguiIsValidHandle(handle)` | 对应 `imguiApi->isValidHandle`。 |
 | `imgui.getLastError()` | `engine_imguiLastError()` | 对应 `imguiApi->lastError`。 |
 
-Lua、JS、Go 的函数对象都不能进入稳定 C ABI，因此没有 `engine_imguiSetOnClick` 之类的函数。
-可复用的控件状态、事件队列、事件等待和关闭决策仍全部位于 `libengine.so`；各语言绑定只保存
-自己的函数引用并分发统一事件。
+Lua、JS、Go 的函数对象都不能进入稳定 C ABI，因此没有 `engine_imguiSetOnClick` 之类的函数。可复用的控件状态、事件队列、事件等待和关闭决策仍全部位于 `libengine.so`；各语言绑定只保存自己的函数引用并分发统一事件。

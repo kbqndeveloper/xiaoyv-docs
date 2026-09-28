@@ -15,8 +15,7 @@ returns: "table"
 
 **详细说明：**
 
-LTN12 用可组合的 source/sink 函数处理流式数据，常与 `socket.http.request` 的请求 table 一起使用。
-函数名、参数和返回值保持 LuaSocket 3.1.0 上游语义。
+LTN12 用可组合的 source/sink 函数处理流式数据，常与 `socket.http.request` 的请求 table 一起使用。函数名、参数和返回值保持 LuaSocket 3.1.0 上游语义。
 
 ```lua
 local http = require("socket.http")

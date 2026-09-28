@@ -23,8 +23,7 @@ returns: "userdata"
 
 **详细说明：**
 
-请求语义与 `httpPost` 一致，只是把同步等待移到新线程。失败时回调收到 `nil, errorMessage`；
-成功时收到 `body, statusCode`。
+请求语义与 `httpPost` 一致，只是把同步等待移到新线程。失败时回调收到 `nil, errorMessage`；成功时收到 `body, statusCode`。
 
 ```lua
 asynHttpPost(function(body, codeOrError)

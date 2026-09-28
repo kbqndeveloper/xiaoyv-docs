@@ -20,8 +20,7 @@ returns: "image userdata 或 nil, error"
 
 **详细说明：**
 
-图片对象提供 `width`、`height` 字段以及读取、修改和保存方法。对象由 Lua userdata 持有，未主动
-调用 `close` 时也会在 GC 时自动释放；关闭后继续访问会抛出 Lua 错误。
+图片对象提供 `width`、`height` 字段以及读取、修改和保存方法。对象由 Lua userdata 持有，未主动调用 `close` 时也会在 GC 时自动释放；关闭后继续访问会抛出 Lua 错误。
 
 ```lua
 local image, error = stb_image.load("input.jpg")

@@ -15,8 +15,7 @@ returns: "table"
 
 **详细说明：**
 
-SMTP 模块保留 LuaSocket 上游 `smtp.send(requestTable)` 和 `smtp.message(messageTable)` 形状。
-它使用普通 SMTP socket，不等同于带 TLS 登录流程；需要 Android Java 邮件兼容入口时见 Java 分类。
+SMTP 模块保留 LuaSocket 上游 `smtp.send(requestTable)` 和 `smtp.message(messageTable)` 形状。它使用普通 SMTP socket，不等同于带 TLS 登录流程；需要 Android Java 邮件兼容入口时见 Java 分类。
 
 ```lua
 local smtp = require("socket.smtp")

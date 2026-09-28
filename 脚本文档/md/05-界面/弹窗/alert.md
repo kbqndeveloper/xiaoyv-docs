@@ -18,7 +18,7 @@ returns: "boolean | nil, string?"
 
 | 返回值 | 说明 |
 |---|---|
-| `boolean | nil, string?` | 具体字段、特殊值和失败情况见下方详细说明。 |
+| `boolean \| nil, string?` | 具体字段、特殊值和失败情况见下方详细说明。 |
 
 **详细说明：**
 
@@ -26,7 +26,6 @@ returns: "boolean | nil, string?"
 local ok, errorMessage = m.dialog.alert("提示", "操作完成", "知道了")
 ```
 
-三个参数均为 `string`，`buttonText` 可省略。确认或关闭返回 `boolean`；创建失败返回
-`nil, errorMessage:string`。
+三个参数均为 `string`，`buttonText` 可省略。确认或关闭返回 `boolean`；创建失败返回 `nil, errorMessage:string`。
 
 通用规则（悬浮窗、权限、options）见左侧「弹窗」。

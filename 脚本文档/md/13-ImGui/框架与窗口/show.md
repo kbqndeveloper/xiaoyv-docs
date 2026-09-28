@@ -28,6 +28,4 @@ imgui.createLabel(window, "脚本运行中", true)
 assert(imgui.show(true, 30), imgui.getLastError())
 ```
 
-三个可选参数按类型识别，顺序可以交换，`nil` 会被忽略；同一种类型出现两次会产生 Lua
-参数错误。`touchable=true` 时当前任务会阻塞到 `imgui.close()` 或外部关闭；为 `false` 时
-显示成功后立即返回。回调由内部事件泵执行，仍可安全调用其他 `imgui` 方法。
+三个可选参数按类型识别，顺序可以交换，`nil` 会被忽略；同一种类型出现两次会产生 Lua 参数错误。`touchable=true` 时当前任务会阻塞到 `imgui.close()` 或外部关闭；为 `false` 时显示成功后立即返回。回调由内部事件泵执行，仍可安全调用其他 `imgui` 方法。

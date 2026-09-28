@@ -25,5 +25,4 @@ imgui.addOptionItem(combo, "新增选项")
 print(imgui.getItemCount(combo))
 ```
 
-追加不会改变当前选择。空组合框追加第一项后仍返回 `-1`，需要时调用
-`setItemSelected(handle, 0)` 显式选择。
+追加不会改变当前选择。空组合框追加第一项后仍返回 `-1`，需要时调用 `setItemSelected(handle, 0)` 显式选择。

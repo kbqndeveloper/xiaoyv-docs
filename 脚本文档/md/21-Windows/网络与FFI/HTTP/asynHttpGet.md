@@ -22,8 +22,7 @@ returns: "thread userdata"
 
 **详细说明：**
 
-回调在新建的 Worker Lua 子线程中执行。成功时收到 `body, statusCode`，失败时收到
-`nil, errorMessage`；异步入口不会把响应头和状态消息作为回调参数传出。
+回调在新建的 Worker Lua 子线程中执行。成功时收到 `body, statusCode`，失败时收到 `nil, errorMessage`；异步入口不会把响应头和状态消息作为回调参数传出。
 
 ```lua
 local thread = asynHttpGet(function(body, codeOrError)

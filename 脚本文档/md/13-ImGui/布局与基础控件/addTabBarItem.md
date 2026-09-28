@@ -26,5 +26,4 @@ local page = assert(imgui.addTabBarItem(tabBar, "日志"))
 imgui.createLabel(page, "暂无日志", false)
 ```
 
-懒人精灵网页把返回值写成无，但其 LSP 和实际嵌套控件用法需要标签页句柄；小鱼精灵返回
-句柄，忽略返回值的旧脚本不受影响。
+懒人精灵网页把返回值写成无，但其 LSP 和实际嵌套控件用法需要标签页句柄；小鱼精灵返回句柄，忽略返回值的旧脚本不受影响。

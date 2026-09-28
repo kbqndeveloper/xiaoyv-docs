@@ -12,7 +12,7 @@ returns: "boolean"
 
 | 参数 | 类型 | 必填 | 说明 |
 |---|---|---|---|
-| `keycode` | `string | integer` | 是 | 按键标识符或 Android 数字按键码。 |
+| `keycode` | `string \| integer` | 是 | 按键标识符或 Android 数字按键码。 |
 
 | 返回值 | 说明 |
 |---|---|
@@ -47,5 +47,4 @@ print(ok)
 | 向上翻页 | `PageUp` | `92` |
 | 向下翻页 | `PageDown` | `93` |
 
-`keyDown`、`keyUp`、`keyPress` 的 `keycode` 类型均为 `string | integer`，可以传标识符，
-也可以直接传数字按键码；三个函数都返回 `boolean`，表示命令是否已执行。
+`keyDown`、`keyUp`、`keyPress` 的 `keycode` 类型均为 `string | integer`，可以传标识符，也可以直接传数字按键码；三个函数都返回 `boolean`，表示命令是否已执行。

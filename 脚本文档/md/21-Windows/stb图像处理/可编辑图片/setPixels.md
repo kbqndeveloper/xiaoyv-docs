@@ -19,8 +19,7 @@ returns: "integer"
 
 **详细说明：**
 
-数组项不是 table 或缺少有效整数时会抛出 Lua 错误；坐标越界和颜色超范围的项只是不计入返回值。
-修改直接作用于内存点阵，需另行调用 `save`。
+数组项不是 table 或缺少有效整数时会抛出 Lua 错误；坐标越界和颜色超范围的项只是不计入返回值。修改直接作用于内存点阵，需另行调用 `save`。
 
 ```lua
 local image = assert(stb_image.load("input.png"))

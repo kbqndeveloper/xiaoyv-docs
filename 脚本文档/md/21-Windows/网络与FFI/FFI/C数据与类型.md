@@ -33,10 +33,7 @@ ffi.sizeof(ctypeOrCdata[, length])
 
 **详细说明：**
 
-常用配套函数包括 `ffi.alignof`、`ffi.offsetof`、`ffi.istype`、`ffi.addressof`、`ffi.nullptr`、
-`ffi.string`、`ffi.copy`、`ffi.fill` 和 `ffi.tonumber`。结构体、指针和数组布局由当前 Windows ABI
-决定，应以 `ffi.sizeof`、`ffi.alignof` 和目标 DLL 的声明为准。不得把任意整数或项目 userdata
-直接当作有效 C 指针。
+常用配套函数包括 `ffi.alignof`、`ffi.offsetof`、`ffi.istype`、`ffi.addressof`、`ffi.nullptr`、`ffi.string`、`ffi.copy`、`ffi.fill` 和 `ffi.tonumber`。结构体、指针和数组布局由当前 Windows ABI 决定，应以 `ffi.sizeof`、`ffi.alignof` 和目标 DLL 的声明为准。不得把任意整数或项目 userdata 直接当作有效 C 指针。
 
 ```lua
 local ffi = require("ffi")

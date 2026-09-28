@@ -19,8 +19,7 @@ returns: "pixels: string"
 
 **详细说明：**
 
-每次调用都会复制完整点阵，返回值与图片对象生命周期无关；需要高频读取时不要反复复制，可考虑
-使用 [getData](getData.md) 的借用地址并在使用期间保持图片对象有效。
+每次调用都会复制完整点阵，返回值与图片对象生命周期无关；需要高频读取时不要反复复制，可考虑使用 [getData](getData.md) 的借用地址并在使用期间保持图片对象有效。
 
 ```lua
 local image = assert(stb_image.load("input.png"))

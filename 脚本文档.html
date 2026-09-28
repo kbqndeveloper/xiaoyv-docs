@@ -870,6 +870,7 @@
 
     // 目录按常用脚本的阅读路径展示；未列入的节点保持 catalog.json 原有顺序。
     const CATEGORY_ORDER = new Map([
+      ["Android", 10], ["Windows", 20], ["工具", 30],
       ["概述", 10], ["日志", 30], ["设备", 40], ["图像", 50],
       ["找色", 60], ["输入", 70], ["无障碍", 80], ["输入法", 90], ["多线程", 100],
       ["网络与通信", 110], ["界面", 120], ["脚本包", 130], ["Java", 140],
@@ -887,6 +888,7 @@
     ]);
     const COMMAND_ORDER = new Map([
       ["useApi / switchApi", 20], ["print", 30], ["sleep", 40], ["systemTime", 50], ["tickCount", 60],
+      ["getWorkerInfo", 70], ["center.request", 80], ["ui.call", 90], ["ui.receive", 100],
       ["m.appIsFront", 50], ["m.appIsRunning", 60], ["m.runApp", 70], ["m.stopApp", 80],
       ["m.frontAppName", 90], ["m.getCurrentActivity", 100], ["m.getRunEnvType", 110],
       ["m.exec", 115], ["m.getDisplaySize", 120], ["m.getDisplayInfo", 130], ["m.getScreenPixels", 140],
@@ -917,6 +919,7 @@
 
     function nodeOrder(node, depth, index) {
       if (depth === 0) return node.order ?? CATEGORY_ORDER.get(node.name) ?? (1000 + index);
+      if (depth === 1 && node.order !== undefined) return node.order;
       if (!node.cmd && /概述|规则/.test(node.name)) return 0;
       if (node.cmd) {
         const exact = COMMAND_ORDER.get(node.cmd);

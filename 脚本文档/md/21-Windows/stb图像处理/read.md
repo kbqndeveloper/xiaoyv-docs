@@ -20,8 +20,7 @@ returns: "width, height, pixels 或 0, 0, \"\""
 
 **详细说明：**
 
-该函数返回的是一次复制后的二进制快照，不会创建可编辑图片对象。需要连续修改像素时使用
-[stb_image.load](load.md)；点阵顺序按行排列，坐标 `(x, y)` 的偏移为 `(y * width + x) * 3`。
+该函数返回的是一次复制后的二进制快照，不会创建可编辑图片对象。需要连续修改像素时使用 [stb_image.load](load.md)；点阵顺序按行排列，坐标 `(x, y)` 的偏移为 `(y * width + x) * 3`。
 
 ```lua
 local width, height, pixels = stb_image.read("input.png")

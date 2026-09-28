@@ -22,8 +22,7 @@ returns: "userdata"
 
 **详细说明：**
 
-回调的第一个参数为正文；请求失败时为 `nil`。第二个参数在成功时是 HTTP 状态码，失败时是错误文本。
-回调在请求线程中执行，避免在其中执行长时间阻塞操作。
+回调的第一个参数为正文；请求失败时为 `nil`。第二个参数在成功时是 HTTP 状态码，失败时是错误文本。回调在请求线程中执行，避免在其中执行长时间阻塞操作。
 
 ```lua
 local worker = asynHttpGet(function(body, codeOrError)

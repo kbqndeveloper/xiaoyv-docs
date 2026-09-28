@@ -22,8 +22,7 @@ returns: "string, integer, table, string 或 nil, string"
 
 **详细说明：**
 
-HTTP 状态码不是 Lua 调用失败：例如服务端返回 404 时仍会得到正文、`404`、响应头和状态消息；
-只有请求本身无法完成时才返回 `nil, errorMessage`。该调用同步等待响应。
+HTTP 状态码不是 Lua 调用失败：例如服务端返回 404 时仍会得到正文、`404`、响应头和状态消息；只有请求本身无法完成时才返回 `nil, errorMessage`。该调用同步等待响应。
 
 ```lua
 local body, code, headers, message = httpGet("https://example.com", 10, {

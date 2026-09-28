@@ -16,7 +16,7 @@ returns: "boolean | nil, string?"
 
 | 返回值 | 说明 |
 |---|---|
-| `boolean | nil, string?` | 具体字段、特殊值和失败情况见下方详细说明。 |
+| `boolean \| nil, string?` | 具体字段、特殊值和失败情况见下方详细说明。 |
 
 **使用示例：**
 
@@ -27,5 +27,4 @@ print(result)
 
 **详细说明：**
 
-关闭指定 `id` 的 HUD。成功关闭返回 `true`，不存在返回 `false`，失败返回
-`nil, errorMessage:string`。
+关闭指定 `id` 的 HUD。成功关闭返回 `true`，不存在返回 `false`，失败返回 `nil, errorMessage:string`。

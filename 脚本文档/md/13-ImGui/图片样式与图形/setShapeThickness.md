@@ -25,5 +25,4 @@ imgui.setShapeThickness(line, 4)
 imgui.setShapeThickness(rectangle, 3)
 ```
 
-线宽对线段、非填充矩形、非填充圆和非填充多边形可见；位图和文本图形不支持该方法并
-返回 `false`。
+线宽对线段、非填充矩形、非填充圆和非填充多边形可见；位图和文本图形不支持该方法并返回 `false`。

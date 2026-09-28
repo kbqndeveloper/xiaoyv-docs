@@ -22,8 +22,7 @@ returns: "string/number, integer, table, string 或 nil, string"
 
 **详细说明：**
 
-HTTP URL 使用上游 `socket.http` 行为。HTTPS URL 会自动交给本项目的 HTTPS 请求兼容层，但请求
-table 的常用形状和返回值保持不变。`source`、`sink` 可配合 `ltn12` 处理流式数据。
+HTTP URL 使用上游 `socket.http` 行为。HTTPS URL 会自动交给本项目的 HTTPS 请求兼容层，但请求 table 的常用形状和返回值保持不变。`source`、`sink` 可配合 `ltn12` 处理流式数据。
 
 ```lua
 local http = require("socket.http")

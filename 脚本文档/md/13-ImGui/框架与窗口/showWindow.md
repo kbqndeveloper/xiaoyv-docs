@@ -50,6 +50,4 @@ assert(imgui.showWindow({
 while true do sleep(1000) end
 ```
 
-本方法非阻塞。显示时，第一个已创建的 ImGui 窗口会默认调整为 `(0, 0, width, height)`
-填满外层画布，之后仍可调用 `setWindowPos`、`setWindowSize` 修改。主脚本结束会统一关闭
-窗口，因此非阻塞脚本必须继续运行。
+本方法非阻塞。显示时，第一个已创建的 ImGui 窗口会默认调整为 `(0, 0, width, height)` 填满外层画布，之后仍可调用 `setWindowPos`、`setWindowSize` 修改。主脚本结束会统一关闭窗口，因此非阻塞脚本必须继续运行。

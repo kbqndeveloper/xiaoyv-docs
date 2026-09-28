@@ -43,9 +43,7 @@ ffi.sizeof(ctypeOrCdata[, length])
 | `ffi.string` / `ffi.copy` / `ffi.fill` | 读取 C 字符串、复制字节和填充内存。长度不明确时不要读取裸指针。 |
 | `ffi.tonumber` / `ffi.type` / `ffi.eval` | 将算术 cdata 转为 Lua 数字、识别 cdata 或解析 C 数值常量。 |
 
-结构体、数组和指针的内存布局由当前 Android ABI 决定。不要用 Lua table 代替 C 指针，也不要将任意
-整数当作有效地址。Java 与 OpenCV userdata 不是 C 指针，不能直接传给 FFI；跨边界数据应使用目标库
-声明的 cdata 或正式 API。
+结构体、数组和指针的内存布局由当前 Android ABI 决定。不要用 Lua table 代替 C 指针，也不要将任意整数当作有效地址。Java 与 OpenCV userdata 不是 C 指针，不能直接传给 FFI；跨边界数据应使用目标库声明的 cdata 或正式 API。
 
 ```lua
 local ffi = require("ffi")
@@ -69,6 +67,4 @@ assert(ffi.string(buffer) == "xiaoyv")
 print(point.x, point.y, ffi.tonumber(point.x))
 ```
 
-上例的 `xiaoyv_point` 仅包含两个 `int`，因此当前 ABI 上大小为 8。对于含指针、`long`、浮点、
-嵌套结构体或编译器填充的类型，应以 `ffi.sizeof`、`ffi.alignof` 和目标设备实测结果为准，不要把
-示例中的布局推广到其他 C 类型。
+上例的 `xiaoyv_point` 仅包含两个 `int`，因此当前 ABI 上大小为 8。对于含指针、`long`、浮点、嵌套结构体或编译器填充的类型，应以 `ffi.sizeof`、`ffi.alignof` 和目标设备实测结果为准，不要把示例中的布局推广到其他 C 类型。

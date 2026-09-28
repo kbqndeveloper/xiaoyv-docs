@@ -1,5 +1,9 @@
 [
   {
+    "name": "Android",
+    "order": 10,
+    "items": [
+  {
     "name": "概述",
     "order": 10,
     "items": [
@@ -1904,18 +1908,57 @@
         ]
       }
     ]
+  }
+    ]
   },
   {
     "name": "Windows",
-    "order": 1000,
+    "order": 20,
     "items": [
       {
         "name": "概述",
         "md": "md/21-Windows/概述.md"
       },
       {
+        "name": "当前 Worker 信息",
+        "md": "md/21-Windows/getWorkerInfo.md",
+        "cmd": "getWorkerInfo"
+      },
+      {
         "name": "中控交互",
-        "md": "md/21-Windows/中控交互.md"
+        "items": [
+          {
+            "name": "概述",
+            "md": "md/21-Windows/中控交互.md"
+          },
+          {
+            "name": "调用页面函数",
+            "md": "md/21-Windows/中控界面/call.md",
+            "cmd": "ui.call"
+          },
+          {
+            "name": "接收页面事件",
+            "md": "md/21-Windows/中控界面/receive.md",
+            "cmd": "ui.receive"
+          },
+          {
+            "name": "HTML 自定义与 JavaScript",
+            "md": "md/21-Windows/中控界面/HTML自定义与JavaScript.md"
+          },
+          {
+            "name": "中控脚本 center.lua",
+            "md": "md/21-Windows/中控界面/中控脚本.md",
+            "cmd": "center.request"
+          }
+        ]
+      },
+      {
+        "name": "中控外部控制",
+        "md": "md/21-Windows/中控外部控制.md"
+      },
+      {
+        "name": "远控命令行工具",
+        "md": "md/21-Windows/远控命令行工具.md"
       },
       {
         "name": "开发与打包",
@@ -1942,6 +1985,54 @@
             "name": "停止子线程",
             "md": "md/21-Windows/多线程/stopThread.md",
             "cmd": "threadObject:stopThread"
+          }
+        ]
+      },
+      {
+        "name": "Worker 互调（RPC）",
+        "items": [
+          {
+            "name": "概述",
+            "md": "md/21-Windows/RPC/概述.md"
+          },
+          {
+            "name": "创建服务",
+            "md": "md/21-Windows/RPC/listen.md",
+            "cmd": "rpc.listen"
+          },
+          {
+            "name": "连接服务",
+            "md": "md/21-Windows/RPC/connect.md",
+            "cmd": "rpc.connect"
+          },
+          {
+            "name": "注册服务函数",
+            "md": "md/21-Windows/RPC/export.md",
+            "cmd": "server:export"
+          },
+          {
+            "name": "运行服务",
+            "md": "md/21-Windows/RPC/run.md",
+            "cmd": "server:run"
+          },
+          {
+            "name": "调用服务函数",
+            "md": "md/21-Windows/RPC/call.md",
+            "cmd": "client:call"
+          },
+          {
+            "name": "关闭客户端",
+            "md": "md/21-Windows/RPC/client_close.md",
+            "cmd": "client:close"
+          },
+          {
+            "name": "关闭服务",
+            "md": "md/21-Windows/RPC/server_close.md",
+            "cmd": "server:close"
+          },
+          {
+            "name": "x64 服务与 x86 客户端示例",
+            "md": "md/21-Windows/RPC/跨位数示例.md"
           }
         ]
       },
@@ -2205,6 +2296,183 @@
         ]
       },
       {
+        "name": "OCR",
+        "items": [
+          {
+            "name": "RapidOCRWeb",
+            "md": "md/21-Windows/OCR/RapidOCRWeb.md"
+          }
+        ]
+      },
+      {
+        "name": "VMmemory 虚拟机内存",
+        "items": [
+          {
+            "name": "概述",
+            "md": "md/21-Windows/VMmemory/概述.md"
+          },
+          {
+            "name": "常量与返回状态",
+            "md": "md/21-Windows/VMmemory/常量与返回状态.md"
+          },
+          {
+            "name": "模块与会话",
+            "items": [
+              {
+                "name": "打开会话",
+                "md": "md/21-Windows/VMmemory/open.md",
+                "cmd": "vm.open"
+              },
+              {
+                "name": "64 位地址",
+                "md": "md/21-Windows/VMmemory/address.md",
+                "cmd": "vm.address / vm.u64"
+              },
+              {
+                "name": "关闭会话",
+                "md": "md/21-Windows/VMmemory/会话/close.md",
+                "cmd": "session:close"
+              },
+              {
+                "name": "取消当前操作",
+                "md": "md/21-Windows/VMmemory/会话/cancel.md",
+                "cmd": "session:cancel"
+              }
+            ]
+          },
+          {
+            "name": "目标信息",
+            "items": [
+              {
+                "name": "枚举与查找进程",
+                "md": "md/21-Windows/VMmemory/会话/processes.md",
+                "cmd": "session:processes / session:find_processes"
+              },
+              {
+                "name": "枚举模块",
+                "md": "md/21-Windows/VMmemory/会话/modules.md",
+                "cmd": "session:modules"
+              },
+              {
+                "name": "查询模块",
+                "md": "md/21-Windows/VMmemory/会话/module.md",
+                "cmd": "session:module"
+              },
+              {
+                "name": "内存区域",
+                "md": "md/21-Windows/VMmemory/会话/regions.md",
+                "cmd": "session:regions"
+              },
+              {
+                "name": "地址转换",
+                "md": "md/21-Windows/VMmemory/会话/translate.md",
+                "cmd": "session:translate"
+              },
+              {
+                "name": "系统信息",
+                "md": "md/21-Windows/VMmemory/会话/system.md",
+                "cmd": "session:system"
+              }
+            ]
+          },
+          {
+            "name": "内存读写",
+            "items": [
+              {
+                "name": "读取字节",
+                "md": "md/21-Windows/VMmemory/会话/read.md",
+                "cmd": "session:read"
+              },
+              {
+                "name": "读取数值",
+                "md": "md/21-Windows/VMmemory/会话/read_value.md",
+                "cmd": "session:read_value"
+              },
+              {
+                "name": "读取文本",
+                "md": "md/21-Windows/VMmemory/会话/read_string.md",
+                "cmd": "session:read_string"
+              },
+              {
+                "name": "写入字节",
+                "md": "md/21-Windows/VMmemory/会话/write.md",
+                "cmd": "session:write"
+              },
+              {
+                "name": "写入数值",
+                "md": "md/21-Windows/VMmemory/会话/write_value.md",
+                "cmd": "session:write_value"
+              },
+              {
+                "name": "写入文本",
+                "md": "md/21-Windows/VMmemory/会话/write_string.md",
+                "cmd": "session:write_string"
+              },
+              {
+                "name": "数值转字节",
+                "md": "md/21-Windows/VMmemory/value_bytes.md",
+                "cmd": "vm.value_bytes"
+              }
+            ]
+          },
+          {
+            "name": "批量与搜索",
+            "items": [
+              {
+                "name": "批量读取",
+                "md": "md/21-Windows/VMmemory/会话/read_batch.md",
+                "cmd": "session:read_batch"
+              },
+              {
+                "name": "批量写入",
+                "md": "md/21-Windows/VMmemory/会话/write_batch.md",
+                "cmd": "session:write_batch"
+              },
+              {
+                "name": "指针链",
+                "md": "md/21-Windows/VMmemory/会话/pointer_chain.md",
+                "cmd": "session:pointer_chain"
+              },
+              {
+                "name": "搜索内存",
+                "md": "md/21-Windows/VMmemory/会话/search.md",
+                "cmd": "session:search"
+              }
+            ]
+          },
+          {
+            "name": "配置与诊断",
+            "items": [
+              {
+                "name": "刷新缓存",
+                "md": "md/21-Windows/VMmemory/会话/refresh.md",
+                "cmd": "session:refresh"
+              },
+              {
+                "name": "读取配置",
+                "md": "md/21-Windows/VMmemory/会话/config_get.md",
+                "cmd": "session:config_get"
+              },
+              {
+                "name": "修改配置",
+                "md": "md/21-Windows/VMmemory/会话/config_set.md",
+                "cmd": "session:config_set"
+              },
+              {
+                "name": "接口版本",
+                "md": "md/21-Windows/VMmemory/abi_version.md",
+                "cmd": "vm.abi_version"
+              },
+              {
+                "name": "最近底层错误",
+                "md": "md/21-Windows/VMmemory/last_error.md",
+                "cmd": "vm.last_error"
+              }
+            ]
+          }
+        ]
+      },
+      {
         "name": "SQLite 数据库",
         "items": [
           {
@@ -2345,6 +2613,29 @@
                 "cmd": "cursor:close"
               }
             ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "工具",
+    "order": 30,
+    "items": [
+      {
+        "name": "小鱼远控",
+        "items": [
+          {
+            "name": "概述",
+            "md": "md/22-工具/小鱼远控/概述.md"
+          },
+          {
+            "name": "P2P 连接",
+            "md": "md/22-工具/小鱼远控/P2P连接.md"
+          },
+          {
+            "name": "服务端部署",
+            "md": "md/22-工具/小鱼远控/服务端部署.md"
           }
         ]
       }

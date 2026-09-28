@@ -3,18 +3,13 @@ params: ""
 returns: ""
 ---
 
-本页主体是 Android API；Windows 条目在分类名称中明确带有“Windows”，完整说明见独立的
-[Windows 概述](../21-Windows/概述.md)。两个平台不能因为函数同名就默认行为完全相同。
+本页汇总 Android 脚本 API。Windows 专属接口见帮助文档中的 Windows 分类；两个平台不能因为函数同名就默认行为完全相同。
 
-Lua 仍是动态语言，下面的类型是 API 契约：`integer` 表示整数，`number` 表示整数或小数，
-`string` 可承载文本或二进制数据，`table` 表示 Lua 表，`userdata` 表示 native/Java 对象，
-`any` 表示任意 Lua 值，类型后的 `?` 表示该值可能为 `nil`。
+Lua 仍是动态语言，下面的类型是 API 契约：`integer` 表示整数，`number` 表示整数或小数，`string` 可承载文本或二进制数据，`table` 表示 Lua 表，`userdata` 表示 native/Java 对象，`any` 表示任意 Lua 值，类型后的 `?` 表示该值可能为 `nil`。
 
-小鱼精灵默认启用 `m` API。总览使用完整的 `m.xxx` 名称标识 API 归属和层级；函数详情页的
-语法与示例则使用实际推荐写法，例如直接调用 `appIsFront()`、`capture(path)` 或 `thread.newThread()`。
+小鱼精灵默认启用 `m` API。总览使用完整的 `m.xxx` 名称标识 API 归属和层级；函数详情页的语法与示例则使用实际推荐写法，例如直接调用 `appIsFront()`、`capture(path)` 或 `thread.newThread()`。
 
-常用脚本通常按“确认运行环境/应用 → 读取截图 → 找图或找色 → 输入操作 → 等待或循环”的顺序
-组织；交互式目录按这个顺序展示命令。扩展、模型和兼容入口放在各自分类的后段。
+常用脚本通常按“确认运行环境/应用 → 读取截图 → 找图或找色 → 输入操作 → 等待或循环”的顺序组织；交互式目录按这个顺序展示命令。扩展、模型和兼容入口放在各自分类的后段。
 
 | 分类 | 函数 | 参数类型 | 返回值类型 | 说明 |
 |---|---|---|---|---|
@@ -136,14 +131,7 @@ Lua 仍是动态语言，下面的类型是 API 契约：`integer` 表示整数�
 | OpenCV | `opencv.capture` / `opencv.findCircles` / `opencv.Mat` 等 | 截图区域、算法配置或 Java 类参数 | Mat userdata、圆形 table 或 Java 对象 | 独立只读命名空间；类索引来自构建所用 OpenCV AAR |
 | 运行时 | `ffi.cdef` / `ffi.load` | C 声明和库路径 | cdata、library 或标量 | CFFI 声明、结构体、数组、浮点、回调和可变参数 |
 | 无障碍 | 选择器、查询、节点信息、节点动作、`nodeLib.*` | 见「无障碍 / 节点自动化」 | selector、node、table 或状态 | 查询和操作 Android 无障碍节点 |
-| Windows 大漠 | `dm.*` | 见「Windows / 大漠兼容入口」 | 视具体函数而定 | 沿用旧 `dm.cpp/dm.h` 签名，不自动展开到 `_G` |
-| Windows stb 图像 | `stb_image.load/merge/read/write/convert/hsvThreshold/rgbToHsv/findColors` | 见「Windows / stb 图像处理」 | 图片对象、RGB 二进制、状态或坐标 | 独立于大漠的 Windows 图片读写和可编辑点阵；`findColor`、旧 `a1~a7` 仍可用 |
-| Windows OpenCV 5 | `require("opencv")`、`cv.imread`、`cv.imwrite`、`cv.cvtColor`、`cv.resize`、`cv.threshold`、`cv.inRange`、`cv.Canny`、`cv.findContours`、`cv.matchTemplate` 等 | 见「Windows / OpenCV 5」 | Mat userdata、数值、坐标或轮廓容器 | 按需加载独立 OpenCV 5 Lua DLL；常用函数按当前绑定提供 |
-| Windows SQLite 数据库 | `require("db")` / `db.open` / `connection:query` 等 | 见「Windows / SQLite 数据库」 | 连接、预编译语句、游标、行表或 `nil, error` | 第一版仅支持 SQLite；支持事务和可选 SQLite3MC 加密 |
 
-`m.sleep`、`m.systemTime`、`m.tickCount`、`m.touchDown` 等同名成员与默认全局函数的参数、
-返回值一致；`m.ime` 是正式输入法模块，默认全局 `ime` 指向同一张表。`m.html` 是 `m.web`
-的别名。设备和应用能力统一归属 `m`，完整清单见左侧「设备」分类。
+`m.sleep`、`m.systemTime`、`m.tickCount`、`m.touchDown` 等同名成员与默认全局函数的参数、返回值一致；`m.ime` 是正式输入法模块，默认全局 `ime` 指向同一张表。`m.html` 是 `m.web` 的别名。设备和应用能力统一归属 `m`，完整清单见左侧「设备」分类。
 
-`lr` / `cd` 是迁移既有脚本的独立命名空间，后续兼容映射不改变 `m` 的正式契约。完整的切换
-规则见「命名空间与别名」，扩展能力按左侧对应功能分类查看。
+`lr` / `cd` 是迁移既有脚本的独立命名空间，后续兼容映射不改变 `m` 的正式契约。完整的切换规则见「命名空间与别名」，扩展能力按左侧对应功能分类查看。

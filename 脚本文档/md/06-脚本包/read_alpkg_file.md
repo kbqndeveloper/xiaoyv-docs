@@ -16,7 +16,7 @@ returns: "string | nil, string?"
 
 | 返回值 | 说明 |
 |---|---|
-| `string | nil, string?` | 具体字段、特殊值和失败情况见下方详细说明。 |
+| `string \| nil, string?` | 具体字段、特殊值和失败情况见下方详细说明。 |
 
 **详细说明：**
 
@@ -30,10 +30,7 @@ local configText = assert(m.read_alpkg_file("data/config.json"))
 local imageBytes = assert(m.read_alpkg_file("images/logo.png"))
 ```
 
-`m.read_alpkg_file(path:string)` 返回二进制安全的 Lua `string`，适用于 CSS、JSON、HTML、图片和
-其他非 Lua 文件。它只接受当前 `.alpkg` 的项目相对路径，只读取 `manifest.json` 中登记为
-`resource` 的条目；不会解压到缓存目录、不会回退到包外文件，也不能读取 Lua chunk。
-读取失败返回 `nil, errorMessage:string`；普通 `.lua` 脚本调用时也会返回失败。
+`m.read_alpkg_file(path:string)` 返回二进制安全的 Lua `string`，适用于 CSS、JSON、HTML、图片和其他非 Lua 文件。它只接受当前 `.alpkg` 的项目相对路径，只读取 `manifest.json` 中登记为 `resource` 的条目；不会解压到缓存目录、不会回退到包外文件，也不能读取 Lua chunk。读取失败返回 `nil, errorMessage:string`；普通 `.lua` 脚本调用时也会返回失败。
 
 打包与格式说明见 [脚本包打包规则](打包规则.md)。
 

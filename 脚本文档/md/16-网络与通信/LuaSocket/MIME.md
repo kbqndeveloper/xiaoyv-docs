@@ -15,8 +15,7 @@ returns: "table"
 
 **详细说明：**
 
-常用函数包括 `mime.b64(text)`、`mime.unb64(text)`、`mime.qp(text)` 和 `mime.unqp(text)`。
-该模块遵循 LuaSocket 3.1.0 上游 API，适合处理邮件或 HTTP 协议中的编码文本。
+常用函数包括 `mime.b64(text)`、`mime.unb64(text)`、`mime.qp(text)` 和 `mime.unqp(text)`。该模块遵循 LuaSocket 3.1.0 上游 API，适合处理邮件或 HTTP 协议中的编码文本。
 
 ```lua
 local mime = require("mime")

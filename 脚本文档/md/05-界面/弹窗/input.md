@@ -34,5 +34,4 @@ local text, errorMessage = m.dialog.input("输入", "请输入名称", "默认�
 })
 ```
 
-确认返回 `text:string`；取消返回 `nil`；创建失败返回 `nil, errorMessage:string`。
-`options` 字段见左侧「弹窗」。
+确认返回 `text:string`；取消返回 `nil`；创建失败返回 `nil, errorMessage:string`。`options` 字段见左侧「弹窗」。

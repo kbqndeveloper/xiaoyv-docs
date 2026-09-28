@@ -16,7 +16,7 @@ returns: "boolean | nil, string?"
 
 | 返回值 | 说明 |
 |---|---|
-| `boolean | nil, string?` | 具体字段、特殊值和失败情况见下方详细说明。 |
+| `boolean \| nil, string?` | 具体字段、特殊值和失败情况见下方详细说明。 |
 
 **使用示例：**
 

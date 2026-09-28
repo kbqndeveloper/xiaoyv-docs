@@ -17,7 +17,7 @@ returns: "table | nil, string?"
 
 | 返回值 | 说明 |
 |---|---|
-| `table | nil, string?` | 具体字段、特殊值和失败情况见下方详细说明。 |
+| `table \| nil, string?` | 具体字段、特殊值和失败情况见下方详细说明。 |
 
 **使用示例：**
 
@@ -28,8 +28,7 @@ print(result)
 
 **详细说明：**
 
-等待页面事件。成功返回 `event:table`，失败返回 `nil, errorMessage:string`。
-常见 `event.type`：`closed`、页面 `xiaoyv.emit` 的自定义类型等。
+等待页面事件。成功返回 `event:table`，失败返回 `nil, errorMessage:string`。常见 `event.type`：`closed`、页面 `xiaoyv.emit` 的自定义类型等。
 
 用法见左侧「HTML」示例。
 

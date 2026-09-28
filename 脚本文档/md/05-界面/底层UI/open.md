@@ -17,7 +17,7 @@ returns: "integer | nil, string?"
 
 | 返回值 | 说明 |
 |---|---|
-| `integer | nil, string?` | 具体字段、特殊值和失败情况见下方详细说明。 |
+| `integer \| nil, string?` | 具体字段、特殊值和失败情况见下方详细说明。 |
 
 **使用示例：**
 
@@ -28,7 +28,6 @@ print(result)
 
 **详细说明：**
 
-打开底层 UI 会话。`surface` 如 `"hud"` / `"web"` 等。成功返回 `sessionId`，失败返回
-`nil, errorMessage:string`。
+打开底层 UI 会话。`surface` 如 `"hud"` / `"web"` 等。成功返回 `sessionId`，失败返回 `nil, errorMessage:string`。
 
 方法表见左侧「底层UI」。

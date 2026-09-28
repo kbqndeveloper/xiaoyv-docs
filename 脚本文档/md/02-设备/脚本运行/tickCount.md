@@ -23,5 +23,4 @@ print(elapsed)
 
 **详细说明：**
 
-`tickCount()` 无参数，返回 `integer` 类型的当前脚本运行毫秒数。
-也可通过 `m.tickCount()` 调用。
+`tickCount()` 无参数，返回 `integer` 类型的当前脚本运行毫秒数。也可通过 `m.tickCount()` 调用。

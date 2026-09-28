@@ -23,8 +23,7 @@ returns: "boolean"
 
 **详细说明：**
 
-`method` 为 `1` 时实际横向偏移为 `x + path1.width`；为 `2` 时实际纵向偏移为
-`y + path1.height`。输出范围会覆盖两张图片及负偏移产生的区域，输出格式由扩展名决定。
+`method` 为 `1` 时实际横向偏移为 `x + path1.width`；为 `2` 时实际纵向偏移为 `y + path1.height`。输出范围会覆盖两张图片及负偏移产生的区域，输出格式由扩展名决定。
 
 ```lua
 assert(stb_image.merge("left.png", "right.png", "all.png", 0, 0, 1))

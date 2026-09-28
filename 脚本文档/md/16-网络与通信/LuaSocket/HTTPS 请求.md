@@ -22,8 +22,7 @@ returns: "string/number, integer, table, string 或 nil, string"
 
 **详细说明：**
 
-这是为兼容常见 LuaSocket HTTPS 脚本提供的请求入口，不是 LuaSec。它只提供 `.request` 形状的
-HTTPS 请求；不提供 `ssl.https.tcp`、证书上下文或 TLS socket 对象。
+这是为兼容常见 LuaSocket HTTPS 脚本提供的请求入口，不是 LuaSec。它只提供 `.request` 形状的 HTTPS 请求；不提供 `ssl.https.tcp`、证书上下文或 TLS socket 对象。
 
 ```lua
 local https = require("ssl.https")

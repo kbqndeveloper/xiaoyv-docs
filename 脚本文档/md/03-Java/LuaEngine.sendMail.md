@@ -32,8 +32,7 @@ sendMailWithMultiFile(...)
 
 **详细说明：**
 
-三个方法均在后台线程发送，不阻塞当前 Lua 调用。未传回调时失败只写入 Android 日志。
-SMTP 连接、读写默认 30 秒超时；端口和加密方式使用 JavaMail 当前 SMTP 默认配置。
+三个方法均在后台线程发送，不阻塞当前 Lua 调用。未传回调时失败只写入 Android 日志。SMTP 连接、读写默认 30 秒超时；端口和加密方式使用 JavaMail 当前 SMTP 默认配置。
 
 ```lua
 local LuaEngine = import("com.nx.assist.lua.LuaEngine")

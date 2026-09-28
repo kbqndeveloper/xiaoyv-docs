@@ -28,6 +28,4 @@ end
 
 **详细说明：**
 
-依次向 `time.android.com`、`ntp.aliyun.com` 和 `time1.cloud.tencent.com` 的 `123`
-端口发送 NTP 请求，并按设备当前地区格式化为 `yyyy-MM-dd_HH-mm-ss`。每个服务器最多等待
-1 秒，全部不可用时返回 `nil`；不会用设备本地时钟伪装网络时间。
+依次向 `time.android.com`、`ntp.aliyun.com` 和 `time1.cloud.tencent.com` 的 `123` 端口发送 NTP 请求，并按设备当前地区格式化为 `yyyy-MM-dd_HH-mm-ss`。每个服务器最多等待 1 秒，全部不可用时返回 `nil`；不会用设备本地时钟伪装网络时间。

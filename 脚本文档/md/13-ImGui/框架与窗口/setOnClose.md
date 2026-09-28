@@ -27,5 +27,4 @@ imgui.setOnClose(window, function(handle)
 end)
 ```
 
-回调明确返回 `false` 会取消本次关闭；返回其他值或没有返回值会销毁窗口。回调在脚本
-运行环境中执行，不在 Android UI 线程或 OpenGL 渲染线程执行。
+回调明确返回 `false` 会取消本次关闭；返回其他值或没有返回值会销毁窗口。回调在脚本运行环境中执行，不在 Android UI 线程或 OpenGL 渲染线程执行。

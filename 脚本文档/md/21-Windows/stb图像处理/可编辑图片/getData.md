@@ -20,8 +20,7 @@ returns: "address, byteCount"
 
 **详细说明：**
 
-地址属于图片对象，脚本不需要也不能自行释放。使用地址期间必须保持 `image` 的强引用，不能调用
-`image:close()`；对象关闭或被 GC 后地址立即失效。需要脱离对象长期保存时使用 [getPixels](getPixels.md)。
+地址属于图片对象，脚本不需要也不能自行释放。使用地址期间必须保持 `image` 的强引用，不能调用 `image:close()`；对象关闭或被 GC 后地址立即失效。需要脱离对象长期保存时使用 [getPixels](getPixels.md)。
 
 ```lua
 local image = assert(stb_image.load("input.png"))

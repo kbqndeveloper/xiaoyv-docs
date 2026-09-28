@@ -17,7 +17,7 @@ returns: "integer | nil, string?"
 
 | 返回值 | 说明 |
 |---|---|
-| `integer | nil, string?` | 具体字段、特殊值和失败情况见下方详细说明。 |
+| `integer \| nil, string?` | 具体字段、特殊值和失败情况见下方详细说明。 |
 
 **使用示例：**
 
@@ -28,7 +28,6 @@ print(result)
 
 **详细说明：**
 
-创建或替换指定 `id` 的 HUD。成功返回 `handle:integer`，失败返回
-`nil, errorMessage:string`。同一 `id` 会替换旧 HUD。
+创建或替换指定 `id` 的 HUD。成功返回 `handle:integer`，失败返回 `nil, errorMessage:string`。同一 `id` 会替换旧 HUD。
 
 字段与事件见左侧「HUD」。

@@ -19,7 +19,7 @@ returns: "boolean | nil, string?"
 
 | 返回值 | 说明 |
 |---|---|
-| `boolean | nil, string?` | 具体字段、特殊值和失败情况见下方详细说明。 |
+| `boolean \| nil, string?` | 具体字段、特殊值和失败情况见下方详细说明。 |
 
 **详细说明：**
 
@@ -27,7 +27,6 @@ returns: "boolean | nil, string?"
 local accepted, errorMessage = m.dialog.confirm("确认", "是否继续？", "继续", "取消")
 ```
 
-四个参数均为 `string`，后两个可省略。确认返回 `true`，取消或关闭返回 `false`，创建失败
-返回 `nil, errorMessage:string`。
+四个参数均为 `string`，后两个可省略。确认返回 `true`，取消或关闭返回 `false`，创建失败返回 `nil, errorMessage:string`。
 
 通用规则见左侧「弹窗」。

@@ -16,7 +16,7 @@ returns: "integer | nil, string?"
 
 | 返回值 | 说明 |
 |---|---|
-| `integer | nil, string?` | 具体字段、特殊值和失败情况见下方详细说明。 |
+| `integer \| nil, string?` | 具体字段、特殊值和失败情况见下方详细说明。 |
 
 **使用示例：**
 
@@ -27,7 +27,6 @@ print(result)
 
 **详细说明：**
 
-打开 WebView/HTML 界面。成功返回 `handle:integer`，失败返回
-`nil, errorMessage:string`。
+打开 WebView/HTML 界面。成功返回 `handle:integer`，失败返回 `nil, errorMessage:string`。
 
 `spec` 字段、来源优先级与布局规则见左侧「HTML」。

@@ -23,5 +23,4 @@ print(tm)
 
 **详细说明：**
 
-`systemTime()` 无参数，返回 `integer` 类型的 Unix epoch 毫秒时间戳。
-也可通过 `m.systemTime()` 调用。
+`systemTime()` 无参数，返回 `integer` 类型的 Unix epoch 毫秒时间戳。也可通过 `m.systemTime()` 调用。

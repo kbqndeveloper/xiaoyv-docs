@@ -25,5 +25,4 @@ imgui.setOnClick(closeButton, function()
 end)
 ```
 
-关闭会移除 Surface 并让阻塞中的 `show(true)` 返回，但不会销毁控件模型和句柄。同一脚本
-可以再次调用 `show` 或 `showWindow` 显示原有控件；脚本结束时才会统一释放全部资源。
+关闭会移除 Surface 并让阻塞中的 `show(true)` 返回，但不会销毁控件模型和句柄。同一脚本可以再次调用 `show` 或 `showWindow` 显示原有控件；脚本结束时才会统一释放全部资源。

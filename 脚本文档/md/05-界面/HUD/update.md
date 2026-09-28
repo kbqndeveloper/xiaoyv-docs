@@ -17,7 +17,7 @@ returns: "boolean | nil, string?"
 
 | 返回值 | 说明 |
 |---|---|
-| `boolean | nil, string?` | 具体字段、特殊值和失败情况见下方详细说明。 |
+| `boolean \| nil, string?` | 具体字段、特殊值和失败情况见下方详细说明。 |
 
 **使用示例：**
 
@@ -28,7 +28,6 @@ print(result)
 
 **详细说明：**
 
-按 `id` 更新已有 HUD，`patch` 为要覆盖的字段子集。成功返回 `true`，失败返回
-`nil, errorMessage:string`。
+按 `id` 更新已有 HUD，`patch` 为要覆盖的字段子集。成功返回 `true`，失败返回 `nil, errorMessage:string`。
 
 字段说明见左侧「HUD」。

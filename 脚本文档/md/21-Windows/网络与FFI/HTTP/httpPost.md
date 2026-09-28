@@ -23,8 +23,7 @@ returns: "string, integer, table, string 或 nil, string"
 
 **详细说明：**
 
-未提供 `Content-Type` 时默认使用 `application/x-www-form-urlencoded; charset=utf-8`。发送 JSON
-等其他正文时，应在请求头中显式设置对应类型。
+未提供 `Content-Type` 时默认使用 `application/x-www-form-urlencoded; charset=utf-8`。发送 JSON 等其他正文时，应在请求头中显式设置对应类型。
 
 ```lua
 local body, code = httpPost(

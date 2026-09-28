@@ -20,9 +20,7 @@ returns: "无"
 
 **详细说明：**
 
-`callback` 在同一 Worker 的 Lua VM 中执行。也可通过 `thread.beginThread` 使用同一入口。一个 Worker
-最多同时运行 10 个用户子线程；子线程
-错误只写入日志并结束该子线程。需要主动停止或等待某个线程时，请使用 [newThread](newThread.md)。
+`callback` 在同一 Worker 的 Lua VM 中执行。也可通过 `thread.beginThread` 使用同一入口。一个 Worker 最多同时运行 10 个用户子线程；子线程错误只写入日志并结束该子线程。需要主动停止或等待某个线程时，请使用 [newThread](newThread.md)。
 
 ```lua
 local total = 0

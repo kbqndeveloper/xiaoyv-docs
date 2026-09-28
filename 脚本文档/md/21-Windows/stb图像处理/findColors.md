@@ -23,8 +23,7 @@ returns: "x, y"
 
 **详细说明：**
 
-`stb_image.findColor` 是同一实现的兼容别名。规则中可以为单个点追加独立 RGB 容差；扫描方向
-和 `colors` 规则与 Windows 屏幕找色入口一致，但此函数只读取图片编码数据，不读取大漠截图地址。
+`stb_image.findColor` 是同一实现的兼容别名。规则中可以为单个点追加独立 RGB 容差；扫描方向和 `colors` 规则与 Windows 屏幕找色入口一致，但此函数只读取图片编码数据，不读取大漠截图地址。
 
 ```lua
 local file = assert(io.open("input.png", "rb"))

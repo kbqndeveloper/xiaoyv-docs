@@ -20,8 +20,7 @@ returns: "boolean"
 
 **详细说明：**
 
-关闭是幂等的；关闭后不能再读取、修改或保存，`getData` 取得的借用地址也立即失效。若不主动
-关闭，Lua GC 会自动释放 userdata 持有的点阵。
+关闭是幂等的；关闭后不能再读取、修改或保存，`getData` 取得的借用地址也立即失效。若不主动关闭，Lua GC 会自动释放 userdata 持有的点阵。
 
 ```lua
 local image = assert(stb_image.load("input.png"))
