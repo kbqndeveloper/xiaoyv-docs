@@ -25,24 +25,18 @@ returns: "any | nil, string?"
 
 **详细说明：**
 
-HTML 模式下页面需先使用 `ui.expose(name, callback)` 注册函数。回调可以是异步函数，并会额外收到包含来源 `workerId` 的上下文，页面可据此按 Worker 组织或区分数据。
+页面先用 [ui.expose](JavaScript接口.md#与-lua-交互) 注册同名函数；回调收到 `(data, {workerId})`，可返回值或 Promise。传参和返回值见[交互数据](交互数据.md)。
 
-等待期间会让出 Lua VM，并继续响应暂停和停止。超时只结束 Lua 等待，不会取消已经进入页面的回调，也不会撤销回调已经产生的副作用；对写入、提交等操作不要在超时后盲目重试。
-
-数据类型、大小和 `ui.null` 规则见[中控交互的 JSON 数据规则](../中控交互.md#json-数据规则)。本接口只能调用页面明确 `expose` 的名称；回调具体执行什么操作由页面作者决定。
-
-`name` 类型错误、`timeoutMs` 不是整数或超出范围时会直接产生 Lua 参数错误；页面调用失败、超时或数据无法转换等运行期失败才按 `nil, error` 返回。Worker 没有连接中控通道时会立即返回 `nil, error`。
+超时不会取消页面中已经执行的操作；写入、提交等操作不要直接重试。未连接中控时返回 `nil, error`；参数类型或超时范围错误会抛出 Lua 错误。
 
 **使用示例：**
 
 ```lua
-local saved, err = ui.call("saveSettings", {
-    account = "demo",
-    proxy = ui.null
-})
-if err then
-    print("保存界面设置失败：", err)
-else
-    print("页面返回：", saved)
-end
+-- 默认 HTML 已注册 getSettings 和 setStatus
+local settings, err = ui.call("getSettings")
+assert(not err, err)
+print("账号：", settings and settings.account or "")
+
+local _, statusErr = ui.call("setStatus", "采集完成")
+assert(not statusErr, statusErr)
 ```

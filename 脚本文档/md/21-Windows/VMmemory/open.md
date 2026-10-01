@@ -38,6 +38,6 @@ print(assert(session:system()).windows_build)
 
 默认只读，且 VMware 数据源同时按只读方式打开。`device` 非空时改用该 LeechCore 数据源，不再用 `host_pid` 定位 VMware；是否可写仍取决于数据源。
 
-默认在 `VMmemory.dll` 同目录加载 `vmm.dll`、`leechcore.dll` 及其配套文件；标准发布位置是 `runtime/x64/`，许可证在 `runtime/licenses/vmmemory/`。`runtime_directory` 是完整运行库目录，不是单个 DLL 路径；移动运行库时建议传绝对路径。不要混用不同发行版本的运行库。
+默认在 `VMmemory.dll` 同目录加载 `vmm.dll`、`leechcore.dll` 及其配套文件；标准发布位置是 `runtime/x64/`。`runtime_directory` 是完整运行库目录，不是单个 DLL 路径；移动运行库时建议传绝对路径。不要混用不同发行版本的运行库。
 
 仅支持 x64 Worker；加载与 Worker 接口不匹配时 `require` 会报错。打开成功后用 [close](会话/close.md)、Lua `<close>` 或 GC 释放。

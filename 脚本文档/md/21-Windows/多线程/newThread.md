@@ -20,7 +20,7 @@ returns: "thread userdata"
 
 **详细说明：**
 
-线程对象只用于控制对应子线程，不代表独立 Lua VM；共享数据依然位于当前 Worker 的 Lua 状态中。线程自然结束后，对象仍可安全回收。
+子线程与主任务共享全局变量，每个窗口最多同时运行 10 个子线程。通过返回的线程对象停止该任务，详见 [stopThread](stopThread.md)。
 
 ```lua
 local threadObject = thread.newThread(function(name)
