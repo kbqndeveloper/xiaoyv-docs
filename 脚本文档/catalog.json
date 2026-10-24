@@ -1888,12 +1888,12 @@
           {
             "name": "查询与选择器动作",
             "md": "md/19-无障碍/查询与选择器动作.md",
-            "cmd": "查询与动作：selector.findOne / findAll / findOnce / click / longClick"
+            "cmd": "查询与动作：selector.findOne / findAll / findOnce / exists / click / longClick / node.findOne"
           },
           {
             "name": "节点信息",
             "md": "md/19-无障碍/节点信息.md",
-            "cmd": "节点信息：node.id / text / bounds / childs / parent / toJson"
+            "cmd": "节点信息：node.id / text / checked / bounds / childs / parent / refresh / toJson"
           },
           {
             "name": "节点动作",
@@ -1903,7 +1903,7 @@
           {
             "name": "节点库",
             "md": "md/19-无障碍/节点库.md",
-            "cmd": "节点库：nodeLib.getNodeXml / saveNode / lockNode / unlockNode / openAccessibility / closeAccessibility"
+            "cmd": "节点库：nodeLib.getNodeXml / saveNode / lockNode / unlockNode / setWindowMode / openAccessibility / closeAccessibility"
           }
         ]
       }
@@ -2277,6 +2277,11 @@
             "name": "屏幕找色",
             "md": "md/21-Windows/屏幕找色.md",
             "cmd": "findColors"
+          },
+          {
+            "name": "屏幕全部找色",
+            "md": "md/21-Windows/屏幕全部找色.md",
+            "cmd": "findColorsAll"
           },
           {
             "name": "stb 图像处理",
