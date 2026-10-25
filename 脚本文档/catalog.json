@@ -2464,6 +2464,60 @@
             "name": "OCR",
             "items": [
               {
+                "name": "RapidOCR 本地插件",
+                "items": [
+                  {
+                    "name": "概述",
+                    "md": "md/21-Windows/OCR/RapidOCR/概述.md"
+                  },
+                  {
+                    "name": "初始化模型",
+                    "md": "md/21-Windows/OCR/RapidOCR/init.md",
+                    "cmd": "ocr.init"
+                  },
+                  {
+                    "name": "识别图片文字",
+                    "md": "md/21-Windows/OCR/RapidOCR/read.md",
+                    "cmd": "ocr.read"
+                  },
+                  {
+                    "name": "查找图片文字",
+                    "md": "md/21-Windows/OCR/RapidOCR/findText.md",
+                    "cmd": "ocr.findText"
+                  },
+                  {
+                    "name": "识别像素文字",
+                    "md": "md/21-Windows/OCR/RapidOCR/readPixels.md",
+                    "cmd": "ocr.readPixels"
+                  },
+                  {
+                    "name": "查找像素文字",
+                    "md": "md/21-Windows/OCR/RapidOCR/findTextPixels.md",
+                    "cmd": "ocr.findTextPixels"
+                  },
+                  {
+                    "name": "识别单行图片",
+                    "md": "md/21-Windows/OCR/RapidOCR/readLine.md",
+                    "cmd": "ocr.readLine"
+                  },
+                  {
+                    "name": "识别单行像素",
+                    "md": "md/21-Windows/OCR/RapidOCR/readLinePixels.md",
+                    "cmd": "ocr.readLinePixels"
+                  },
+                  {
+                    "name": "查询模型状态",
+                    "md": "md/21-Windows/OCR/RapidOCR/isLoaded.md",
+                    "cmd": "ocr.isLoaded"
+                  },
+                  {
+                    "name": "释放模型",
+                    "md": "md/21-Windows/OCR/RapidOCR/release.md",
+                    "cmd": "ocr.release"
+                  }
+                ]
+              },
+              {
                 "name": "RapidOCRWeb",
                 "md": "md/21-Windows/OCR/RapidOCRWeb.md"
               }
