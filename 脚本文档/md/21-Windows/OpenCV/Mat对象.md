@@ -42,8 +42,9 @@ local dm = require("xiaoyv_hcbyj")
 
 local x1, y1 = 100, 100
 local x2, y2 = 800, 600
-local width = x2 - x1 + 1
-local height = y2 - y1 + 1
+-- 大漠点阵宽高按坐标差计算，不加 1。
+local width = x2 - x1
+local height = y2 - y1
 
 local ptr = dm.GetScreenData(x1, y1, x2, y2)
 assert(ptr ~= 0, "获取屏幕数据失败")

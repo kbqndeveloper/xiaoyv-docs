@@ -33,8 +33,9 @@ local ocr = require("rapidocr")
 -- 按实际文字位置调整，区域内应只有一行文字
 local left, top, right, bottom = 100, 100, 299, 139
 local data = dm.GetScreenData(left, top, right, bottom)
+-- 大漠点阵宽高按坐标差计算，不加 1。
 local text, score = ocr.readLinePixels(
-    data, right - left + 1, bottom - top + 1, {useAngle = false}
+    data, right - left, bottom - top, {useAngle = false}
 )
 assert(text, score)
 print(text, score)

@@ -2471,7 +2471,7 @@
                     "md": "md/21-Windows/OCR/RapidOCR/概述.md"
                   },
                   {
-                    "name": "初始化模型",
+                    "name": "加载模型",
                     "md": "md/21-Windows/OCR/RapidOCR/init.md",
                     "cmd": "ocr.init"
                   },
