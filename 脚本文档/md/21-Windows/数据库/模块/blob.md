@@ -1,6 +1,6 @@
 ---
 params: "value: string"
-returns: "BLOB 绑定值或 nil, error"
+returns: "blob: XiaoYvDbBlob（userdata） 或 nil, error: string"
 ---
 
 **方法名称：** 创建 SQLite BLOB 绑定值。

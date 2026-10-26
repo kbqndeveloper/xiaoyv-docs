@@ -1,6 +1,6 @@
 ---
-params: "config?: string|table"
-returns: "true 或 nil, error"
+params: "config?: string|XiaoYvOcrPresetConfig（table）|XiaoYvOcrModelConfig（table）"
+returns: "true 或 nil, error: string"
 ---
 
 **方法名称：** 初始化或切换 OCR 模型。
@@ -11,16 +11,24 @@ returns: "true 或 nil, error"
 
 | 参数 | 类型 | 必填 | 说明 |
 |---|---|---|---|
-| `config` | `string / table` | 否 | 省略为 `server`；字符串可为 `mobile` 或 `server`，表字段见下方。 |
+| `config` | `string\|XiaoYvOcrPresetConfig（table）\|XiaoYvOcrModelConfig（table）` | 否 | 省略为 `server`；字符串可为 `mobile` 或 `server`，表字段见下方。 |
 
-| 配置字段 | 类型 | 说明 |
-|---|---|---|
-| `preset` | `string` | 预设名，默认 `server`；未设置 `det` 时使用。 |
-| `threads` | `integer` | 推理线程数，默认 `2`。 |
-| `det` | `string` | 自定义检测 ONNX 文件路径。 |
-| `rec` | `string` | 自定义识别 ONNX 文件路径；设置 `det` 时必填。 |
-| `keys` | `string` | 与识别模型匹配的 UTF-8 字典文件，每行一个字符；设置 `det` 时必填。 |
-| `cls` | `string` | 自定义方向分类 ONNX 文件路径，可省略。 |
+**类型：** `XiaoYvOcrPresetConfig`（table）
+
+| 字段 | 类型 | 必填 | 说明 |
+|---|---|---|---|
+| `preset` | `"mobile"\|"server"` | 否 | 预设名，默认 `server`。 |
+| `threads` | `integer` | 否 | 推理线程数，默认 `2`。 |
+
+**类型：** `XiaoYvOcrModelConfig`（table）
+
+| 字段 | 类型 | 必填 | 说明 |
+|---|---|---|---|
+| `det` | `string` | 是 | 自定义检测 ONNX 文件路径。 |
+| `rec` | `string` | 是 | 自定义识别 ONNX 文件路径。 |
+| `keys` | `string` | 是 | 与识别模型匹配的 UTF-8 字典文件，每行一个字符。 |
+| `cls` | `string` | 否 | 自定义方向分类 ONNX 文件路径。 |
+| `threads` | `integer` | 否 | 推理线程数，默认 `2`。 |
 
 | 返回值 | 说明 |
 |---|---|

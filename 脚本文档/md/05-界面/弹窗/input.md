@@ -1,6 +1,6 @@
 ---
 params: "title: string, hint: string, defaultText: string?, options: table?"
-returns: "string? 或 nil, string"
+returns: "text: string? 或 nil, error: string"
 ---
 <!-- 标准化脚本文档：保留并扩展原有正文，不删除既有说明。 -->
 

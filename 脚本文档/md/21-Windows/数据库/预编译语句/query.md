@@ -1,6 +1,6 @@
 ---
 params: "...: any"
-returns: "cursor 或 nil, error"
+returns: "cursor: XiaoYvDbCursor（userdata） 或 nil, error: string"
 ---
 
 **方法名称：** 执行预编译查询。

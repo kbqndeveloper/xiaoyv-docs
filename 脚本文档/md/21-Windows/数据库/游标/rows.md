@@ -1,6 +1,6 @@
 ---
 params: ""
-returns: "Lua 迭代器"
+returns: "iterator: fun(): XiaoYvDbRow（table）|nil"
 ---
 
 **方法名称：** 创建游标行迭代器。

@@ -1,6 +1,6 @@
 ---
 params: ""
-returns: "true 或 nil, error"
+returns: "true 或 nil, error: string"
 ---
 
 **方法名称：** 重置预编译语句。

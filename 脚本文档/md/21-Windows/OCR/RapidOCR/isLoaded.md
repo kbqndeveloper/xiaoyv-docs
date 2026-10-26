@@ -1,6 +1,6 @@
 ---
 params: ""
-returns: "boolean"
+returns: "loaded: boolean"
 ---
 
 **方法名称：** 查询 OCR 模型是否已加载。

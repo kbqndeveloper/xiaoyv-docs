@@ -1,6 +1,6 @@
 ---
-params: "data: integer|lightuserdata|string, width: integer, height: integer, options?: table"
-returns: "text, score 或 nil, error"
+params: "data: integer|lightuserdata|string, width: integer, height: integer, options?: XiaoYvOcrLinePixelOptions（table）"
+returns: "text: string, score: number 或 nil, error: string"
 ---
 
 **方法名称：** 从原始像素识别单行文字。
@@ -13,7 +13,14 @@ returns: "text, score 或 nil, error"
 |---|---|---|---|
 | `data` | `integer / lightuserdata / string` | 是 | 已裁好的横排单行文字像素地址或字节串，格式和内存要求见 [readPixels](readPixels.md)。 |
 | `width, height` | `integer` | 是 | 输入图像的实际宽、高，单位为像素。 |
-| `options` | `table` | 否 | 支持 [单行识别选项](readLine.md)，以及 [像素选项](readPixels.md) `format`、`stride`。 |
+| `options` | `XiaoYvOcrLinePixelOptions`（table） | 否 | 支持 [单行识别选项](readLine.md)，以及下面的像素选项。 |
+
+**类型：** `XiaoYvOcrLinePixelOptions`（table），继承 `XiaoYvOcrLineOptions`（table）。
+
+| 字段 | 类型 | 必填 | 说明 |
+|---|---|---|---|
+| `format` | `"BGRA"\|"RGBA"\|"BGR"\|"RGB"` | 否 | 默认 `BGRA`。 |
+| `stride` | `integer` | 否 | 默认 `0`；含义见 [readPixels](readPixels.md)。 |
 
 | 返回值 | 说明 |
 |---|---|

@@ -1,6 +1,6 @@
 ---
 params: "callback: function, url: string, postdata: string, timeout: number? 或 header: table/string, header: table/string?"
-returns: "userdata"
+returns: "thread: userdata"
 ---
 
 **方法名称：** 在线程中发送 HTTP POST 请求。

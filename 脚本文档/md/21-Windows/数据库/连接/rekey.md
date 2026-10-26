@@ -1,6 +1,6 @@
 ---
 params: "newKey: string"
-returns: "true 或 nil, error"
+returns: "true 或 nil, error: string"
 ---
 
 **方法名称：** 修改当前 SQLite 数据库密码。

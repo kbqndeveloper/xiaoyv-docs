@@ -1,6 +1,6 @@
 ---
 params: "callback: function, mode: string?"
-returns: "回调返回值、true 或 nil, error"
+returns: "any ..."
 ---
 
 **方法名称：** 执行带自动提交和回滚的事务。
@@ -11,7 +11,7 @@ returns: "回调返回值、true 或 nil, error"
 
 | 参数 | 类型 | 必填 | 说明 |
 |---|---|---|---|
-| `callback` | `function` | 是 | 事务回调，接收当前连接作为唯一参数。 |
+| `callback` | `fun(connection: XiaoYvDbConnection（userdata）): ...` | 是 | 事务回调，接收当前连接作为唯一参数，可返回多个值。 |
 | `mode` | `string` | 否 | `deferred`、`immediate` 或 `exclusive`，默认 `deferred`。 |
 
 | 返回值 | 说明 |

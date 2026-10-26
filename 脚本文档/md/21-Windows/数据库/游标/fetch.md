@@ -1,6 +1,6 @@
 ---
 params: ""
-returns: "row、nil 或 nil, error"
+returns: "row: XiaoYvDbRow（table）|nil 或 nil, error: string"
 ---
 
 **方法名称：** 读取游标的下一行。

@@ -1,6 +1,6 @@
 ---
 params: "url: string, postdata: string, timeout: number? 或 header: table/string, header: table/string?"
-returns: "string, integer, table, string 或 nil, string"
+returns: "body: string, statusCode: integer, headers: table, statusMessage: string 或 nil, error: string"
 ---
 
 **方法名称：** 发送同步 HTTP POST 请求。

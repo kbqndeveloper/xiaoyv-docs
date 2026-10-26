@@ -1,6 +1,6 @@
 ---
 params: "callback: function, url: string, timeout: number? 或 header: table/string, header: table/string?"
-returns: "thread userdata"
+returns: "thread: XiaoYvWindowsThread（userdata）"
 ---
 
 **方法名称：** 在线程中发送 HTTP GET 请求。

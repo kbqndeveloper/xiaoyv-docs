@@ -1,6 +1,6 @@
 ---
 params: ""
-returns: "string[]"
+returns: "ciphers: string[]"
 ---
 
 **方法名称：** 获取 SQLite3MC 支持的加密格式。

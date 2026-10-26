@@ -1,6 +1,6 @@
 ---
 params: "sql: string"
-returns: "statement 或 nil, error"
+returns: "statement: XiaoYvDbStatement（userdata） 或 nil, error: string"
 ---
 
 **方法名称：** 创建可重复使用的 SQLite 预编译语句。

@@ -6,7 +6,12 @@ returns: "无"
 
 **方法名称：** 移动触摸。
 
-**语法：** `touchMove([id,] x, y)`
+**语法：**
+
+```lua
+touchMove(x, y)
+touchMove(id, x, y)
+```
 
 **参数说明：**
 

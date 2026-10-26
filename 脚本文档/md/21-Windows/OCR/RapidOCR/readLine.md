@@ -1,6 +1,6 @@
 ---
-params: "path: string, options?: table"
-returns: "text, score 或 nil, error"
+params: "path: string, options?: XiaoYvOcrLineOptions（table）"
+returns: "text: string, score: number 或 nil, error: string"
 ---
 
 **方法名称：** 识别图片中的单行文字。
@@ -12,7 +12,15 @@ returns: "text, score 或 nil, error"
 | 参数 | 类型 | 必填 | 说明 |
 |---|---|---|---|
 | `path` | `string` | 是 | 已裁好的横排单行文字图片，使用 UTF-8 文件路径。 |
-| `options` | `table` | 否 | 使用 [read](read.md) 中的 `useAngle`、`minScore`、`maxRecognizerWidth`，默认值和范围相同；检测选项不生效。 |
+| `options` | `XiaoYvOcrLineOptions`（table） | 否 | 本次识别选项；检测选项不生效。 |
+
+**类型：** `XiaoYvOcrLineOptions`（table）
+
+| 字段 | 类型 | 必填 | 说明 |
+|---|---|---|---|
+| `useAngle` | `boolean` | 否 | 默认 `true`；启用已配置的方向分类模型。 |
+| `minScore` | `number` | 否 | 默认 `0.5`；识别结果最低得分，范围 `0～1`。 |
+| `maxRecognizerWidth` | `integer` | 否 | 默认 `4096`；识别图像最大宽度，范围 `32～4096`。 |
 
 | 返回值 | 说明 |
 |---|---|

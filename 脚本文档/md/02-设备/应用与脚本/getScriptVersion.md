@@ -1,6 +1,6 @@
 ---
 params: "无"
-returns: "integer"
+returns: "version: integer"
 ---
 
 **方法名称：** 获取当前脚本版本号。

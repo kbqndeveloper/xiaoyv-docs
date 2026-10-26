@@ -1,6 +1,6 @@
 ---
 params: "callback: function, ...: any"
-returns: "thread userdata"
+returns: "thread: XiaoYvWindowsThread（userdata）"
 ---
 
 **方法名称：** 启动并返回 Lua 子线程对象。

@@ -1,6 +1,6 @@
 ---
 params: ""
-returns: "string[]"
+returns: "columns: string[]"
 ---
 
 **方法名称：** 获取游标的列名。

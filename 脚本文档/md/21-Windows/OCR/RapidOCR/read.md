@@ -1,6 +1,6 @@
 ---
-params: "path: string, options?: table"
-returns: "result 或 nil, error"
+params: "path: string, options?: XiaoYvOcrOptions（table）"
+returns: "result: XiaoYvOcrResult（table） 或 nil, error: string"
 ---
 
 **方法名称：** 识别图片中的文字。
@@ -12,17 +12,18 @@ returns: "result 或 nil, error"
 | 参数 | 类型 | 必填 | 说明 |
 |---|---|---|---|
 | `path` | `string` | 是 | UTF-8 图片文件路径，例如 PNG、JPEG。 |
-| `options` | `table` | 否 | 本次识别选项，见下表。 |
+| `options` | `XiaoYvOcrOptions`（table） | 否 | 本次识别选项，见下表。 |
 
-| 选项 | 默认值 | 说明 |
-|---|---|---|
-| `maxSideLen` | `960` | 检测图像最长边，范围 `32～2048`。 |
-| `threshold` | `0.30` | 检测二值化阈值，范围 `0.01～0.99`。 |
-| `boxThreshold` | `0.50` | 检测框得分阈值，范围 `0.01～0.99`。 |
-| `unClipRatio` | `1.5` | 检测框扩张系数，范围 `0～4`。 |
-| `minScore` | `0.5` | 识别结果最低得分，范围 `0～1`。 |
-| `maxRecognizerWidth` | `4096` | 识别图像最大宽度，范围 `32～4096`。 |
-| `useAngle` | `true` | 启用已配置的方向分类模型。 |
+**类型：** `XiaoYvOcrOptions`（table），继承 `XiaoYvOcrLineOptions`（table）。
+
+共同的识别字段见 [单行识别选项](readLine.md)。
+
+| 字段 | 类型 | 必填 | 说明 |
+|---|---|---|---|
+| `maxSideLen` | `integer` | 否 | 默认 `960`；检测图像最长边，范围 `32～2048`。 |
+| `threshold` | `number` | 否 | 默认 `0.30`；检测二值化阈值，范围 `0.01～0.99`。 |
+| `boxThreshold` | `number` | 否 | 默认 `0.50`；检测框得分阈值，范围 `0.01～0.99`。 |
+| `unClipRatio` | `number` | 否 | 默认 `1.5`；检测框扩张系数，范围 `0～4`。 |
 
 数值选项超出范围时限制到相应边界。以上选项也适用于找字和原始像素接口。
 
@@ -33,14 +34,31 @@ returns: "result 或 nil, error"
 
 `result.text` 按 `items` 顺序将各文字框的文字用换行符 `\n` 拼接，不恢复原图排版。
 
-`items` 中每个文字框的字段：
+**类型：** `XiaoYvOcrResult`（table）
 
-| 字段 | 类型 | 说明 |
-|---|---|---|
-| `text` | `string` | UTF-8 文字。 |
-| `x, y, w, h` | `integer` | 外接矩形的左上角坐标、宽、高。 |
-| `score` | `number` | 识别得分。 |
-| `points` | `table` | 四个 `{x = number, y = number}` 顶点，依次为左上、右上、右下、左下。 |
+| 字段 | 类型 | 必填 | 说明 |
+|---|---|---|---|
+| `text` | `string` | 是 | 全部文字，无文字时为空字符串。 |
+| `items` | `XiaoYvOcrBox（table）[]` | 是 | 文字框数组，无文字时为空数组。 |
+
+**类型：** `XiaoYvOcrBox`（table）
+
+| 字段 | 类型 | 必填 | 说明 |
+|---|---|---|---|
+| `text` | `string` | 是 | UTF-8 文字。 |
+| `x` | `integer` | 是 | 外接矩形左上角 X 坐标。 |
+| `y` | `integer` | 是 | 外接矩形左上角 Y 坐标。 |
+| `w` | `integer` | 是 | 外接矩形宽度。 |
+| `h` | `integer` | 是 | 外接矩形高度。 |
+| `score` | `number` | 是 | 识别得分。 |
+| `points` | `XiaoYvOcrPoint（table）[]` | 是 | 四个顶点，依次为左上、右上、右下、左下。 |
+
+**类型：** `XiaoYvOcrPoint`（table）
+
+| 字段 | 类型 | 必填 | 说明 |
+|---|---|---|---|
+| `x` | `number` | 是 | 顶点 X 坐标。 |
+| `y` | `number` | 是 | 顶点 Y 坐标。 |
 
 ```lua
 local ocr = require("rapidocr")

@@ -1,6 +1,6 @@
 ---
 params: "url: string, onOpened: function?, onClosed: function?, onError: function?, onRecv: function?"
-returns: "integer"
+returns: "handle: integer"
 ---
 
 **方法名称：** 创建 WebSocket 连接并注册事件回调。

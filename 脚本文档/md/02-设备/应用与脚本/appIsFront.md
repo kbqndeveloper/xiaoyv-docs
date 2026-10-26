@@ -1,6 +1,6 @@
 ---
 params: "packageName: string"
-returns: "boolean"
+returns: "isFront: boolean"
 ---
 <!-- 标准化脚本文档：保留并扩展原有正文，不删除既有说明。 -->
 

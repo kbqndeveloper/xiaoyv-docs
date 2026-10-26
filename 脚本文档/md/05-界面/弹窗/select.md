@@ -1,6 +1,6 @@
 ---
 params: "title: string, items: table, selectedIndex: integer?, options: table?"
-returns: "integer, string 或 nil, string?"
+returns: "index: integer, value: string 或 nil, error: string?"
 ---
 <!-- 标准化脚本文档：保留并扩展原有正文，不删除既有说明。 -->
 

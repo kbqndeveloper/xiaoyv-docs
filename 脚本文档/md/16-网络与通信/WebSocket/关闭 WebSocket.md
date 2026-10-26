@@ -1,6 +1,6 @@
 ---
 params: "handle: integer"
-returns: "boolean"
+returns: "ok: boolean"
 ---
 
 **方法名称：** 请求关闭一个 WebSocket 连接。

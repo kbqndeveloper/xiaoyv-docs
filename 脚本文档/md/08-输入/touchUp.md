@@ -6,7 +6,12 @@ returns: "无"
 
 **方法名称：** 抬起触摸。
 
-**语法：** `touchUp([id,] x, y)`
+**语法：**
+
+```lua
+touchUp(x, y)
+touchUp(id, x, y)
+```
 
 **参数说明：**
 

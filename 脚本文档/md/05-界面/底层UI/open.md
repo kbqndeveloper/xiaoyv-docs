@@ -1,6 +1,6 @@
 ---
 params: "surface: string, spec: table"
-returns: "integer | nil, string?"
+returns: "sessionId: integer | nil, error: string?"
 ---
 <!-- 标准化脚本文档：保留并扩展原有正文，不删除既有说明。 -->
 

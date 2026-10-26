@@ -1,6 +1,6 @@
 ---
 params: "sql: string, ...: any"
-returns: "row、nil 或 nil, error"
+returns: "row: XiaoYvDbRow（table）|nil 或 nil, error: string"
 ---
 
 **方法名称：** 执行查询并读取第一行。

@@ -1,6 +1,6 @@
 ---
 params: ""
-returns: "boolean"
+returns: "isDebug: boolean"
 ---
 
 **方法名称：** 检查 Debug 构建。

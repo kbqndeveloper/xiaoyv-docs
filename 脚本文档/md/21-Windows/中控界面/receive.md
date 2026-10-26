@@ -1,6 +1,6 @@
 ---
 params: "timeoutMs?: integer"
-returns: "string?, any? | string?"
+returns: "name: string?, data_or_error: any? | string?"
 ---
 
 # ui.receive

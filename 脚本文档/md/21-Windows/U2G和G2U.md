@@ -1,6 +1,6 @@
 ---
 params: "text: string"
-returns: "string"
+returns: "text: string"
 ---
 
 # U2G 和 G2U

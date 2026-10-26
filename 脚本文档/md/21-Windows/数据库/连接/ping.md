@@ -1,6 +1,6 @@
 ---
 params: ""
-returns: "true 或 nil, error"
+returns: "true 或 nil, error: string"
 ---
 
 **方法名称：** 检测 SQLite 连接是否仍然可用。

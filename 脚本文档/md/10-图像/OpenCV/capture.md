@@ -1,6 +1,6 @@
 ---
 params: "x1, y1, x2, y2: integer"
-returns: "userdata"
+returns: "mat: userdata"
 ---
 
 **方法名称：** 获取 OpenCV `Mat` 截图。

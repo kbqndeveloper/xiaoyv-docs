@@ -1,6 +1,6 @@
 ---
 params: "title: string, message: string, positiveText: string?, negativeText: string?"
-returns: "boolean | nil, string?"
+returns: "accepted: boolean | nil, error: string?"
 ---
 <!-- 标准化脚本文档：保留并扩展原有正文，不删除既有说明。 -->
 

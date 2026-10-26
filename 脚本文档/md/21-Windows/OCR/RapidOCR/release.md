@@ -1,6 +1,6 @@
 ---
 params: ""
-returns: "boolean"
+returns: "released: boolean"
 ---
 
 **方法名称：** 释放当前 OCR 模型。

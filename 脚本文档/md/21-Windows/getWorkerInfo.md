@@ -1,6 +1,6 @@
 ---
 params: ""
-returns: "table"
+returns: "info: XiaoYvWorkerInfo（table）"
 ---
 
 # getWorkerInfo
@@ -19,11 +19,13 @@ returns: "table"
 |---|---|
 | `info` | 当前 Worker 信息表，字段见下表。 |
 
-| 字段 | 类型 | 说明 |
-|---|---|---|
-| `info.id` | `string` 或 `nil` | 中控分配的 Worker ID，例如 `"w1"`；独立运行时为 `nil`。 |
-| `info.arch` | `string` | 当前 Worker 的 `"x86"` 或 `"x64"`，不是操作系统位数。 |
-| `info.pid` | `integer` | 当前 Worker 的 Windows 进程 ID。 |
+**类型：** `XiaoYvWorkerInfo`（table）
+
+| 字段 | 类型 | 必填 | 说明 |
+|---|---|---|---|
+| `id` | `string` | 否 | 中控分配的 Worker ID，例如 `"w1"`；独立运行时为 `nil`。 |
+| `arch` | `"x86"\|"x64"` | 是 | 当前 Worker 的进程位数，不是操作系统位数。 |
+| `pid` | `integer` | 是 | 当前 Worker 的 Windows 进程 ID。 |
 
 **详细说明：**
 

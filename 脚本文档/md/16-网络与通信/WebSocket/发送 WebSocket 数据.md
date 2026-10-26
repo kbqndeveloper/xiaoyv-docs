@@ -1,6 +1,6 @@
 ---
 params: "handle: integer, text: string"
-returns: "boolean"
+returns: "ok: boolean"
 ---
 
 **方法名称：** 向 WebSocket 连接提交一条文本消息。
