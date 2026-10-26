@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="460" viewBox="0 0 640 460" role="img" aria-labelledby="title desc">
+  <title id="title">多点找色八方向起点示意图</title>
+  <desc id="desc">1、2 从左上开始，3、4 从右上开始，5、6 从右下开始，7、8 从左下开始。四角大圆点是起点，小圆点标示八边形顶点，箭头表示行内或列内扫描方向，推荐方向 2。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 1 1 L 9 5 L 1 9" fill="none" stroke="#c84a38" stroke-width="2"/>
+    </marker>
+    <marker id="recommended" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 1 1 L 9 5 L 1 9" fill="none" stroke="#176fc1" stroke-width="2"/>
+    </marker>
+  </defs>
+  <g font-family="Microsoft YaHei, sans-serif" text-anchor="middle">
+    <path d="M 265 100 H 375 L 460 185 V 295 L 375 380 H 265 L 180 295 V 185 Z" fill="none" stroke="#94a3b8" stroke-width="2"/>
+    <g fill="#94a3b8">
+      <circle cx="265" cy="100" r="3"/><circle cx="375" cy="100" r="3"/>
+      <circle cx="460" cy="185" r="3"/><circle cx="460" cy="295" r="3"/>
+      <circle cx="375" cy="380" r="3"/><circle cx="265" cy="380" r="3"/>
+      <circle cx="180" cy="295" r="3"/><circle cx="180" cy="185" r="3"/>
+    </g>
+    <g fill="#64748b" font-size="17">
+      <text x="130" y="75">左上</text><text x="510" y="75">右上</text>
+      <text x="130" y="420">左下</text><text x="510" y="420">右下</text>
+      <text x="320" y="245" font-size="23">搜索范围</text>
+    </g>
+    <g fill="none" stroke="#c84a38" stroke-width="3.5" marker-end="url(#arrow)">
+      <path d="M 180 100 V 175"/><path d="M 460 100 H 385"/>
+      <path d="M 460 100 V 175"/><path d="M 460 380 V 305"/>
+      <path d="M 460 380 H 385"/><path d="M 180 380 H 255"/>
+      <path d="M 180 380 V 305"/>
+    </g>
+    <path d="M 180 100 H 255" fill="none" stroke="#176fc1" stroke-width="3.5" marker-end="url(#recommended)"/>
+    <g fill="#64748b">
+      <circle cx="180" cy="100" r="6"/><circle cx="460" cy="100" r="6"/>
+      <circle cx="460" cy="380" r="6"/><circle cx="180" cy="380" r="6"/>
+    </g>
+    <g fill="#c84a38" font-size="26" font-weight="600">
+      <text x="150" y="145">1</text><text x="423" y="75">3</text>
+      <text x="490" y="145">4</text><text x="490" y="345">5</text>
+      <text x="423" y="420">6</text><text x="217" y="420">7</text>
+      <text x="150" y="345">8</text>
+    </g>
+    <text x="217" y="75" fill="#176fc1" font-size="23" font-weight="600">2 推荐</text>
+  </g>
+</svg>

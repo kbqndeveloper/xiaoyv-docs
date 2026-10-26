@@ -315,6 +315,7 @@
       font-weight: 600;
     }
     #body p { margin: 0.7em 0; }
+    #body img { max-width: 100%; height: auto; }
     #body ul { padding-left: 1.3em; }
     #body li { margin: 0.25em 0; }
     /* 仅行内 code；不要用 #body code 以免盖住代码块 */
@@ -762,6 +763,12 @@
           closeList();
         }
         if (!line.trim()) { i++; continue; }
+        const image = line.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
+        if (image) {
+          const path = BASE + resolveMarkdownLink(activeMarkdownPath, image[2]);
+          html += `<p><img src="${escapeHtml(path)}" alt="${escapeHtml(image[1])}"></p>`;
+          i++; continue;
+        }
         if (line.startsWith("### ")) { html += `<h3>${inlineMd(line.slice(4))}</h3>`; i++; continue; }
         if (line.startsWith("## ")) { html += `<h2>${inlineMd(line.slice(3))}</h2>`; i++; continue; }
         if (line.startsWith("# ")) { html += `<h1>${inlineMd(line.slice(2))}</h1>`; i++; continue; }
@@ -882,7 +889,7 @@
       ["文件与资源", 50], ["媒体", 60], ["显示与控制", 70], ["调试状态", 80],
       ["截图来源与缓存", 10],
       ["保存截图", 20], ["模板找图", 30], ["OpenCV", 40],
-      ["取色与转换", 10], ["比色与统计", 20], ["查找与分析", 30],
+      ["扫描方向", 5], ["取色与转换", 10], ["比色与统计", 20], ["查找与分析", 30],
       ["弹窗", 10], ["HUD", 20], ["HTML", 30], ["底层UI", 40],
       ["项目 HTTP", 10], ["WebSocket", 20], ["LuaSocket", 30]
     ]);
