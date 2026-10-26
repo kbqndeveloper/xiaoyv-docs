@@ -35,7 +35,7 @@ local left, top, right, bottom = 100, 100, 299, 139
 local data = dm.GetScreenData(left, top, right, bottom)
 -- 大漠点阵宽高按坐标差计算，不加 1。
 local text, score = ocr.readLinePixels(
-    data, right - left, bottom - top, {useAngle = false}
+    data, right - left, bottom - top
 )
 assert(text, score)
 print(text, score)

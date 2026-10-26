@@ -1306,6 +1306,10 @@
         "name": "截图来源与缓存",
         "items": [
           {
+            "name": "缓存规则",
+            "md": "md/10-图像/截图与缓存/缓存规则.md"
+          },
+          {
             "name": "获取屏幕像素",
             "md": "md/10-图像/截图与缓存/获取屏幕像素.md",
             "cmd": "m.getScreenPixels"
@@ -1334,10 +1338,6 @@
             "name": "设置截图缓存时间",
             "md": "md/10-图像/截图与缓存/设置截图缓存时间.md",
             "cmd": "m.setCaptureCacheMs / setCaptureCacheMs / setSnapCacheTime"
-          },
-          {
-            "name": "缓存规则",
-            "md": "md/10-图像/截图与缓存/缓存规则.md"
           }
         ]
       },
@@ -1519,11 +1519,6 @@
         "cmd": "m.ocr.load"
       },
       {
-        "name": "释放模型",
-        "md": "md/14-OCR/释放模型.md",
-        "cmd": "m.ocr.release"
-      },
-      {
         "name": "模型状态",
         "md": "md/14-OCR/模型状态.md",
         "cmd": "m.ocr.isLoaded"
@@ -1537,6 +1532,11 @@
         "name": "找文字",
         "md": "md/14-OCR/找文字.md",
         "cmd": "m.ocr.findText"
+      },
+      {
+        "name": "释放模型",
+        "md": "md/14-OCR/释放模型.md",
+        "cmd": "m.ocr.release"
       }
     ]
   },
@@ -1559,24 +1559,24 @@
         "cmd": "m.yolo.isAvailable"
       },
       {
-        "name": "加载模型",
-        "md": "md/20-YOLO/加载模型.md",
-        "cmd": "m.yolo.load"
-      },
-      {
         "name": "初始化默认模型",
         "md": "md/20-YOLO/初始化默认模型.md",
         "cmd": "m.yolo.init"
       },
       {
-        "name": "释放模型",
-        "md": "md/20-YOLO/释放模型.md",
-        "cmd": "m.yolo.release"
+        "name": "加载模型",
+        "md": "md/20-YOLO/加载模型.md",
+        "cmd": "m.yolo.load"
       },
       {
         "name": "模型状态",
         "md": "md/20-YOLO/模型状态.md",
         "cmd": "m.yolo.isLoaded"
+      },
+      {
+        "name": "简化检测",
+        "md": "md/20-YOLO/简化检测.md",
+        "cmd": "m.yolo.detect"
       },
       {
         "name": "检测屏幕",
@@ -1589,9 +1589,9 @@
         "cmd": "m.yolo.detectFile"
       },
       {
-        "name": "简化检测",
-        "md": "md/20-YOLO/简化检测.md",
-        "cmd": "m.yolo.detect"
+        "name": "释放模型",
+        "md": "md/20-YOLO/释放模型.md",
+        "cmd": "m.yolo.release"
       }
     ]
   },
@@ -1717,14 +1717,14 @@
             "cmd": "m.httpGet"
           },
           {
-            "name": "HTTP POST",
-            "md": "md/16-网络与通信/项目HTTP/HTTP POST.md",
-            "cmd": "m.httpPost"
-          },
-          {
             "name": "异步 HTTP GET",
             "md": "md/16-网络与通信/项目HTTP/异步 HTTP GET.md",
             "cmd": "m.asynHttpGet"
+          },
+          {
+            "name": "HTTP POST",
+            "md": "md/16-网络与通信/项目HTTP/HTTP POST.md",
+            "cmd": "m.httpPost"
           },
           {
             "name": "异步 HTTP POST",
@@ -2028,14 +2028,14 @@
                 "cmd": "httpGet"
               },
               {
-                "name": "HTTP POST",
-                "md": "md/21-Windows/网络与FFI/HTTP/httpPost.md",
-                "cmd": "httpPost"
-              },
-              {
                 "name": "异步 HTTP GET",
                 "md": "md/21-Windows/网络与FFI/HTTP/asynHttpGet.md",
                 "cmd": "asynHttpGet"
+              },
+              {
+                "name": "HTTP POST",
+                "md": "md/21-Windows/网络与FFI/HTTP/httpPost.md",
+                "cmd": "httpPost"
               },
               {
                 "name": "异步 HTTP POST",
@@ -2481,19 +2481,9 @@
                     "cmd": "ocr.read"
                   },
                   {
-                    "name": "查找图片文字",
-                    "md": "md/21-Windows/OCR/RapidOCR/findText.md",
-                    "cmd": "ocr.findText"
-                  },
-                  {
                     "name": "识别像素文字",
                     "md": "md/21-Windows/OCR/RapidOCR/readPixels.md",
                     "cmd": "ocr.readPixels"
-                  },
-                  {
-                    "name": "查找像素文字",
-                    "md": "md/21-Windows/OCR/RapidOCR/findTextPixels.md",
-                    "cmd": "ocr.findTextPixels"
                   },
                   {
                     "name": "识别单行图片",
@@ -2504,6 +2494,16 @@
                     "name": "识别单行像素",
                     "md": "md/21-Windows/OCR/RapidOCR/readLinePixels.md",
                     "cmd": "ocr.readLinePixels"
+                  },
+                  {
+                    "name": "查找图片文字",
+                    "md": "md/21-Windows/OCR/RapidOCR/findText.md",
+                    "cmd": "ocr.findText"
+                  },
+                  {
+                    "name": "查找像素文字",
+                    "md": "md/21-Windows/OCR/RapidOCR/findTextPixels.md",
+                    "cmd": "ocr.findTextPixels"
                   },
                   {
                     "name": "查询模型状态",

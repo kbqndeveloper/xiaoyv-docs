@@ -887,11 +887,12 @@
       ["项目 HTTP", 10], ["WebSocket", 20], ["LuaSocket", 30]
     ]);
     const COMMAND_ORDER = new Map([
-      ["useApi / switchApi", 20], ["print", 30], ["sleep", 40], ["systemTime", 50], ["tickCount", 60],
+      ["useApi", 20], ["print", 30], ["sleep", 40], ["systemTime", 50], ["tickCount", 60],
       ["getWorkerInfo", 70], ["center.request", 110], ["ui.call", 90], ["ui.receive", 100],
       ["m.appIsFront", 50], ["m.appIsRunning", 60], ["m.runApp", 70], ["m.stopApp", 80],
       ["m.frontAppName", 90], ["m.getCurrentActivity", 100], ["m.getRunEnvType", 110],
       ["m.exec", 115], ["m.getDisplaySize", 120], ["m.getDisplayInfo", 130], ["m.getScreenPixels", 140],
+      ["m.setScreenPixels", 142], ["m.restoreScreenPixels", 144],
       ["m.keepCapture", 150], ["m.releaseCapture", 160], ["m.setCaptureCacheMs", 170],
       ["m.capture", 180], ["m.snapShot", 190], ["m.findPic", 200], ["m.findPicAll", 210],
       ["m.getPixelColor", 220], ["m.getScreenPixel", 230], ["m.cmpColor", 240],
@@ -901,8 +902,9 @@
       ["keyUp", 390], ["inputText", 400], ["selector.findOne", 410],
       ["selector.findAll", 420], ["node.click", 430], ["node.setText", 440],
       ["m.ime.lock", 450], ["m.ime.setText", 460], ["m.ime.unlock", 470],
-      ["m.thread.newThread", 480], ["m.thread.beginThread", 490], ["thread:stopThread", 500],
-      ["m.httpGet", 510], ["m.httpPost", 520], ["m.downloadFile", 530], ["m.uploadFile", 540],
+      ["m.thread.beginThread", 480], ["m.thread.newThread", 490], ["thread:stopThread", 500],
+      ["m.httpGet", 510], ["m.asynHttpGet", 515], ["m.httpPost", 520], ["m.asynHttpPost", 525],
+      ["m.downloadFile", 530], ["m.uploadFile", 540],
       ["m.dialog.alert", 550], ["m.dialog.confirm", 560], ["m.toast", 570],
       ["m.hud.show", 580], ["m.hud.update", 590], ["m.hud.hide", 600],
       ["m.read_alpkg_file", 610], ["import", 620], ["m.font.setDict", 630],
@@ -915,10 +917,10 @@
       ["m.yolo.init", 800], ["m.yolo.load", 810], ["m.yolo.isLoaded", 820],
       ["m.yolo.detect", 830], ["m.yolo.detectScreen", 840], ["m.yolo.detectFile", 850],
       ["m.yolo.release", 860],
-      ["ocr.init", 870], ["ocr.read", 880], ["ocr.findText", 890],
-      ["ocr.readPixels", 900], ["ocr.findTextPixels", 910],
-      ["ocr.readLine", 912], ["ocr.readLinePixels", 914],
-      ["ocr.isLoaded", 920], ["ocr.release", 930]
+      ["ocr.init", 870], ["ocr.read", 880], ["ocr.readPixels", 890],
+      ["ocr.readLine", 900], ["ocr.readLinePixels", 910],
+      ["ocr.findText", 920], ["ocr.findTextPixels", 930],
+      ["ocr.isLoaded", 940], ["ocr.release", 950]
     ]);
 
     function nodeOrder(node, depth, index) {
@@ -926,11 +928,9 @@
       if (depth === 1 && node.order !== undefined) return node.order;
       if (!node.cmd && /概述|规则/.test(node.name)) return 0;
       if (node.cmd) {
-        const exact = COMMAND_ORDER.get(node.cmd);
-        if (exact !== undefined) return exact;
-        for (const [key, rank] of COMMAND_ORDER) {
-          if (node.cmd.includes(key)) return rank;
-        }
+        // 多入口页按第一个完整命令排序，避免 getFingerprint 误匹配 print。
+        const rank = COMMAND_ORDER.get(node.cmd.split(" / ", 1)[0]);
+        if (rank !== undefined) return rank;
       }
       return GROUP_ORDER.get(node.name) ?? (1000 + index);
     }
