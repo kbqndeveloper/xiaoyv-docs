@@ -378,6 +378,10 @@
       color: var(--heading);
       font-weight: 600;
     }
+    #body td code {
+      white-space: normal;
+      overflow-wrap: anywhere;
+    }
     #body a {
       color: var(--link);
       text-decoration: underline;
@@ -878,7 +882,7 @@
     // 目录按常用脚本的阅读路径展示；未列入的节点保持 catalog.json 原有顺序。
     const CATEGORY_ORDER = new Map([
       ["Android", 10], ["Windows", 20], ["工具", 30],
-      ["概述", 10], ["日志", 30], ["设备", 40], ["图像", 50],
+      ["概述", 10], ["日志", 30], ["设备", 40], ["内存", 45], ["图像", 50],
       ["找色", 60], ["输入", 70], ["无障碍", 80], ["输入法", 90], ["多线程", 100],
       ["网络与通信", 110], ["界面", 120], ["脚本包", 130], ["Java", 140],
       ["点阵字库", 150], ["OCR", 160], ["YOLO", 170], ["ImGui", 180],
@@ -898,7 +902,11 @@
       ["getWorkerInfo", 70], ["center.request", 110], ["ui.call", 90], ["ui.receive", 100],
       ["m.appIsFront", 50], ["m.appIsRunning", 60], ["m.runApp", 70], ["m.stopApp", 80],
       ["m.frontAppName", 90], ["m.getCurrentActivity", 100], ["m.getRunEnvType", 110],
-      ["m.exec", 115], ["m.getDisplaySize", 120], ["m.getDisplayInfo", 130], ["m.getScreenPixels", 140],
+      ["m.exec", 115], ["Memory:new", 116], ["mem:get_pid", 116.5],
+      ["mem:read_memory", 117], ["mem:search_memory", 117.5], ["mem:fuckChain", 118],
+      ["mem:remoteCallFunction", 118.5], ["mem:setReadBackend", 119], ["mem:file_md5", 119.5],
+      ["native:read", 119.75],
+      ["m.getDisplaySize", 120], ["m.getDisplayInfo", 130], ["m.getScreenPixels", 140],
       ["m.setScreenPixels", 142], ["m.restoreScreenPixels", 144],
       ["m.keepCapture", 150], ["m.releaseCapture", 160], ["m.setCaptureCacheMs", 170],
       ["m.capture", 180], ["m.snapShot", 190], ["m.findPic", 200], ["m.findPicAll", 210],

@@ -34,3 +34,5 @@ print()
 输出到引擎日志。`printEx(...)` 是兼容入口，与 `print(...)` 使用同一套日志输出行为。这两个入口接受任意数量的 Lua 值，不返回结果，并受 `setLogOff(true)` 控制。
 
 对应 C ABI：`engine_print`。
+
+封装日志函数时，可用 [printAt](printAt.md) 指定要记录哪一级调用位置。

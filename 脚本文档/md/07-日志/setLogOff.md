@@ -11,7 +11,7 @@ returns: ""
 
 | 参数 | 类型 | 必填 | 说明 |
 |---|---|---|---|
-| `disabled` | `boolean` | 是 | `true` 关闭普通 `print` 输出，`false` 恢复输出。 |
+| `disabled` | `boolean` | 是 | `true` 关闭 `print`、`printEx` 和 `printAt` 输出，`false` 恢复输出。 |
 
 | 返回值 | 说明 |
 |---|---|
@@ -27,4 +27,4 @@ setLogOff(false)
 
 **详细说明：**
 
-该开关只影响普通 `print` 兼容入口；其他明确的日志实现是否输出由其自身接口决定。
+该开关影响 [print / printEx](print.md) 和 [printAt](printAt.md)；其他明确的日志实现是否输出由其自身接口决定。

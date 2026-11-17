@@ -25,10 +25,6 @@
         "cmd": "useApi / switchApi"
       },
       {
-        "name": "API 总览",
-        "md": "md/00-概述/API总览.md"
-      },
-      {
         "name": "扩展 API 与迁移",
         "md": "md/00-概述/扩展与迁移.md"
       }
@@ -452,6 +448,71 @@
             "md": "md/02-设备/系统与文件扩展/checkIsDebug.md",
             "cmd": "checkIsDebug"
           }
+    ]
+  },
+  {
+    "name": "内存",
+    "order": 45,
+    "items": [
+      {
+        "name": "入门与使用说明",
+        "order": 10,
+        "md": "md/22-内存/Memory.md",
+        "cmd": "Memory:new"
+      },
+      {
+        "name": "进程与模块",
+        "order": 20,
+        "md": "md/22-内存/进程与模块.md",
+        "cmd": "mem:get_pid"
+      },
+      {
+        "name": "内存读写",
+        "order": 30,
+        "md": "md/22-内存/内存读写.md",
+        "cmd": "mem:read_memory"
+      },
+      {
+        "name": "内存搜索",
+        "order": 40,
+        "md": "md/22-内存/内存搜索.md",
+        "cmd": "mem:search_memory"
+      },
+      {
+        "name": "指针链与 Unity",
+        "order": 50,
+        "md": "md/22-内存/指针链与Unity.md",
+        "cmd": "mem:fuckChain"
+      },
+      {
+        "name": "远程操作",
+        "order": 60,
+        "md": "md/22-内存/远程操作.md",
+        "cmd": "mem:remoteCallFunction"
+      },
+      {
+        "name": "内存读取方式",
+        "order": 70,
+        "md": "md/22-内存/内存读取方式.md",
+        "cmd": "mem:setReadBackend"
+      },
+      {
+        "name": "辅助功能",
+        "order": 80,
+        "md": "md/22-内存/辅助功能.md",
+        "cmd": "mem:file_md5"
+      },
+      {
+        "name": "底层接口",
+        "order": 85,
+        "md": "md/22-内存/底层接口.md",
+        "cmd": "native:read"
+      },
+      {
+        "name": "常量附录",
+        "order": 90,
+        "md": "md/22-内存/常量附录.md"
+      }
     ]
   },
   {
@@ -1208,6 +1269,11 @@
         "cmd": "print / printEx"
       },
       {
+        "name": "按调用层级输出日志",
+        "md": "md/07-日志/printAt.md",
+        "cmd": "m.printAt"
+      },
+      {
         "name": "关闭普通日志",
         "md": "md/07-日志/setLogOff.md",
         "cmd": "setLogOff"
@@ -1833,6 +1899,16 @@
     "order": 190,
     "items": [
       {
+        "name": "JSON",
+        "md": "md/17-安全与数据/JSON.md",
+        "cmd": "json.*"
+      },
+      {
+        "name": "MD5",
+        "md": "md/17-安全与数据/MD5.md",
+        "cmd": "md5.*"
+      },
+      {
         "name": "加密",
         "md": "md/17-安全与数据/加密.md",
         "cmd": "cryptLib.*"
@@ -1946,6 +2022,16 @@
             "name": "UTF-8 与 GBK",
             "md": "md/21-Windows/U2G和G2U.md",
             "cmd": "U2G / G2U"
+          },
+          {
+            "name": "JSON",
+            "md": "md/17-安全与数据/JSON.md",
+            "cmd": "json.*"
+          },
+          {
+            "name": "MD5",
+            "md": "md/17-安全与数据/MD5.md",
+            "cmd": "md5.*"
           }
         ],
         "order": 30

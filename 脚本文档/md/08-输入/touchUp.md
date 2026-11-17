@@ -1,5 +1,5 @@
 ---
-params: "[id: integer,] x: integer, y: integer"
+params: "[id: integer] 或 [id: integer,] x: integer, y: integer"
 returns: "无"
 ---
 <!-- 标准化脚本文档：保留并扩展原有正文，不删除既有说明。 -->
@@ -9,6 +9,8 @@ returns: "无"
 **语法：**
 
 ```lua
+touchUp()
+touchUp(id)
 touchUp(x, y)
 touchUp(id, x, y)
 ```
@@ -18,8 +20,8 @@ touchUp(id, x, y)
 | 参数 | 类型 | 必填 | 说明 |
 |---|---|---|---|
 | `id` | `integer` | 否 | 模拟手指索引，范围 `0` 到 `4`；省略时使用 `1`。 |
-| `x` | `integer` | 是 | 抬起前的终点横坐标。 |
-| `y` | `integer` | 是 | 抬起前的终点纵坐标。 |
+| `x` | `integer` | 否 | 终点横坐标；与 `y` 一起提供时先移动再抬起。 |
+| `y` | `integer` | 否 | 终点纵坐标；与 `x` 一起提供或一起省略。 |
 
 | 返回值 | 说明 |
 |---|---|
@@ -27,19 +29,19 @@ touchUp(id, x, y)
 
 **详细说明：**
 
-弹起手指，仅 Root 模式。
+弹起手指，仅 Root 模式。不传坐标时，在该手指最近一次按下或移动的位置直接抬起；传入坐标时，先发送一次移动事件到指定位置，再抬起，即使坐标与当前位置相同也会发送移动事件。
 
 ```lua
 touchDown(100, 100)
 sleep(50)
 touchMove(200, 200)
-touchUp(200, 200)
+touchUp()
 ```
 
 参数：
 
 - `id:integer`：模拟手指索引；省略时为 `1`。多指手势中应保持同一索引。
-- `x:integer, y:integer`：终点坐标；会先移动到该坐标再抬起。
+- `x:integer, y:integer`：可选终点坐标；一起省略时直接抬起。
 
 返回：
 

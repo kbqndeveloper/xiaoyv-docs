@@ -67,7 +67,16 @@ Lua 使用 [ui.call](call.md) 调用已注册函数，使用 [ui.receive](receiv
 | `center.copyText(text)` | 文本 | `Promise<void>`；复制到剪贴板。 |
 | `center.readClipboard()` | 无 | `Promise<string>`；读取剪贴板。 |
 | `center.reload()` | 无 | `Promise<object>`；刷新页面。 |
+| `center.hide()` | 无 | `Promise<object>`；隐藏中控主窗口及任务栏按钮，不显示托盘图标。 |
 
 文件的相对路径以中控 EXE 所在目录为准。写入会覆盖文件，父目录需预先存在；文本编码与 Base64 转换由页面处理。
 
 刷新页面不会停止脚本；页面的事件监听和 `ui.expose` 回调需重新注册，未完成的页面调用会失败。
+
+隐藏不会停止脚本或卸载页面；关闭和最小化按钮保持原有行为。再次启动同一路径的中控 EXE 即可显示原窗口，已有脚本继续运行。
+
+例如在自定义 HTML 中添加按钮：
+
+```html
+<button onclick="center.hide().catch(error => console.error(error))">隐藏中控</button>
+```
