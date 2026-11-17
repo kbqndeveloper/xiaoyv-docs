@@ -2135,6 +2135,30 @@
             ]
           },
           {
+            "name": "WebSocket",
+            "items": [
+              {
+                "name": "概述",
+                "md": "md/21-Windows/网络与FFI/WebSocket/概述.md"
+              },
+              {
+                "name": "创建 WebSocket",
+                "md": "md/21-Windows/网络与FFI/WebSocket/startWebSocket.md",
+                "cmd": "startWebSocket"
+              },
+              {
+                "name": "发送 WebSocket 数据",
+                "md": "md/21-Windows/网络与FFI/WebSocket/sendWebSocket.md",
+                "cmd": "sendWebSocket"
+              },
+              {
+                "name": "关闭 WebSocket",
+                "md": "md/21-Windows/网络与FFI/WebSocket/closeWebSocket.md",
+                "cmd": "closeWebSocket"
+              }
+            ]
+          },
+          {
             "name": "FFI",
             "items": [
               {
